@@ -1,0 +1,22 @@
+uuid: 35403409-8eb3-4edf-a3b4-dd9f3b7ca6a9
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - montreal2027
+_core:
+  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
+id: montreal2027_messages
+theme: montreal2027
+region: header
+weight: -1
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

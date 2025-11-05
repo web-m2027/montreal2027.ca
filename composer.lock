@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "deb2efbb5cf41900006ba57273394d2c",
+    "content-hash": "04c3ca16df0a9e8e66e5343bad72a987",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1133,6 +1133,115 @@
             "time": "2024-02-05T11:35:39+00:00"
         },
         {
+            "name": "drupal/admin_theme",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/admin_theme.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/admin_theme-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "838062c6ab84a661b81cefb50a5ee4861894ea07"
+            },
+            "require": {
+                "drupal/core": "^9.5 || ^10.2 || ^11.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1732231029",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "geek-merlin",
+                    "homepage": "https://www.drupal.org/user/229048"
+                },
+                {
+                    "name": "justy",
+                    "homepage": "https://www.drupal.org/user/115811"
+                }
+            ],
+            "description": "Enable the administration theme on more paths than possible with Drupal's default administration page.",
+            "homepage": "https://www.drupal.org/project/admin_theme",
+            "keywords": [
+                "drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/admin_theme"
+            }
+        },
+        {
+            "name": "drupal/classy",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/classy.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/classy-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "d1aade177c5735c3de953b00d3ade323ca711db1"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/stable": "^2.1"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1744243951",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bnjmnm",
+                    "homepage": "https://www.drupal.org/user/2369194"
+                },
+                {
+                    "name": "davidhernandez",
+                    "homepage": "https://www.drupal.org/user/274559"
+                },
+                {
+                    "name": "lauriii",
+                    "homepage": "https://www.drupal.org/user/1078742"
+                },
+                {
+                    "name": "smustgrave",
+                    "homepage": "https://www.drupal.org/user/3252890"
+                }
+            ],
+            "description": "The Classy base theme from Drupal 8/9 moved to contrib",
+            "homepage": "https://drupal.org/project/classy",
+            "support": {
+                "source": "https://git.drupalcode.org/project/classy",
+                "issues": "https://drupal.org/project/issues/classy"
+            }
+        },
+        {
             "name": "drupal/config_ignore",
             "version": "3.3.0",
             "source": {
@@ -1754,6 +1863,231 @@
             }
         },
         {
+            "name": "drupal/embed",
+            "version": "1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/embed.git",
+                "reference": "8.x-1.10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/embed-8.x-1.10.zip",
+                "reference": "8.x-1.10",
+                "shasum": "4ac5be0c3a421851c9c60ed82e3bc497be88e61c"
+            },
+            "require": {
+                "drupal/core": "^10.2 || ^11"
+            },
+            "require-dev": {
+                "drupal/ckeditor": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.10",
+                    "datestamp": "1737663032",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "cs_shadow",
+                    "homepage": "https://www.drupal.org/user/2828287"
+                },
+                {
+                    "name": "dave reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "devin carlson",
+                    "homepage": "https://www.drupal.org/user/290182"
+                },
+                {
+                    "name": "Drupal Media Team",
+                    "homepage": "https://www.drupal.org/user/3260690"
+                },
+                {
+                    "name": "phenaproxima",
+                    "homepage": "https://www.drupal.org/user/205645"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                }
+            ],
+            "description": "Provides a framework for different types of embeds in text editors.",
+            "homepage": "https://www.drupal.org/project/embed",
+            "support": {
+                "source": "https://git.drupalcode.org/project/embed"
+            }
+        },
+        {
+            "name": "drupal/entity_embed",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/entity_embed.git",
+                "reference": "8.x-1.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_embed-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "64b7226390198572cdea0dd2227585f74338c773"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/embed": "^1.10"
+            },
+            "require-dev": {
+                "drupal/entity_browser": "^2.11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.7",
+                    "datestamp": "1738512139",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "cs_shadow",
+                    "homepage": "https://www.drupal.org/user/2828287"
+                },
+                {
+                    "name": "dave reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "devin carlson",
+                    "homepage": "https://www.drupal.org/user/290182"
+                },
+                {
+                    "name": "Drupal Media Team",
+                    "homepage": "https://www.drupal.org/user/3260690"
+                },
+                {
+                    "name": "oknate",
+                    "homepage": "https://www.drupal.org/user/471638"
+                },
+                {
+                    "name": "phenaproxima",
+                    "homepage": "https://www.drupal.org/user/205645"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                },
+                {
+                    "name": "wim leers",
+                    "homepage": "https://www.drupal.org/user/99777"
+                }
+            ],
+            "description": "Allows any entity to be embedded within a text area using a WYSIWYG editor.",
+            "homepage": "https://www.drupal.org/project/entity_embed",
+            "support": {
+                "source": "https://git.drupalcode.org/project/entity_embed"
+            }
+        },
+        {
+            "name": "drupal/facets",
+            "version": "3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/facets.git",
+                "reference": "3.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/facets-3.0.2.zip",
+                "reference": "3.0.2",
+                "shasum": "6bcb932da836accf548807a0cdfd2a78831f628d"
+            },
+            "require": {
+                "drupal/core": "^10.1 || ^11"
+            },
+            "conflict": {
+                "drupal/core": "<10.1.0",
+                "drupal/search_api": "<1.14"
+            },
+            "require-dev": {
+                "drupal/better_exposed_filters": "~7.0",
+                "drupal/default_content": "~2.0@alpha",
+                "drupal/facets_exposed_filters": "*",
+                "drupal/jquery_ui_slider": "~2.1",
+                "drupal/jquery_ui_touch_punch": "~1.1",
+                "drupal/search_api": "1.x-dev",
+                "drupal/search_api_db": "*",
+                "drupal/views_ajax_history": "~1.8",
+                "drupal/views_filters_summary": "~3.2"
+            },
+            "suggest": {
+                "drupal/better_exposed_filters": "Required for AJAX support for facets rendered as views exposed filters",
+                "drupal/jquery_ui_slider": "Required for the 'Facets Range Widget' module to work",
+                "drupal/jquery_ui_touch_punch": "Required for the 'Facets Range Widget' module to work"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.2",
+                    "datestamp": "1760700679",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "See all contributors",
+                    "homepage": "https://www.drupal.org/node/2348769/committers"
+                },
+                {
+                    "name": "drunken monkey",
+                    "homepage": "https://www.drupal.org/user/205582"
+                },
+                {
+                    "name": "mkalkbrenner",
+                    "homepage": "https://www.drupal.org/user/124705"
+                },
+                {
+                    "name": "nick_vh",
+                    "homepage": "https://www.drupal.org/user/122682"
+                },
+                {
+                    "name": "strykaizer",
+                    "homepage": "https://www.drupal.org/user/462700"
+                }
+            ],
+            "description": "The Facet module allows site builders to easily create and manage faceted search interfaces.",
+            "homepage": "https://www.drupal.org/project/facets",
+            "support": {
+                "source": "https://git.drupalcode.org/project/facets.git",
+                "issues": "https://www.drupal.org/project/issues/facets",
+                "irc": "irc://irc.freenode.org/drupal-search-api"
+            }
+        },
+        {
             "name": "drupal/gin",
             "version": "5.0.5",
             "source": {
@@ -1881,6 +2215,59 @@
                     "url": "https://paypal.me/saschaeggi"
                 }
             ]
+        },
+        {
+            "name": "drupal/media_gallery",
+            "version": "3.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_gallery.git",
+                "reference": "3.2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_gallery-3.2.2.zip",
+                "reference": "3.2.2",
+                "shasum": "e55b7065a41aba920a596466fcaf0ffadf2386ae"
+            },
+            "require": {
+                "drupal/core": "^10 || ^11",
+                "drupal/photoswipe": "^5.0"
+            },
+            "require-dev": {
+                "drupal/migrate_plus": "*",
+                "drupal/migrate_tools": "*",
+                "drupal/pathauto": "^1.11",
+                "drupal/swiper_formatter": "^2.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.2.2",
+                    "datestamp": "1760701780",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Andrei Ivnitskii",
+                    "homepage": "https://www.drupal.org/u/ivnish",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "A simple gallery of media.",
+            "homepage": "https://www.drupal.org/project/media_gallery",
+            "support": {
+                "source": "https://git.drupalcode.org/project/media_gallery",
+                "issues": "https://www.drupal.org/project/issues/media_gallery"
+            }
         },
         {
             "name": "drupal/menu_block",
@@ -2084,6 +2471,398 @@
                 "source": "https://cgit.drupalcode.org/pathauto",
                 "issues": "https://www.drupal.org/project/issues/pathauto",
                 "documentation": "https://www.drupal.org/docs/8/modules/pathauto"
+            }
+        },
+        {
+            "name": "drupal/photoswipe",
+            "version": "5.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/photoswipe.git",
+                "reference": "5.0.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/photoswipe-5.0.6.zip",
+                "reference": "5.0.6",
+                "shasum": "6f3ae21b678908aed903698e7f04cf7ab988dc6a"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10 || ^11"
+            },
+            "suggest": {
+                "npm-asset/photoswipe": "Required to make the 'photoswipe' module functional. Expected version: ^5",
+                "npm-asset/photoswipe-dynamic-caption-plugin": "Required to make the 'photoswipe_dynamic_caption' submodule functional. Expected version: ^1.2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "5.0.6",
+                    "datestamp": "1758701729",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "anybody",
+                    "homepage": "https://www.drupal.org/user/291091"
+                },
+                {
+                    "name": "dinazaur",
+                    "homepage": "https://www.drupal.org/user/3637512"
+                },
+                {
+                    "name": "grevil",
+                    "homepage": "https://www.drupal.org/user/3668491"
+                },
+                {
+                    "name": "julou",
+                    "homepage": "https://www.drupal.org/user/273952"
+                },
+                {
+                    "name": "sun",
+                    "homepage": "https://www.drupal.org/user/54136"
+                },
+                {
+                    "name": "thomas.frobieter",
+                    "homepage": "https://www.drupal.org/user/409335"
+                }
+            ],
+            "description": "Javascript-based photo gallery display for your Drupal website (very sleek with mobile browsers).",
+            "homepage": "https://www.drupal.org/project/photoswipe",
+            "keywords": [
+                "Drupal",
+                "Gallery",
+                "Lightbox",
+                "Mobile",
+                "Photoswipe"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/photoswipe",
+                "issues": "https://www.drupal.org/project/issues/photoswipe"
+            }
+        },
+        {
+            "name": "drupal/search_api",
+            "version": "1.39.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/search_api.git",
+                "reference": "8.x-1.39"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/search_api-8.x-1.39.zip",
+                "reference": "8.x-1.39",
+                "shasum": "faaf441950b7357203d3fa9ce92f3e59b55c0837"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11"
+            },
+            "conflict": {
+                "drupal/search_api_solr": "2.* || 3.0 || 3.1"
+            },
+            "require-dev": {
+                "drupal/config_readonly": "1.x-dev",
+                "drupal/language_fallback_fix": "1.x-dev",
+                "drupal/search_api_autocomplete": "1.x-dev",
+                "drupal/search_api_db": "*"
+            },
+            "suggest": {
+                "drupal/facets": "Adds the ability to create faceted searches.",
+                "drupal/search_api_autocomplete": "Allows adding autocomplete suggestions to search fields.",
+                "drupal/search_api_solr": "Adds support for using Apache Solr as a backend."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.39",
+                    "datestamp": "1758968162",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "branch-alias": {
+                    "dev-8.x-1.x": "1.x-dev"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Seidl",
+                    "homepage": "https://www.drupal.org/u/drunken-monkey"
+                },
+                {
+                    "name": "Nick Veenhof",
+                    "homepage": "https://www.drupal.org/u/nick_vh"
+                },
+                {
+                    "name": "See other contributors",
+                    "homepage": "https://www.drupal.org/node/790418/committers"
+                }
+            ],
+            "description": "Provides a generic framework for modules offering search capabilities.",
+            "homepage": "https://www.drupal.org/project/search_api",
+            "support": {
+                "source": "https://git.drupalcode.org/project/search_api",
+                "issues": "https://www.drupal.org/project/issues/search_api",
+                "irc": "irc://irc.freenode.org/drupal-search-api"
+            }
+        },
+        {
+            "name": "drupal/social_media_links",
+            "version": "2.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/social_media_links.git",
+                "reference": "8.x-2.10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/social_media_links-8.x-2.10.zip",
+                "reference": "8.x-2.10",
+                "shasum": "dd329d44f88112d2fe83f54331502738c5f2810b"
+            },
+            "require": {
+                "drupal/core": "^9.5 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.10",
+                    "datestamp": "1724736719",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Christian Beier",
+                    "homepage": "https://www.drupal.org/u/cbeier",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "neslee canil pinto",
+                    "homepage": "https://www.drupal.org/user/3580850"
+                }
+            ],
+            "description": "The module provides a block that display links (icons) to your profiles on various social networking sites.",
+            "homepage": "https://www.drupal.org/project/social_media_links",
+            "support": {
+                "source": "https://git.drupalcode.org/project/social_media_links",
+                "issues": "https://www.drupal.org/project/issues/social_media_links"
+            }
+        },
+        {
+            "name": "drupal/stable",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/stable.git",
+                "reference": "2.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/stable-2.1.0.zip",
+                "reference": "2.1.0",
+                "shasum": "fb2b010190e492e976e1db9692a8a46d5b7d15bb"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "drupal": {
+                    "version": "2.1.0",
+                    "datestamp": "1721202956",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bnjmnm",
+                    "homepage": "https://www.drupal.org/user/2369194"
+                },
+                {
+                    "name": "lauriii",
+                    "homepage": "https://www.drupal.org/user/1078742"
+                },
+                {
+                    "name": "rajeshreeputra",
+                    "homepage": "https://www.drupal.org/user/3418561"
+                },
+                {
+                    "name": "star-szr",
+                    "homepage": "https://www.drupal.org/user/1167326"
+                }
+            ],
+            "description": "A base theme using Drupal core markup and CSS.",
+            "homepage": "https://www.drupal.org/project/stable",
+            "support": {
+                "source": "https://git.drupalcode.org/project/stable"
+            }
+        },
+        {
+            "name": "drupal/svg_image",
+            "version": "3.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/svg_image.git",
+                "reference": "3.2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/svg_image-3.2.2.zip",
+                "reference": "3.2.2",
+                "shasum": "ce7226257ce332d82dedc21269bc73d12c29d6b2"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "enshrined/svg-sanitize": ">=0.22 <1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.2.2",
+                    "datestamp": "1756292430",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Yaroslav Lushnikov",
+                    "homepage": "https://www.drupal.org/u/imyaro",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/2887125/committers"
+                },
+                {
+                    "name": "imyaro",
+                    "homepage": "https://www.drupal.org/user/2870933"
+                },
+                {
+                    "name": "mably",
+                    "homepage": "https://www.drupal.org/user/3375160"
+                },
+                {
+                    "name": "thomas.frobieter",
+                    "homepage": "https://www.drupal.org/user/409335"
+                }
+            ],
+            "description": "Overrides the standard image formatter and widget to support SVG files.",
+            "homepage": "https://drupal.org/project/svg_image",
+            "support": {
+                "source": "https://git.drupalcode.org/project/svg_image",
+                "issues": "https://www.drupal.org/project/issues/svg_image"
+            }
+        },
+        {
+            "name": "drupal/svg_image_field",
+            "version": "2.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/svg_image_field.git",
+                "reference": "2.3.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/svg_image_field-2.3.4.zip",
+                "reference": "2.3.4",
+                "shasum": "c4452fb1b63b7bb15c807748fe30bd76e641e718"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10 || ^11",
+                "enshrined/svg-sanitize": "~0.15",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "drupal/stage_file_proxy": "^2.0 || ^3.0",
+                "drush/drush": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.3.4",
+                    "datestamp": "1743529551",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/2863622/committers"
+                },
+                {
+                    "name": "dunot",
+                    "homepage": "https://www.drupal.org/user/3562626"
+                },
+                {
+                    "name": "jwilson3",
+                    "homepage": "https://www.drupal.org/user/220177"
+                },
+                {
+                    "name": "mandclu",
+                    "homepage": "https://www.drupal.org/user/52136"
+                },
+                {
+                    "name": "romychvk",
+                    "homepage": "https://www.drupal.org/user/361734"
+                },
+                {
+                    "name": "shmel210",
+                    "homepage": "https://www.drupal.org/user/2600028"
+                }
+            ],
+            "description": "Provides SVG Image field.",
+            "homepage": "https://www.drupal.org/project/svg_image_field",
+            "support": {
+                "source": "https://git.drupalcode.org/project/svg_image_field",
+                "issues": "https://www.drupal.org/project/issues/svg_image_field"
             }
         },
         {
@@ -2432,6 +3211,51 @@
                 }
             ],
             "time": "2025-03-06T22:45:56+00:00"
+        },
+        {
+            "name": "enshrined/svg-sanitize",
+            "version": "0.22.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/darylldoyle/svg-sanitizer.git",
+                "reference": "0afa95ea74be155a7bcd6c6fb60c276c39984500"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/darylldoyle/svg-sanitizer/zipball/0afa95ea74be155a7bcd6c6fb60c276c39984500",
+                "reference": "0afa95ea74be155a7bcd6c6fb60c276c39984500",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5 || ^8.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "enshrined\\svgSanitize\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Daryll Doyle",
+                    "email": "daryll@enshrined.co.uk"
+                }
+            ],
+            "description": "An SVG sanitizer for PHP",
+            "support": {
+                "issues": "https://github.com/darylldoyle/svg-sanitizer/issues",
+                "source": "https://github.com/darylldoyle/svg-sanitizer/tree/0.22.0"
+            },
+            "time": "2025-08-12T10:13:48+00:00"
         },
         {
             "name": "grasmash/expander",
@@ -3180,6 +4004,29 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.6.2"
             },
             "time": "2025-10-21T19:32:17+00:00"
+        },
+        {
+            "name": "omscllc/clean_blog_theme",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/omscllc/clean_blog_theme.git",
+                "reference": "9b684441cec54560ed727ce78b455ddbef2913fe"
+            },
+            "require": {
+                "drupal/classy": "^2.0",
+                "drupal/core": "^9 || ^10 || ^11"
+            },
+            "type": "drupal-theme",
+            "authors": [
+                {
+                    "name": "David L. Weiner",
+                    "email": "David.L.Weiner30030@gmail.com",
+                    "role": "Developer, Maintainer"
+                }
+            ],
+            "description": "A clean blog theme forked from drupal/d8_blog_theme",
+            "time": "2025-08-20T03:41:25+00:00"
         },
         {
             "name": "pear/archive_tar",
@@ -7054,10 +7901,10 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }

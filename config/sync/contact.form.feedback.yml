@@ -1,4 +1,4 @@
-uuid: 00be8f0b-c6da-452a-8ad9-14a335515415
+uuid: 53ef04a5-f5b9-4227-b36f-3012acc557f4
 langcode: en
 status: true
 dependencies: {  }
@@ -7,7 +7,7 @@ _core:
 id: feedback
 label: 'Website feedback'
 recipients:
-  - david.weiner@montreal2027.ca
+  - admin@example.com
 reply: ''
 weight: 0
 message: 'Your message has been sent.'

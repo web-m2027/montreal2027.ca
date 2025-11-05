@@ -60,3 +60,5 @@ phpcs.xml
 /web/assets/css
 /web/assets/js
 /web/assets/php
+/.editorconfig
+/.gitattributes

@@ -1,0 +1,24 @@
+name: montreal2027
+type: theme
+base theme: clean_blog_theme
+description: Montreal 2027 is a sub theme of Clean Blog Theme to allow for the overriding of some of the design choices
+package: Custom
+core_version_requirement: ^10 || ^11
+libraries:
+  - montreal2027/global
+regions:
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  featured: 'Featured'
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  sidebar_first: 'Left Sidebar'
+  secondary_menu: 'Secondary menu'
+  sidebar_second: 'Right Sidebar'
+  footer_first: 'First Footer'
+  footer_second: 'Second Footer'
+  footer_third: 'Third Footer'
+  footer_fourth: 'Fourth Footer'
+  footer_fifth: 'Site Footer'
