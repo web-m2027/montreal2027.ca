@@ -1,0 +1,20 @@
+uuid: 46194b42-3871-42e3-957c-e94c419ceb99
+langcode: en
+status: false
+dependencies:
+  theme:
+    - montreal2027
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: montreal2027_primary_admin_actions
+theme: montreal2027
+region: header
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

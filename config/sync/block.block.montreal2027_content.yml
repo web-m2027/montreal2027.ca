@@ -1,0 +1,22 @@
+uuid: 15d2075a-57e6-4d09-9ca9-bd79852763f4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - montreal2027
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: montreal2027_content
+theme: montreal2027
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

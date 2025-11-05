@@ -12,23 +12,36 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "git",
+            "url" : "https://github.com/omscllc/clean_blog_theme.git"
         }
     ],
     "require": {
         "composer/installers": "^2.3",
         "cweagans/composer-patches": "^1.7",
+        "drupal/admin_theme": "^1.1",
         "drupal/config_ignore": "^3.3",
         "drupal/core-composer-scaffold": "^11.2",
         "drupal/core-project-message": "^11.2",
         "drupal/core-recipe-unpack": "^11.2",
         "drupal/core-recommended": "^11.2",
         "drupal/easy_breadcrumb": "^2.0",
+        "drupal/entity_embed": "^1.7",
+        "drupal/facets": "^3.0",
         "drupal/gin": "^5.0",
+        "drupal/media_gallery": "^3.2",
         "drupal/menu_block": "^1.14",
         "drupal/metatag": "^2.2",
         "drupal/pathauto": "^1.14",
+        "drupal/search_api": "^1.39",
+        "drupal/social_media_links": "^2.10",
+        "drupal/svg_image": "^3.2",
+        "drupal/svg_image_field": "^2.3",
         "drupal/twig_tweak": "^3.4",
         "drush/drush": "^13.6",
+        "omscllc/clean_blog_theme": "^2.0",
         "wikimedia/composer-merge-plugin": "^2.1"
     },
     "conflict": {

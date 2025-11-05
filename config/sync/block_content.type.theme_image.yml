@@ -1,0 +1,8 @@
+uuid: 8e71c67c-7b2d-4de6-9de4-7b8145c6e0fb
+langcode: en
+status: true
+dependencies: {  }
+id: theme_image
+label: 'Theme Image'
+revision: false
+description: 'Add an image to any region'

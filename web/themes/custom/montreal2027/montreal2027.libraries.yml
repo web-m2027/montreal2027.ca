@@ -1,0 +1,7 @@
+# Main theme library
+global:
+  css:
+    base:
+      css/montreal2027.css: {}
+  dependencies:
+    - clean_blog_theme/global-css
