@@ -1,0 +1,23 @@
+uuid: ed7ac3ab-99b4-4b83-9fa7-c0af738006d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.theme_image
+    - field.field.block_content.theme_image.field_block_image
+id: block_content.theme_image.default
+targetEntityType: block_content
+bundle: theme_image
+mode: default
+content:
+  field_block_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

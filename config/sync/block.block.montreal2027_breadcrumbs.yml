@@ -1,0 +1,22 @@
+uuid: 3cd7dc3d-51a4-4a5f-88db-cbbf26936cf5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - montreal2027
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: montreal2027_breadcrumbs
+theme: montreal2027
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }
