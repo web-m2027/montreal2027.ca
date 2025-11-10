@@ -1,0 +1,13 @@
+{
+  "name": "montreal2027-theme",
+  "version": "1.0.0",
+  "description": "Montreal2027 subtheme build scripts",
+  "private": true,
+  "devDependencies": {
+    "sass": "^1.73.1"
+  },
+  "scripts": {
+    "build:css": "sass --style=compressed src/scss/montreal2027.scss:css/montreal2027.min.css --embed-source-map",
+    "watch:css": "sass --watch src/scss/montreal2027.scss:css/montreal2027.min.css --style=compressed --embed-source-map"
+  }
+}
