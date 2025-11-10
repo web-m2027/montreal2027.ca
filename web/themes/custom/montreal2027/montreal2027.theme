@@ -1,0 +1,12 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function montreal2027_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id === 'search_block_form') {
+    $form['keys']['#attributes']['placeholder'] = t('I am looking for'); // Add placeholder
+  }
+}
