@@ -2,6 +2,6 @@
 global:
   css:
     base:
-      css/montreal2027.css: {}
+      css/montreal2027.min.css: {}
   dependencies:
     - clean_blog_theme/global-css
