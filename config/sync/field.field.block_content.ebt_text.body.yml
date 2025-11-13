@@ -1,0 +1,26 @@
+uuid: 2ed52715-bf28-43e7-90d9-4918e4d2ddbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_text
+    - field.storage.block_content.body
+  module:
+    - text
+_core:
+  default_config_hash: htRzt66f_OSqHawgprrWKiHiaLoBZUKzc0aMsoIVRlI
+id: block_content.ebt_text.body
+field_name: body
+entity_type: block_content
+bundle: ebt_text
+label: Body
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

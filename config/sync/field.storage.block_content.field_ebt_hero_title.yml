@@ -1,0 +1,21 @@
+uuid: 0f15147f-8e18-42bf-9e49-223431d8ad38
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+_core:
+  default_config_hash: tz0LPZeke3wFWFFnRzkakjNgB9UGwLj1eCtzzQv6XSA
+id: block_content.field_ebt_hero_title
+field_name: field_ebt_hero_title
+entity_type: block_content
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

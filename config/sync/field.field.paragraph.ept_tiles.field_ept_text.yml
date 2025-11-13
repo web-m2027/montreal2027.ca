@@ -1,0 +1,24 @@
+uuid: 4148d98f-1dab-4b87-a269-4284fc0d7483
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_text
+    - paragraphs.paragraphs_type.ept_tiles
+  module:
+    - text
+_core:
+  default_config_hash: uGM6CpdmK0GJ5mrS4WHYG6QnXJLHx0fiEbs3D7e_iqE
+id: paragraph.ept_tiles.field_ept_text
+field_name: field_ept_text
+entity_type: paragraph
+bundle: ept_tiles
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,33 @@
+uuid: 01df753e-a054-4f96-823a-08181e510873
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_tiles
+    - paragraphs.paragraphs_type.ept_tiles
+    - paragraphs.paragraphs_type.ept_tiles_item
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: Lii17sKUYm4ZAvrf-OKM8IF0auj5DIQWCMBUkdzT4BM
+id: paragraph.ept_tiles.field_ept_tiles
+field_name: field_ept_tiles
+entity_type: paragraph
+bundle: ept_tiles
+label: Tiles
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      ept_tiles_item: ept_tiles_item
+    negate: 0
+    target_bundles_drag_drop:
+      ept_tiles_item:
+        weight: 75
+        enabled: true
+field_type: entity_reference_revisions

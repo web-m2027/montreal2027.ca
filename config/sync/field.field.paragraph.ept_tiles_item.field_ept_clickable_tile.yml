@@ -1,0 +1,25 @@
+uuid: 6f506bda-b52a-434c-8367-b757505f62ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_clickable_tile
+    - paragraphs.paragraphs_type.ept_tiles_item
+_core:
+  default_config_hash: BVIyqIinPodc30VYfLCsYHnMbl1U6L7LpKffkLNM6RY
+id: paragraph.ept_tiles_item.field_ept_clickable_tile
+field_name: field_ept_clickable_tile
+entity_type: paragraph
+bundle: ept_tiles_item
+label: 'Clickable Tile'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

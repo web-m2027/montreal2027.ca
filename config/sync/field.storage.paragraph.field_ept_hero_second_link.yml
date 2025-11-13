@@ -1,0 +1,21 @@
+uuid: 1c23eb54-8d08-42ec-9795-456848608a8f
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+_core:
+  default_config_hash: _LEdcxkwVZPMeBjAfFM_DTcqJxHu-SXmfvkzYA16OTE
+id: paragraph.field_ept_hero_second_link
+field_name: field_ept_hero_second_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

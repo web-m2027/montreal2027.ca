@@ -1,0 +1,23 @@
+uuid: 195aafe5-87b4-4695-821a-9831d38679bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_tiles
+    - field.storage.block_content.field_ebt_settings
+  module:
+    - ebt_core
+_core:
+  default_config_hash: J3ICag16O5nBkU9zwYLt76LvxEF78Qt-pDCJWA5n1Q4
+id: block_content.ebt_tiles.field_ebt_settings
+field_name: field_ebt_settings
+entity_type: block_content
+bundle: ebt_tiles
+label: 'Block settings'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: ebt_settings

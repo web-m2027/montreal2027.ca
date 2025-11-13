@@ -1,0 +1,87 @@
+#page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  & header[role="banner"] {
+    & .container {
+      max-width: unset;
+      padding-left: 0;
+    }
+  }
+
+  & #header {
+    height: var(--site-header-height);
+    background: linear-gradient(90deg, rgba(237, 28, 36, 0.19) 0%, rgba(237, 28, 36, 0.91) 50%, rgba(153, 0, 51, 1) 100%),
+    white;
+    width: 100%;
+    padding-top: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+
+    & .container {
+      & .region-header {
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto 1fr auto;
+      }
+    }
+  }
+
+  & #main {
+    min-height: 0; /* neutralize clean_blog_theme's min-height: 750px */
+    box-sizing: border-box;
+    transition: padding-bottom 220ms ease, padding-top 220ms ease;
+    position: sticky;
+    top: var(--site-main-content-top);
+    height: var(--site-main-content-height);
+    padding: 0;
+    overflow: auto;
+  }
+
+  /* Footer: default is static (in-flow) for mobile/smaller screens */
+  footer.site-footer {
+    height: var(--site-footer-height);
+    box-sizing: border-box;
+    position: static;
+    transition: transform 220ms ease, box-shadow 220ms ease;
+    width: 100%;
+  }
+
+  /* Make footer fixed on larger viewports and give a subtle slide-up/box-shadow */
+  /* Fallback: explicit media query for broad browser support */
+  @media (min-width: 64rem) {
+    footer.site-footer {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1000;
+      transform: translateY(0);
+      box-shadow: 0 -8px 16px rgba(0,0,0,0.06);
+      background: inherit;
+    }
+  }
+
+  /* CSS-variable based media query (kept so the breakpoint can be updated at runtime via CSS) */
+  @media (min-width: calc(var(--footer-fixed-breakpoint))) {
+    footer.site-footer {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1000;
+      transform: translateY(0);
+      box-shadow: 0 -8px 16px rgba(0,0,0,0.06);
+      background: inherit;
+    }
+  }
+
+  /* Utility: leftover class remains but footer is fixed by default now */
+  .site-footer--fixed {
+    /* kept for compatibility; footer becomes fixed at desktop widths via media query */
+  }
+}

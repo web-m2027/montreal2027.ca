@@ -1,0 +1,90 @@
+uuid: bef81d0c-1314-4b22-b5a7-ee941dd32d52
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_hero
+    - field.field.block_content.ebt_hero.body
+    - field.field.block_content.ebt_hero.field_ebt_hero_column_image
+    - field.field.block_content.ebt_hero.field_ebt_hero_link
+    - field.field.block_content.ebt_hero.field_ebt_hero_second_link
+    - field.field.block_content.ebt_hero.field_ebt_hero_title
+    - field.field.block_content.ebt_hero.field_ebt_hero_title_prefix
+    - field.field.block_content.ebt_hero.field_ebt_settings
+  module:
+    - ebt_core
+    - link
+    - media
+    - text
+_core:
+  default_config_hash: XtJum4t5ZIxuZCmM5WqHm32Q5cPXTBC1K_4FK0DKBak
+id: block_content.ebt_hero.default
+targetEntityType: block_content
+bundle: ebt_hero
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ebt_hero_column_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ebt_hero_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 800
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ebt_hero_second_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 800
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_ebt_hero_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ebt_hero_title_prefix:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_ebt_settings:
+    type: ebt_settings_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  search_api_excerpt: true

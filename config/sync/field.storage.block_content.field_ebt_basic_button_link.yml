@@ -1,0 +1,21 @@
+uuid: b27d3fcb-bc7e-4e01-a59c-e59a8d2dbc62
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+_core:
+  default_config_hash: BzBSGwNX6bKi7xiNAKiETrdJPbGYMNk27dC6VzdE2Z4
+id: block_content.field_ebt_basic_button_link
+field_name: field_ebt_basic_button_link
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

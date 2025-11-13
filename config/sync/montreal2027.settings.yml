@@ -1,0 +1,16 @@
+features:
+  node_user_picture: 0
+  comment_user_picture: 0
+  comment_user_verification: 0
+  favicon: 0
+logo:
+  use_default: 0
+  path: 'public://m2027-logo.svg'
+favicon:
+  use_default: 1
+slideshow_display: 0
+slide_count: ''
+slide_title_1: ''
+slide_image_1: {  }
+slide_url_1: ''
+include_fontawesome: 0

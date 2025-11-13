@@ -1,0 +1,24 @@
+uuid: 6e36043e-d25d-4efe-85f2-e4a83a356873
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_hero
+    - field.storage.block_content.field_ebt_hero_title_prefix
+  module:
+    - text
+_core:
+  default_config_hash: 135nCPN0Zyg7GtNdwrEY1joFOZdHSUqBoP1cfFmTlws
+id: block_content.ebt_hero.field_ebt_hero_title_prefix
+field_name: field_ebt_hero_title_prefix
+entity_type: block_content
+bundle: ebt_hero
+label: 'Title Prefix'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

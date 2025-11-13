@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Component\Utility\Html;
 
 /**
  * Implements hook_form_alter().
@@ -8,5 +9,30 @@ use Drupal\Core\Form\FormStateInterface;
 function montreal2027_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if ($form_id === 'search_block_form') {
     $form['keys']['#attributes']['placeholder'] = t('I am looking for'); // Add placeholder
+  }
+}
+
+function montreal2027_preprocess_block__system_branding_block(&$variables) {
+  // Wrap each word in the site slogan with a <span> so it can be styled separately.
+  if (!empty($variables['site_slogan'])) {
+    // This is user provided input, remove any existing markup and work with the plain text.
+    $slogan_text = strip_tags($variables['site_slogan']['#markup']);
+
+    // Explode by whitespace.
+    $parts = explode(' ', $slogan_text);
+
+    $wrapped = '';
+    foreach ($parts as $part) {
+      if (strlen($wrapped) > 0) {
+        // Add a space before all but the first word.
+        $wrapped .= ' ';
+      }
+
+      // Escape the word and wrap it because it's user provided input.
+      $wrapped .= '<span class="slogan-word">' . Html::escape($part) . '</span>';
+    }
+
+    // Set as render array to ensure it's output as safe markup.
+    $variables['site_slogan'] = ['#markup' => $wrapped];
   }
 }

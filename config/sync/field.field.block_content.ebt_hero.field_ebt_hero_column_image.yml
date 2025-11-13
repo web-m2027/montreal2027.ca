@@ -1,0 +1,31 @@
+uuid: 5085e81a-d579-4fd9-afc0-923d43c5fd6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_hero
+    - field.storage.block_content.field_ebt_hero_column_image
+    - media.type.image
+_core:
+  default_config_hash: VbR985Mwa7blDm4IzjllHaKyIKieWmVaPhFiNTxALUg
+id: block_content.ebt_hero.field_ebt_hero_column_image
+field_name: field_ebt_hero_column_image
+entity_type: block_content
+bundle: ebt_hero
+label: 'Column Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

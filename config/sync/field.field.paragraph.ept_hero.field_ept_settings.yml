@@ -1,0 +1,23 @@
+uuid: 743f4c51-a9e2-40e6-9452-da041a558602
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_settings
+    - paragraphs.paragraphs_type.ept_hero
+  module:
+    - ept_core
+_core:
+  default_config_hash: jlfCaG2VGA8ar8Pw_-7SqeS8qRs_HrOK0KBRLdRLQGw
+id: paragraph.ept_hero.field_ept_settings
+field_name: field_ept_settings
+entity_type: paragraph
+bundle: ept_hero
+label: Settings
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: ept_settings

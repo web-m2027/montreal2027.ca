@@ -1,0 +1,54 @@
+uuid: b23b6b46-4882-4224-b925-17a908fec8a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ept_basic_button.field_ept_basic_button_link
+    - field.field.paragraph.ept_basic_button.field_ept_settings
+    - field.field.paragraph.ept_basic_button.field_ept_text
+    - field.field.paragraph.ept_basic_button.field_ept_title
+    - paragraphs.paragraphs_type.ept_basic_button
+  module:
+    - ept_basic_button
+    - link
+    - text
+_core:
+  default_config_hash: BDM_dmNUeNyOV7_jEouKixGZvfGdfIYFnegSbt0TFUk
+id: paragraph.ept_basic_button.default
+targetEntityType: paragraph
+bundle: ept_basic_button
+mode: default
+content:
+  field_ept_basic_button_link:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_ept_settings:
+    type: ept_settings_basic_button
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ept_text:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_ept_title:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

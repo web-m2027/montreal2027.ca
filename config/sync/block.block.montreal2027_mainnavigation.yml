@@ -1,0 +1,34 @@
+uuid: db585493-b938-424e-a6b8-2fe7f5b01392
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - menu_block
+  theme:
+    - montreal2027
+id: montreal2027_mainnavigation
+theme: montreal2027
+region: primary_menu
+weight: -6
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  display_empty: false
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'main:'
+  render_parent: false
+  suggestion: main
+  hide_on_nonactive: false
+visibility: {  }

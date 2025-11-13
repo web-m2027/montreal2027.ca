@@ -1,0 +1,24 @@
+uuid: f94caa1d-6819-4371-b569-2b254fac9155
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_tiles_text
+    - paragraphs.paragraphs_type.ept_tiles_item
+  module:
+    - text
+_core:
+  default_config_hash: zLtl1oCO1H3AjX05GApCKNVIuZj-sWnEjN2TFBhgTpk
+id: paragraph.ept_tiles_item.field_ept_tiles_text
+field_name: field_ept_tiles_text
+entity_type: paragraph
+bundle: ept_tiles_item
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long
