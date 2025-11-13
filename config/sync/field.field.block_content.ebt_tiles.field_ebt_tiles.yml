@@ -1,0 +1,33 @@
+uuid: 05a16629-2df3-49bc-9014-11a6ded35643
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_tiles
+    - field.storage.block_content.field_ebt_tiles
+    - paragraphs.paragraphs_type.ebt_tiles_item
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: L9cDmlbMT83s3nbfD0cDfsf0BnRv1fpAyA4KTplqxJs
+id: block_content.ebt_tiles.field_ebt_tiles
+field_name: field_ebt_tiles
+entity_type: block_content
+bundle: ebt_tiles
+label: Tiles
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      ebt_tiles_item: ebt_tiles_item
+    negate: 0
+    target_bundles_drag_drop:
+      ebt_tiles_item:
+        weight: 45
+        enabled: true
+field_type: entity_reference_revisions

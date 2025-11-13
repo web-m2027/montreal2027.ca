@@ -1,0 +1,12 @@
+uuid: 84dc1960-5e4f-4843-a634-0246dd8eae46
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: OXCYSO_8vGgFySd4voU9Be7Av6Oqe56G4XnMO_fX4EE
+id: ebt_tiles_item
+label: 'EBT Tiles Item'
+icon_uuid: null
+icon_default: null
+description: 'Section for EBT Tiles'
+behavior_plugins: {  }

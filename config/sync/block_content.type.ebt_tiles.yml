@@ -1,0 +1,10 @@
+uuid: 97f43895-8465-4bc9-9d91-58e409e13417
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7NM6NtKtRJqDl2LKF2ttqtshhXn4nV3DIIr56XEhBGw
+id: ebt_tiles
+label: 'EBT Tiles'
+revision: 0
+description: 'Extra Block Type (EBT): Tiles'

@@ -1,0 +1,53 @@
+uuid: 2d60821e-8f7e-401f-b250-362ef1ab2384
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ept_tiles.field_ept_settings
+    - field.field.paragraph.ept_tiles.field_ept_text
+    - field.field.paragraph.ept_tiles.field_ept_tiles
+    - field.field.paragraph.ept_tiles.field_ept_title
+    - paragraphs.paragraphs_type.ept_tiles
+  module:
+    - entity_reference_revisions
+    - ept_core
+    - text
+_core:
+  default_config_hash: VFAqZYQk4Jf5mJN7H6sw-zAemRX1LtPDXAfRw5U6hjM
+id: paragraph.ept_tiles.default
+targetEntityType: paragraph
+bundle: ept_tiles
+mode: default
+content:
+  field_ept_settings:
+    type: ept_settings_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ept_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ept_tiles:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ept_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

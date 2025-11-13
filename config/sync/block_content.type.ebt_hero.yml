@@ -1,0 +1,10 @@
+uuid: eb4f2e46-1f97-41ab-bb9c-99d2c30de0b8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: UndgTjioHDq7754rxxFxg1qIXgj6xzvZ2292BZOTduY
+id: ebt_hero
+label: 'EBT Hero'
+revision: 1
+description: 'Extra Block Type (EBT): Hero'

@@ -1,0 +1,31 @@
+uuid: 78b4ffae-bb7a-4a37-a961-a993d03e9399
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_hero_column_image
+    - media.type.image
+    - paragraphs.paragraphs_type.ept_hero
+_core:
+  default_config_hash: _3eydYXoFUtHpVqERbj-NUTxfjmRpY41GlotzDaiMHw
+id: paragraph.ept_hero.field_ept_hero_column_image
+field_name: field_ept_hero_column_image
+entity_type: paragraph
+bundle: ept_hero
+label: 'Column Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

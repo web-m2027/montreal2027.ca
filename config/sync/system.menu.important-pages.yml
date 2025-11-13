@@ -1,0 +1,8 @@
+uuid: ebc4f88c-4be6-469d-86c6-24e6f1fb0c38
+langcode: en
+status: true
+dependencies: {  }
+id: important-pages
+label: 'Important Pages'
+description: ''
+locked: false

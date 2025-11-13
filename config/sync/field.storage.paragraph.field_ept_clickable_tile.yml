@@ -1,0 +1,20 @@
+uuid: f70f8702-b112-4a59-8f63-b61ca9ffdf31
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: wKnQMenIUygu6qoP8n4_EzChFXMkjnwf78bFFBWCN0w
+id: paragraph.field_ept_clickable_tile
+field_name: field_ept_clickable_tile
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

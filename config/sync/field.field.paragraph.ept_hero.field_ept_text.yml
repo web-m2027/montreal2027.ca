@@ -1,0 +1,24 @@
+uuid: 03466c7f-f7b4-4722-a078-479f3d90c019
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_text
+    - paragraphs.paragraphs_type.ept_hero
+  module:
+    - text
+_core:
+  default_config_hash: d6uOb6beHqZsXuoLFCkZ9d-OTiK3Lfl7WLMId5Ynb1o
+id: paragraph.ept_hero.field_ept_text
+field_name: field_ept_text
+entity_type: paragraph
+bundle: ept_hero
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

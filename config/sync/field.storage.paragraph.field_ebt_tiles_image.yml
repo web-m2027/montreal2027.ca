@@ -1,0 +1,22 @@
+uuid: 41b317f9-c4b0-4006-a8ac-1b4ae6711b73
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+_core:
+  default_config_hash: 3aeaxW3pHrK5yFagP66-FT7HXAGYacr2YhOcg-h70n0
+id: paragraph.field_ebt_tiles_image
+field_name: field_ebt_tiles_image
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

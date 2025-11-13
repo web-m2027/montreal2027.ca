@@ -1,0 +1,56 @@
+uuid: 4283e382-9422-4107-8b48-6cc376e162bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ept_basic_button.field_ept_basic_button_link
+    - field.field.paragraph.ept_basic_button.field_ept_settings
+    - field.field.paragraph.ept_basic_button.field_ept_text
+    - field.field.paragraph.ept_basic_button.field_ept_title
+    - paragraphs.paragraphs_type.ept_basic_button
+  module:
+    - ept_core
+    - link
+    - text
+_core:
+  default_config_hash: 4gJX4ZzysdJ_kzlqlJAB2uqXRXQJi3VjikD1N3iepgA
+id: paragraph.ept_basic_button.default
+targetEntityType: paragraph
+bundle: ept_basic_button
+mode: default
+content:
+  field_ept_basic_button_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 800
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ept_settings:
+    type: ept_settings_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ept_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ept_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

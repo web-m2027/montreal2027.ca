@@ -1,0 +1,34 @@
+uuid: 7c248134-c441-4e31-ab71-5d805fa9cc59
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.external
+  module:
+    - menu_block
+  theme:
+    - montreal2027
+id: montreal2027_externallinks
+theme: montreal2027
+region: footer_first
+weight: -4
+provider: null
+plugin: 'menu_block:external'
+settings:
+  id: 'menu_block:external'
+  label: 'External Links'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  display_empty: false
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'external:'
+  render_parent: false
+  suggestion: external
+  hide_on_nonactive: false
+visibility: {  }

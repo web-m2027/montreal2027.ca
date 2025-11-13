@@ -1,0 +1,12 @@
+uuid: d9496fac-0678-455d-8257-b8d5e97af95d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Kps1UJbRPEF2GuSjDQDJFWWG5EZ6qTHII92BJxLlwTk
+id: ept_hero
+label: 'EPT Hero'
+icon_uuid: null
+icon_default: null
+description: 'Extra Paragraph Type (EPT): EPT Hero'
+behavior_plugins: {  }

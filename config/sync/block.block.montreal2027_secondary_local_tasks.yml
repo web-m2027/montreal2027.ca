@@ -9,7 +9,7 @@ _core:
 id: montreal2027_secondary_local_tasks
 theme: montreal2027
 region: header
-weight: 1
+weight: -2
 provider: null
 plugin: local_tasks_block
 settings:

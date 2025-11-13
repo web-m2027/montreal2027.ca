@@ -1,0 +1,93 @@
+uuid: e6a0f63f-3ccd-4b1d-85c4-3120b1b4422b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ept_text.field_ept_settings
+    - field.field.paragraph.ept_text.field_ept_text
+    - field.field.paragraph.ept_text.field_ept_title
+    - paragraphs.paragraphs_type.ept_text
+  module:
+    - ept_core
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_content
+        - group_settings
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 120
+    group_content:
+      children:
+        - field_ept_title
+        - field_ept_text
+      label: Content
+      region: content
+      parent_name: group_tabs
+      weight: 4
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: true
+    group_settings:
+      children:
+        - field_ept_settings
+      label: Settings
+      region: hidden
+      parent_name: group_tabs
+      weight: 5
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+_core:
+  default_config_hash: shyYm2rY3OjdKeiRCtoWJpvauXuaTQJb8xb0cyNYRM8
+id: paragraph.ept_text.default
+targetEntityType: paragraph
+bundle: ept_text
+mode: default
+content:
+  field_ept_settings:
+    type: ept_settings_default
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ept_text:
+    type: text_textarea
+    weight: 23
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_ept_title:
+    type: text_textarea
+    weight: 22
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

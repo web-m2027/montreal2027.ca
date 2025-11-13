@@ -1,0 +1,39 @@
+uuid: 682dc835-b7f8-4ee3-99d5-c13c50f9b2b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_basic_button
+    - field.field.block_content.ebt_basic_button.field_ebt_basic_button_link
+    - field.field.block_content.ebt_basic_button.field_ebt_settings
+  module:
+    - ebt_core
+    - link
+_core:
+  default_config_hash: D0bWnt-1a4nvpSyJNmrOwKtHeZ4joh72qib-yadGXdo
+id: block_content.ebt_basic_button.default
+targetEntityType: block_content
+bundle: ebt_basic_button
+mode: default
+content:
+  field_ebt_basic_button_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 800
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_ebt_settings:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: ebt_settings_default
+    region: content
+hidden:
+  search_api_excerpt: true

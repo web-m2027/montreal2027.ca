@@ -1,0 +1,142 @@
+uuid: b754fe05-fd24-4efd-8316-e02762d0860c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_hero
+    - field.field.block_content.ebt_hero.body
+    - field.field.block_content.ebt_hero.field_ebt_hero_column_image
+    - field.field.block_content.ebt_hero.field_ebt_hero_link
+    - field.field.block_content.ebt_hero.field_ebt_hero_second_link
+    - field.field.block_content.ebt_hero.field_ebt_hero_title
+    - field.field.block_content.ebt_hero.field_ebt_hero_title_prefix
+    - field.field.block_content.ebt_hero.field_ebt_settings
+  module:
+    - ebt_hero
+    - field_group
+    - link
+    - media_library
+    - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_content
+        - group_settings
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 120
+    group_content:
+      children:
+        - field_ebt_hero_title
+        - field_ebt_hero_title_prefix
+        - body
+        - field_ebt_hero_column_image
+        - field_ebt_hero_link
+        - field_ebt_hero_second_link
+      label: Content
+      region: content
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: true
+    group_settings:
+      children:
+        - field_ebt_settings
+      label: Settings
+      region: content
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+_core:
+  default_config_hash: GQBJ-wowpRaxqn3ERit4j93oiUyIBZaIJDtySINgXhM
+id: block_content.ebt_hero.default
+targetEntityType: block_content
+bundle: ebt_hero
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 8
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_ebt_hero_column_image:
+    type: media_library_widget
+    weight: 9
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_ebt_hero_link:
+    type: link_default
+    weight: 10
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_ebt_hero_second_link:
+    type: link_default
+    weight: 11
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_ebt_hero_title:
+    type: text_textarea
+    weight: 6
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+  field_ebt_hero_title_prefix:
+    type: text_textarea
+    weight: 7
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_ebt_settings:
+    type: ebt_settings_hero
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,26 @@
+uuid: d5f26035-d4d7-4bf7-a675-0c6d3f76ca61
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_tiles
+    - field.storage.block_content.body
+  module:
+    - text
+_core:
+  default_config_hash: hru15RrwqNoJ9o_uoGV1KT2wAkHwJsGaTj7KF0sIZxU
+id: block_content.ebt_tiles.body
+field_name: body
+entity_type: block_content
+bundle: ebt_tiles
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary
