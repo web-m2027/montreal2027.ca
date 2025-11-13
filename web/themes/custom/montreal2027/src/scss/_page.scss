@@ -85,3 +85,7 @@
     /* kept for compatibility; footer becomes fixed at desktop widths via media query */
   }
 }
+
+.ebt-block-tiles .ebt-tiles-wrapper .inner {
+  border: 0;
+}

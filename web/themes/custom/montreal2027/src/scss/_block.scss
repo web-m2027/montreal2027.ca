@@ -112,6 +112,16 @@
       }
     }
   }
+
+  &-location {
+    & h3 {
+      color: var(--color-red);
+    }
+
+    & p {
+      color: var(--color-white);
+    }
+  }
 }
 
 
