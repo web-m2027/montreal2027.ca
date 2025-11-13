@@ -2,21 +2,16 @@ _core:
   default_config_hash: 4GIX5Esnc_umpXUBj4IIocRX7Mt5fPhm4AgXfE3E56E
 module:
   admin_theme: 0
-  announcements_feed: 0
   automated_cron: 0
-  big_pipe: 0
   block: 0
   block_content: 0
   breakpoint: 0
   ckeditor5: 0
   comment: 0
-  components: 0
   config: 0
   config_ignore: 0
-  contact: 0
   content_moderation: 0
   contextual: 0
-  crop: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
@@ -42,13 +37,11 @@ module:
   field_ui: 0
   file: 0
   filter: 0
-  focal_point: 0
   help: 0
   history: 0
   image: 0
   inline_form_errors: 0
   layout_builder: 0
-  layout_builder_restrictions: 0
   layout_discovery: 0
   link: 0
   media: 0
@@ -67,12 +60,10 @@ module:
   path: 0
   path_alias: 0
   photoswipe: 0
-  rest: 0
   search: 0
   search_api: 0
   search_api_db: 0
   serialization: 0
-  shortcut: 0
   social_media_links: 0
   svg_image: 0
   svg_image_field: 0
