@@ -1,0 +1,24 @@
+uuid: 1b40ac0d-4ad7-4808-8d7a-5758e18ab263
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_hero
+    - field.storage.block_content.field_ebt_hero_title
+  module:
+    - text
+_core:
+  default_config_hash: 86hFjrfGlcIjrIIrmgUrVPJ3_QyoV2KsiqXTYhCAeR8
+id: block_content.ebt_hero.field_ebt_hero_title
+field_name: field_ebt_hero_title
+entity_type: block_content
+bundle: ebt_hero
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

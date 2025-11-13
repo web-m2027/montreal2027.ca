@@ -1,0 +1,25 @@
+uuid: 25966dc6-2dfc-4241-bea6-cc81cf300d79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ebt_clickable_tile
+    - paragraphs.paragraphs_type.ebt_tiles_item
+_core:
+  default_config_hash: I8Bhnp9Mihk3DDEulISHIOOcN-avs5jkwzt9L0n-CcI
+id: paragraph.ebt_tiles_item.field_ebt_clickable_tile
+field_name: field_ebt_clickable_tile
+entity_type: paragraph
+bundle: ebt_tiles_item
+label: 'Clickable Tile'
+description: 'Make entire tile clickable or display link separataly if unchecked'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

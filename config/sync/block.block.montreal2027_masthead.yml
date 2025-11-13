@@ -1,0 +1,25 @@
+uuid: 51df215c-06fc-4eaa-94fa-9f3e82fcc487
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:ebt_text:eb2c5c8b-7bf7-4ebc-a749-2c2403e4eeda'
+  module:
+    - block_content
+  theme:
+    - montreal2027
+id: montreal2027_masthead
+theme: montreal2027
+region: header
+weight: -7
+provider: null
+plugin: 'block_content:eb2c5c8b-7bf7-4ebc-a749-2c2403e4eeda'
+settings:
+  id: 'block_content:eb2c5c8b-7bf7-4ebc-a749-2c2403e4eeda'
+  label: Masthead
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -22,10 +22,20 @@ module:
   dblog: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
+  ebt_basic_button: 0
+  ebt_core: 0
+  ebt_hero: 0
+  ebt_text: 0
+  ebt_tiles: 0
   editor: 0
   embed: 0
   entity_embed: 0
   entity_reference_revisions: 0
+  ept_basic_button: 0
+  ept_core: 0
+  ept_hero: 0
+  ept_text: 0
+  ept_tiles: 0
   facets: 0
   field: 0
   field_group: 0
@@ -45,7 +55,9 @@ module:
   media: 0
   media_gallery: 0
   media_library: 0
+  media_library_form_element: 0
   menu_block: 0
+  menu_item_extras: 0
   menu_link_content: 0
   menu_ui: 0
   metatag: 0

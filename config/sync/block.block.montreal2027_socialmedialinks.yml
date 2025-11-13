@@ -1,0 +1,177 @@
+uuid: 64b5165c-f361-45b0-8404-18467531f3e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_media_links
+  theme:
+    - montreal2027
+id: montreal2027_socialmedialinks
+theme: montreal2027
+region: primary_menu
+weight: -8
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Social Media Links'
+  label_display: '0'
+  provider: social_media_links
+  platforms:
+    facebook:
+      value: '#'
+      description: ''
+      weight: '-46'
+    instagram:
+      value: '#'
+      description: ''
+      weight: '-45'
+    twitter:
+      value: '#'
+      description: ''
+      weight: '-44'
+    youtube:
+      value: '#'
+      description: ''
+      weight: '-43'
+    linkedin:
+      value: '#'
+      description: ''
+      weight: '-42'
+    pinterest:
+      value: '#'
+      description: ''
+      weight: '-41'
+    rss:
+      value: ''
+      description: ''
+      weight: '-40'
+    email:
+      value: ''
+      description: ''
+      weight: '-39'
+    whatsapp_channel:
+      value: ''
+      description: ''
+      weight: '-38'
+    goodreads:
+      value: ''
+      description: ''
+      weight: '-37'
+    googleplay:
+      value: ''
+      description: ''
+      weight: '-36'
+    telegram:
+      value: ''
+      description: ''
+      weight: '-35'
+    meetup:
+      value: ''
+      description: ''
+      weight: '-34'
+    website:
+      value: ''
+      description: ''
+      weight: '-33'
+    youtube_channel:
+      value: ''
+      description: ''
+      weight: '-32'
+    mastodon:
+      value: ''
+      description: ''
+      weight: '-31'
+    vimeo:
+      value: ''
+      description: ''
+      weight: '-30'
+    github:
+      value: ''
+      description: ''
+      weight: '-29'
+    gitlab:
+      value: ''
+      description: ''
+      weight: '-28'
+    bitbucket:
+      value: ''
+      description: ''
+      weight: '-27'
+    drupal:
+      value: ''
+      description: ''
+      weight: '-26'
+    tumblr:
+      value: ''
+      description: ''
+      weight: '-25'
+    yandex_zen:
+      value: ''
+      description: ''
+      weight: '-24'
+    contact:
+      value: ''
+      description: ''
+      weight: '-23'
+    behance:
+      value: ''
+      description: ''
+      weight: '-22'
+    flickr:
+      value: ''
+      description: ''
+      weight: '-21'
+    tiktok:
+      value: ''
+      description: ''
+      weight: '-20'
+    glassdoor:
+      value: ''
+      description: ''
+      weight: '-19'
+    soundcloud:
+      value: ''
+      description: ''
+      weight: '-18'
+    patreon:
+      value: ''
+      description: ''
+      weight: '-17'
+    xing:
+      value: ''
+      description: ''
+      weight: '-16'
+    whatsapp:
+      value: ''
+      description: ''
+      weight: '-15'
+    vkontakte:
+      value: ''
+      description: ''
+      weight: '-14'
+    amazon:
+      value: ''
+      description: ''
+      weight: '-13'
+    googleplus:
+      value: ''
+      description: ''
+      weight: '-12'
+    slideshare:
+      value: ''
+      description: ''
+      weight: '-11'
+  appearance:
+    orientation: h
+    show_name: 0
+    suggestion: ''
+  link_attributes:
+    target: '<none>'
+    rel: '<none>'
+  iconset:
+    style: 'fontawesome:2x'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility: {  }

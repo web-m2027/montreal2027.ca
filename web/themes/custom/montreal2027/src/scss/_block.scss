@@ -1,0 +1,117 @@
+#block-montreal2027 {
+  &-mainnavigation {
+    background-color: var(--color-blue);
+  }
+
+  &-searchform {
+    & #search-block-form {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 1rem;
+      margin-bottom: 0;
+      margin-left: auto;
+      width: 35dvw;
+
+      & input[type="search"] {
+        font-size: 1rem;
+        padding: .5rem;
+        border: 0;
+        width: 100%;
+        background: var(--color-dark-blue);
+
+        &::placeholder {
+          font-size: 1rem;
+          color: var(--color-white);
+        }
+      }
+
+      & input[type="submit"] {
+        font-size: 1rem;
+        padding: .5rem 1rem;
+        border: none;
+        background-color: var(--color-white);
+        color: var(--color-black);
+        cursor: pointer;
+        border-right: 0;
+        border-radius: 0;
+        margin-top: 1rem;
+        height: 2.4rem;
+        text-transform: capitalize;
+
+        &:hover {
+          background-color: var(--color-red);
+        }
+      }
+    }
+  }
+
+  &-mapleleaf {
+    & img {
+      height: 6rem;
+      width: auto;
+      margin-top: .5rem;
+    }
+  }
+
+  &-site-branding {
+    align-content: center;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    & .site-logo {
+      display: block;
+      width: auto;
+      height: auto;
+      margin-left: 1rem;
+
+      & img {
+        height: 6rem;
+      }
+    }
+
+    & .site-slogan {
+
+    }
+  }
+
+  &-masthead {
+    text-align: center;
+    & p {
+      color: var(--color-black);
+      font-size: 1.5rem;
+      font-family: var(--title-font);
+      font-weight: 700;
+      line-height: 1.7rem;
+      margin: 0;
+
+      & .slogan-word {
+        text-transform: uppercase;
+        display: inline-block;
+
+        &::first-letter {
+          font-size: 1.9rem;
+        }
+      }
+    }
+  }
+
+  &-socialmedialinks {
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+    & ul {
+      & li {
+        & a {
+          color: var(--color-white);
+        }
+      }
+    }
+  }
+}
+
+

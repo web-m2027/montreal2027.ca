@@ -11,7 +11,7 @@ dependencies:
 id: montreal2027_mapleleaf
 theme: montreal2027
 region: header
-weight: -3
+weight: -6
 provider: null
 plugin: 'block_content:0e56bd57-44af-44bc-8009-0aa83a85c14e'
 settings:

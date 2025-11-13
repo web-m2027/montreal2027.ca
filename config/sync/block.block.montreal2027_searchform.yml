@@ -1,0 +1,21 @@
+uuid: 7837bc35-4194-456c-b4f8-1d17414bf293
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - montreal2027
+id: montreal2027_searchform
+theme: montreal2027
+region: primary_menu
+weight: -7
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

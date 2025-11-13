@@ -1,0 +1,68 @@
+uuid: 4524b741-1556-4c08-809a-a43947ec1732
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ebt_tiles_item.field_ebt_clickable_tile
+    - field.field.paragraph.ebt_tiles_item.field_ebt_tiles_image
+    - field.field.paragraph.ebt_tiles_item.field_ebt_tiles_link
+    - field.field.paragraph.ebt_tiles_item.field_ebt_tiles_text
+    - field.field.paragraph.ebt_tiles_item.field_ebt_tiles_title
+    - paragraphs.paragraphs_type.ebt_tiles_item
+  module:
+    - link
+    - text
+_core:
+  default_config_hash: ZHOP2C6K3eAHsBjc_FJwNsbIKZ-XL88CGUz5EexQ8nE
+id: paragraph.ebt_tiles_item.default
+targetEntityType: paragraph
+bundle: ebt_tiles_item
+mode: default
+content:
+  field_ebt_clickable_tile:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_ebt_tiles_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ebt_tiles_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 800
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ebt_tiles_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ebt_tiles_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

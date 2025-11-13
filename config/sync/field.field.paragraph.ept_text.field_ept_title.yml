@@ -1,0 +1,24 @@
+uuid: f866431a-a14f-4f53-af96-0e3ee28a28ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_title
+    - paragraphs.paragraphs_type.ept_text
+  module:
+    - text
+_core:
+  default_config_hash: DZTXvQuYpXkQt9q004RnVKvKTocT9hurW7VYy0As9Is
+id: paragraph.ept_text.field_ept_title
+field_name: field_ept_title
+entity_type: paragraph
+bundle: ept_text
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

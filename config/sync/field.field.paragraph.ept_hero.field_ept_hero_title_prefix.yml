@@ -1,0 +1,24 @@
+uuid: d48709c2-298d-4f73-8bee-e40baec07c8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_hero_title_prefix
+    - paragraphs.paragraphs_type.ept_hero
+  module:
+    - text
+_core:
+  default_config_hash: veAof1VE_5yLVqcM55gO7131zQkIVF8H4zYSRsZft-U
+id: paragraph.ept_hero.field_ept_hero_title_prefix
+field_name: field_ept_hero_title_prefix
+entity_type: paragraph
+bundle: ept_hero
+label: 'Title prefix'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,18 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+
+  & ul {
+    & .nav-item {
+      padding: 0 1rem 0 1rem;
+
+      & a {
+        color: var(--color-white);
+      }
+    }
+  }
+}
+
+.navbar-nav {
+  align-items:  baseline;
+}

@@ -1,0 +1,87 @@
+uuid: 6f87c40b-f736-4c28-8ee4-4c911a1e94a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ept_hero.field_ept_hero_column_image
+    - field.field.paragraph.ept_hero.field_ept_hero_link
+    - field.field.paragraph.ept_hero.field_ept_hero_second_link
+    - field.field.paragraph.ept_hero.field_ept_hero_title_prefix
+    - field.field.paragraph.ept_hero.field_ept_settings
+    - field.field.paragraph.ept_hero.field_ept_text
+    - field.field.paragraph.ept_hero.field_ept_title
+    - paragraphs.paragraphs_type.ept_hero
+  module:
+    - ept_core
+    - link
+    - text
+_core:
+  default_config_hash: RyJFBZtpPZyel78RpfsF1AiH8hwBQOOxLrAmCsQUA3E
+id: paragraph.ept_hero.default
+targetEntityType: paragraph
+bundle: ept_hero
+mode: default
+content:
+  field_ept_hero_column_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ept_hero_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 1024
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_ept_hero_second_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 1024
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_ept_hero_title_prefix:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ept_settings:
+    type: ept_settings_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_ept_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ept_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

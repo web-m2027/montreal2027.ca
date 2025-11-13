@@ -1,0 +1,34 @@
+uuid: 0b0fc33e-5973-463c-a764-53a245a4a090
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.connect-with-us
+  module:
+    - menu_block
+  theme:
+    - montreal2027
+id: montreal2027_connectwithus
+theme: montreal2027
+region: footer_first
+weight: -5
+provider: null
+plugin: 'menu_block:connect-with-us'
+settings:
+  id: 'menu_block:connect-with-us'
+  label: 'Connect With Us'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  display_empty: false
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'connect-with-us:'
+  render_parent: false
+  suggestion: connect_with_us
+  hide_on_nonactive: false
+visibility: {  }
