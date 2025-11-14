@@ -1,9 +1,9 @@
-uuid: 7a1af383-3959-46df-b34f-036e80d2fb1f
+uuid: 705b12e4-af54-47fc-80bf-b37a608ad73b
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:ebt_tiles:c4172145-836f-4f9c-9bce-1e211951d30d'
+    - 'block_content:basic:b0535ea2-7bcb-4e4f-b835-cb21cf45648b'
   module:
     - block_content
   theme:
@@ -11,11 +11,11 @@ dependencies:
 id: montreal2027_location
 theme: montreal2027
 region: footer_first
-weight: -7
+weight: -9
 provider: null
-plugin: 'block_content:c4172145-836f-4f9c-9bce-1e211951d30d'
+plugin: 'block_content:b0535ea2-7bcb-4e4f-b835-cb21cf45648b'
 settings:
-  id: 'block_content:c4172145-836f-4f9c-9bce-1e211951d30d'
+  id: 'block_content:b0535ea2-7bcb-4e4f-b835-cb21cf45648b'
   label: Location
   label_display: '0'
   provider: block_content

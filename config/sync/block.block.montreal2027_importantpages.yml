@@ -11,7 +11,7 @@ dependencies:
 id: montreal2027_importantpages
 theme: montreal2027
 region: footer_first
-weight: -6
+weight: -8
 provider: null
 plugin: 'menu_block:important-pages'
 settings:
