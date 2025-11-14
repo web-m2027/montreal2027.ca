@@ -1,0 +1,25 @@
+uuid: 4615b5ec-da08-468b-b2b8-6c37383af92f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:8dc4bdf1-7c35-47d5-af43-c646d72c981e'
+  module:
+    - block_content
+  theme:
+    - montreal2027
+id: montreal2027_copyright
+theme: montreal2027
+region: footer_second
+weight: 0
+provider: null
+plugin: 'block_content:8dc4bdf1-7c35-47d5-af43-c646d72c981e'
+settings:
+  id: 'block_content:8dc4bdf1-7c35-47d5-af43-c646d72c981e'
+  label: Copyright
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -8,8 +8,7 @@
       display: grid;
       grid-template-columns: auto auto;
       grid-gap: 1rem;
-      margin-bottom: 0;
-      margin-left: auto;
+      margin: 0 0 0 auto;
       width: 35dvw;
 
       & input[type="search"] {
@@ -49,7 +48,7 @@
     & img {
       height: 6rem;
       width: auto;
-      margin-top: .5rem;
+      margin: .5rem 0 0 0;
     }
   }
 
@@ -66,20 +65,17 @@
       display: block;
       width: auto;
       height: auto;
-      margin-left: 1rem;
+      margin: 0 0 0 1rem;
 
       & img {
         height: 6rem;
       }
     }
-
-    & .site-slogan {
-
-    }
   }
 
   &-masthead {
     text-align: center;
+
     & p {
       color: var(--color-black);
       font-size: 1.5rem;
@@ -114,14 +110,32 @@
   }
 
   &-location {
+    display: grid;
+    align-items: center;
+
+    & img {
+      max-height: 8rem;
+      width: auto;
+      margin: 0.6rem;
+    }
     & h3 {
       color: var(--color-red);
+      margin: .2rem 0 0 0;
     }
 
     & p {
       color: var(--color-white);
+      font-size: 1.1rem;
+      line-height: 1.4rem;
+    }
+  }
+
+  &-copyright {
+    & p {
+      color: white;
+      font-size: 0.8rem;
+      line-height: 0.3rem;
+      text-align: center;
     }
   }
 }
-
-
