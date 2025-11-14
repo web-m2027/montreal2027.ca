@@ -64,6 +64,7 @@ module:
   search_api: 0
   search_api_db: 0
   serialization: 0
+  smart_trim: 0
   social_media_links: 0
   svg_image: 0
   svg_image_field: 0

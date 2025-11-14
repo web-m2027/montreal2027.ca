@@ -43,6 +43,7 @@
         "drupal/metatag": "^2.2",
         "drupal/pathauto": "^1.14",
         "drupal/search_api": "^1.39",
+        "drupal/smart_trim": "^2.2",
         "drupal/social_media_links": "^2.10",
         "drupal/svg_image": "^3.2",
         "drupal/svg_image_field": "^2.3",
