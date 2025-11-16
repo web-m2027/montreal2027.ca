@@ -9,7 +9,7 @@ dependencies:
 id: montreal2027_searchform
 theme: montreal2027
 region: primary_menu
-weight: -7
+weight: -8
 provider: null
 plugin: search_form_block
 settings:

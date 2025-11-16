@@ -1,0 +1,9 @@
+uuid: 7b3c7676-e3b6-4262-bc99-3ccacfd7ded9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Guest Type'
+vid: guest_type
+description: 'What type of guest it is'
+weight: 0
+new_revision: true

@@ -1,0 +1,20 @@
+uuid: 509e8405-1c6f-4cdc-81ac-311b0766461a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_type_of_guest
+field_name: field_type_of_guest
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

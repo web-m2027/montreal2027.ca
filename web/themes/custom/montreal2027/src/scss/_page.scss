@@ -1,3 +1,5 @@
+@use 'mixins' as *;
+
 #page-wrapper {
   display: flex;
   flex-direction: column;
@@ -38,8 +40,19 @@
     position: sticky;
     top: var(--site-main-content-top);
     height: var(--site-main-content-height);
-    padding: 0;
     overflow: auto;
+    container: main / inline-size;
+
+    & .container {
+      @include frosted-glass($border-radius: 1rem);
+      padding: 1rem 1.5rem;
+    }
+
+    @container main (min-width: 60ch) {
+      & .container {
+        max-width: calc(100% - 10rem);
+      }
+    }
   }
 
   /* Footer: default is static (in-flow) for mobile/smaller screens */
@@ -84,8 +97,4 @@
   .site-footer--fixed {
     /* kept for compatibility; footer becomes fixed at desktop widths via media query */
   }
-}
-
-.ebt-block-tiles .ebt-tiles-wrapper .inner {
-  border: 0;
 }
