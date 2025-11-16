@@ -1,0 +1,6 @@
+{% set term = element['#items'].0.entity ?? null %}
+{% if term and term.description is defined %}
+  <div class="guest-type-description">
+    {{ term.description.processed }}
+  </div>
+{% endif %}

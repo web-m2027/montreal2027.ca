@@ -1,0 +1,22 @@
+uuid: 1f53ef21-2bcb-4765-bd61-7da55736fcad
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: guests
+label: Guests
+type: 'canonical_entities:node'
+pattern: 'guest/[node:title]'
+selection_criteria:
+  a8e5d15a-2dd3-4179-b893-cc1a8773bca0:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: a8e5d15a-2dd3-4179-b893-cc1a8773bca0
+    context_mapping:
+      node: node
+    bundles:
+      guest: guest
+selection_logic: and
+weight: -5
+relationships: {  }

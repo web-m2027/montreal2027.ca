@@ -1,19 +1,41 @@
 :root {
   --footer-fixed-breakpoint: 64rem;
   --site-header-height: 7rem;
-  --site-breadcrumb-height: 2.5rem;
+  --site-breadcrumb-height: 1.5rem;
   --site-breadcrumb-top: calc(var(--site-header-height) + var(--site-primary-menu-height));
   --site-primary-menu-height: 4rem;
   --site-primary-menu-top: var(--site-header-height);
   --site-main-content-top: calc(var(--site-header-height) + var(--site-primary-menu-height) + var(--site-breadcrumb-height));
-  --site-main-content-height: calc(100dvh - var(--site-main-content-top) - var(--site-footer-height) - 1rem);
+  --site-main-content-height: calc(100dvh - var(--site-main-content-top) - var(--site-footer-height));
   --site-footer-height: 13rem;
+  --shadow-color: var(--color-black);
   --color-blue: #33339b;
   --color-dark-blue: #161a37;
   --color-white: #ffffff;
   --color-red: #c70012;
+  --color-maroon: #990033;
   --color-black: #000000;
   --title-font: 'Cinzel, serif';
-  height: 100vh;
   height: 100dvh;
+  height: 100vh;
+  margin: 0;
+  min-height: 100dvh;
+}
+
+body {
+  background-attachment: fixed;      /* keeps image static */
+  background-image: url('/assets/2025-11/53876623114_a7f20e1dbb_o.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;            /* fills the page */
+  color: var(--color-black);
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-weight: 500;
+}
+
+p {
+  color: var(--color-black);
 }

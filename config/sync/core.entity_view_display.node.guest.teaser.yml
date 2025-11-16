@@ -1,0 +1,71 @@
+uuid: 0b491318-5e28-4c58-92c7-6f8029cd9f2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.guest.field_bio
+    - field.field.node.guest.field_guest_photo
+    - field.field.node.guest.field_type_of_guest
+    - node.type.guest
+  module:
+    - layout_builder
+    - smart_trim
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.guest.teaser
+targetEntityType: node
+bundle: guest
+mode: teaser
+content:
+  field_bio:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 100
+      trim_type: words
+      trim_suffix: ''
+      wrap_output: false
+      wrap_class: trimmed
+      more:
+        display_link: true
+        target_blank: false
+        link_trim_only: true
+        class: more-link
+        text: "Read [node:title]'s full bio"
+        aria_label: "Read [node:title]'s full bio"
+      summary_handler: full
+      trim_options:
+        text: false
+        trim_zero: false
+        replace_tokens: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_guest_photo:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_type_of_guest:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

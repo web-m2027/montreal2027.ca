@@ -1,0 +1,18 @@
+uuid: e714cef1-993f-4903-b06c-c5b97fd2f5db
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Guest
+type: guest
+description: 'Detailed guest page'
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: false

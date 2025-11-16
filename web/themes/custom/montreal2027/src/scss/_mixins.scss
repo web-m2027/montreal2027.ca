@@ -1,0 +1,35 @@
+// Slight drop shadow mixin.
+// Usage:
+//   @include drop-shadow-slight(); // default subtle shadow
+//   @include drop-shadow-slight($color: rgba(0,0,0,0.2)); // override color
+//   @include drop-shadow-slight($y: 3px, $blur: 10px); // override offsets/blur
+@mixin drop-shadow-slight(
+  $x: 0,
+  $y: 2px,
+  $blur: 8px,
+  $spread: 0,
+  $color: var(--shadow-color, rgba(0, 0, 0, 0.15)),
+  $inset: false
+) {
+  box-shadow: if($inset, inset, null) $x $y $blur $spread $color;
+}
+
+@mixin frosted-glass(
+  $blur: 10px,
+  $bg-color: rgba(255, 255, 255, 0.65),
+  $border-color: rgba(255, 255, 255, 0.3),
+  $border-radius: .5rem,
+) {
+  background-color: $bg-color;
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
+  border-radius: $border-radius;
+}
+
+@mixin noto-serif-font ($weight: 500) {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}

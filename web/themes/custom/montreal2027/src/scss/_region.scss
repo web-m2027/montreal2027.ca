@@ -1,3 +1,5 @@
+@use 'mixins' as *;
+
 .region {
   &-primary-menu {
     display: grid;
@@ -13,7 +15,8 @@
     position: sticky;
     top: var(--site-breadcrumb-top);
     z-index: 900;
-    margin: 0 0 0 2rem;
+    margin:0;
+    @include frosted-glass($border-radius: 0);
   }
 
   &-footer {
