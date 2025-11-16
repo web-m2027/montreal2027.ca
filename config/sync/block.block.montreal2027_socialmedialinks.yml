@@ -9,7 +9,7 @@ dependencies:
 id: montreal2027_socialmedialinks
 theme: montreal2027
 region: primary_menu
-weight: -8
+weight: -9
 provider: null
 plugin: social_media_links_block
 settings:
@@ -18,35 +18,35 @@ settings:
   label_display: '0'
   provider: social_media_links
   platforms:
+    email:
+      value: info@montreal2027.ca
+      description: ''
+      weight: '-46'
     facebook:
       value: '#'
       description: ''
-      weight: '-46'
+      weight: '-45'
     instagram:
       value: '#'
       description: ''
-      weight: '-45'
+      weight: '-44'
     twitter:
       value: '#'
       description: ''
-      weight: '-44'
+      weight: '-43'
     youtube:
       value: '#'
       description: ''
-      weight: '-43'
+      weight: '-42'
     linkedin:
       value: '#'
       description: ''
-      weight: '-42'
+      weight: '-41'
     pinterest:
       value: '#'
       description: ''
-      weight: '-41'
-    rss:
-      value: ''
-      description: ''
       weight: '-40'
-    email:
+    rss:
       value: ''
       description: ''
       weight: '-39'

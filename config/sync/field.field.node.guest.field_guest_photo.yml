@@ -1,0 +1,29 @@
+uuid: 668fea79-9bae-4c5c-aee5-ff9f1d35b572
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_guest_photo
+    - media.type.image
+    - node.type.guest
+id: node.guest.field_guest_photo
+field_name: field_guest_photo
+entity_type: node
+bundle: guest
+label: 'Guest Photo'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: field_media_image.title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

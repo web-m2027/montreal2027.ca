@@ -1,0 +1,22 @@
+uuid: c8842511-783d-4d90-a2c1-f314d238febf
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.guest
+id: node.guest.status
+field_name: status
+entity_type: node
+bundle: guest
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
