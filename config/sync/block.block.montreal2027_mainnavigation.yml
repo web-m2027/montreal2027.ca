@@ -11,7 +11,7 @@ dependencies:
 id: montreal2027_mainnavigation
 theme: montreal2027
 region: primary_menu
-weight: -7
+weight: -15
 provider: null
 plugin: 'menu_block:main'
 settings:

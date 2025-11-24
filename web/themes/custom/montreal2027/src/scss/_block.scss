@@ -4,11 +4,13 @@
   }
 
   &-searchform {
+    display: flex;
+    align-content: center;
     & #search-block-form {
       display: grid;
       grid-template-columns: auto auto;
       grid-gap: 1rem;
-      margin: 0 0 0 auto;
+      margin:auto;
       width: 35dvw;
 
       & input[type="search"] {
@@ -97,8 +99,7 @@
 
   &-socialmedialinks {
     display: flex;
-    align-items: center;
-    align-content: center;
+    justify-content: center;
 
     & ul {
       & li {
@@ -116,7 +117,7 @@
     & img {
       max-height: 8rem;
       width: auto;
-      margin: 0.6rem;
+      margin: 0.6rem 0.6rem auto;
     }
     & h3 {
       color: var(--color-red);

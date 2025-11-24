@@ -8,8 +8,8 @@ dependencies:
     - montreal2027
 id: montreal2027_searchform
 theme: montreal2027
-region: primary_menu
-weight: -8
+region: footer_first
+weight: -13
 provider: null
 plugin: search_form_block
 settings:

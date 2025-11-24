@@ -5,7 +5,7 @@
   --site-header-height: 7rem;
   --site-breadcrumb-height: 1.5rem;
   --site-breadcrumb-top: calc(var(--site-header-height) + var(--site-primary-menu-height));
-  --site-primary-menu-height: 4rem;
+  --site-primary-menu-height: 3rem;
   --site-primary-menu-top: var(--site-header-height);
   --site-main-content-top: calc(var(--site-header-height) + var(--site-primary-menu-height) + var(--site-breadcrumb-height));
   --site-main-content-height: calc(100dvh - var(--site-main-content-top) - var(--site-footer-height));
