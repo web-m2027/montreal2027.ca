@@ -1,0 +1,54 @@
+uuid: 91c2b6b4-528a-49a1-b975-259ee9087fff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_guests
+    - node.type.page
+    - paragraphs.paragraphs_type.guest_block
+    - paragraphs.paragraphs_type.guests
+  module:
+    - entity_reference_revisions
+id: node.page.field_guests
+field_name: field_guests
+entity_type: node
+bundle: page
+label: Guests
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      guests: guests
+      guest_block: guest_block
+    negate: 0
+    target_bundles_drag_drop:
+      ebt_tiles_item:
+        weight: 9
+        enabled: false
+      ept_basic_button:
+        weight: 10
+        enabled: false
+      ept_hero:
+        weight: 11
+        enabled: false
+      ept_text:
+        weight: 12
+        enabled: false
+      ept_tiles:
+        weight: 13
+        enabled: false
+      ept_tiles_item:
+        weight: 14
+        enabled: false
+      guest_block:
+        weight: 16
+        enabled: true
+      guests:
+        weight: 15
+        enabled: true
+field_type: entity_reference_revisions

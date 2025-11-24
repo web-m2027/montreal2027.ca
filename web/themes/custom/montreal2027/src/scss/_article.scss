@@ -1,7 +1,32 @@
 @use 'mixins' as *;
 
+article .node.node--type-guest.node--view-mode-teaser h3 {
+  color: var(--color-maroon);
+  font-weight: 900;
+  text-align: left;
+}
+
 article {
   &.node {
+    &.node--type-guest.node--view-mode-teaser {
+      img {
+        border-radius: 50%;
+        width: auto;
+        max-height: 10rem;
+      }
+
+      & h3 {
+        color: var(--color-maroon);
+        text-align: left;
+        font-weight: 900;
+        margin-bottom: 0;
+
+        & a {
+          color: var(--color-maroon);
+        }
+      }
+    }
+
     &--type-guest {
       & h2 {
         @include noto-serif-font($weight: 900);
@@ -9,6 +34,10 @@ article {
         text-align: center;
         color: var(--color-black);
         margin-bottom: .5rem;
+
+        & a {
+          color: inherit;
+        }
       }
 
       & h3 {
@@ -32,3 +61,5 @@ article {
     }
   }
 }
+
+

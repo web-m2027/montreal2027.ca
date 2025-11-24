@@ -1,6 +1,6 @@
 uuid: 4615b5ec-da08-468b-b2b8-6c37383af92f
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:basic:8dc4bdf1-7c35-47d5-af43-c646d72c981e'
@@ -10,7 +10,7 @@ dependencies:
     - montreal2027
 id: montreal2027_copyright
 theme: montreal2027
-region: footer_second
+region: header
 weight: 0
 provider: null
 plugin: 'block_content:8dc4bdf1-7c35-47d5-af43-c646d72c981e'
