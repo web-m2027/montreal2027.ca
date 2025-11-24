@@ -1,0 +1,21 @@
+uuid: 0662c4b0-172f-43f9-8cc9-4f413bb48557
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.guest_block.field_block
+    - paragraphs.paragraphs_type.guest_block
+id: paragraph.guest_block.default
+targetEntityType: paragraph
+bundle: guest_block
+mode: default
+content:
+  field_block:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

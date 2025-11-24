@@ -22,3 +22,10 @@ regions:
   footer_third: 'Third Footer'
   footer_fourth: 'Fourth Footer'
   footer_fifth: 'Site Footer'
+
+# Override Views Responsive Grid styles
+libraries-override:
+  views/views.responsive-grid:
+    css:
+      layout:
+        css/views-responsive-grid.css: css/overrides/views-responsive-grid.css

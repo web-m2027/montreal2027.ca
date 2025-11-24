@@ -1,0 +1,31 @@
+uuid: 65241f1f-0522-4854-89ae-172f8e515030
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.guest_type.field_plural
+    - taxonomy.vocabulary.guest_type
+  module:
+    - text
+id: taxonomy_term.guest_type.default
+targetEntityType: taxonomy_term
+bundle: guest_type
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_plural:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

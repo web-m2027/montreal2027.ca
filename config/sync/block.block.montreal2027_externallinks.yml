@@ -1,6 +1,6 @@
 uuid: 7c248134-c441-4e31-ab71-5d805fa9cc59
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.external
@@ -10,7 +10,7 @@ dependencies:
     - montreal2027
 id: montreal2027_externallinks
 theme: montreal2027
-region: footer_first
+region: header
 weight: -6
 provider: null
 plugin: 'menu_block:external'

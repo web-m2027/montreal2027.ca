@@ -1,0 +1,29 @@
+uuid: 2b0d0413-7bfb-4a6f-9159-623b0dd79443
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_guests
+    - node.type.guest
+    - paragraphs.paragraphs_type.guests
+id: paragraph.guests.field_guests
+field_name: field_guests
+entity_type: paragraph
+bundle: guests
+label: Guests
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      guest: guest
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

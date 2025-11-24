@@ -1,0 +1,23 @@
+uuid: 2e0a2b0b-b86e-4362-876a-fb6e24cb4db6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.guests.field_guests
+    - paragraphs.paragraphs_type.guests
+id: paragraph.guests.default
+targetEntityType: paragraph
+bundle: guests
+mode: default
+content:
+  field_guests:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

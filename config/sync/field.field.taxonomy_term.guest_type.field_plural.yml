@@ -1,0 +1,19 @@
+uuid: e0116c03-eb65-4c17-944b-ab15a799d308
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_plural
+    - taxonomy.vocabulary.guest_type
+id: taxonomy_term.guest_type.field_plural
+field_name: field_plural
+entity_type: taxonomy_term
+bundle: guest_type
+label: 'Plural Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

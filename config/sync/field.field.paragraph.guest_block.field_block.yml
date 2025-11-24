@@ -1,0 +1,29 @@
+uuid: 669dd15a-b860-46cb-b024-715d1a0fe237
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block
+    - paragraphs.paragraphs_type.guest_block
+    - taxonomy.vocabulary.guest_type
+id: paragraph.guest_block.field_block
+field_name: field_block
+entity_type: paragraph
+bundle: guest_block
+label: 'Type of Guests to show'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      guest_type: guest_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
