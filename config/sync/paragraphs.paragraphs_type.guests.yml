@@ -1,0 +1,10 @@
+uuid: fe755a1a-7b08-48a2-aaae-012813d29084
+langcode: en
+status: true
+dependencies: {  }
+id: guests
+label: Guests
+icon_uuid: null
+icon_default: null
+description: 'Select guests teaser cards to show on a page'
+behavior_plugins: {  }

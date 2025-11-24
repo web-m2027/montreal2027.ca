@@ -1,0 +1,37 @@
+.view {
+  &-id-guest_list {
+    .views {
+      &-view-responsive {
+        &-grid {
+          &__item {
+            background: var(--color-dark-blue);
+            padding: .8rem;
+            border-radius: .5rem;
+
+            & p {
+              color: var(--color-white);
+
+              &::first-letter {
+                font-size: 1.2rem;
+                color: var(--color-red);
+              }
+            }
+
+            img {
+              border-radius: 50%;
+              width: auto;
+              max-height: 10rem;
+            }
+          }
+          &--horizontal {
+            border: 0;
+          }
+        }
+      }
+    }
+    .node--view-mode-teaser {
+    }
+  }
+}
+
+

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d7366379477466948b6568c897a9889f",
+    "content-hash": "4b2e042905adbd3a95bf259cc12599d7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1182,6 +1182,70 @@
             ],
             "support": {
                 "source": "https://git.drupalcode.org/project/admin_theme"
+            }
+        },
+        {
+            "name": "drupal/block_field",
+            "version": "1.0.0-rc5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/block_field.git",
+                "reference": "8.x-1.0-rc5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/block_field-8.x-1.0-rc5.zip",
+                "reference": "8.x-1.0-rc5",
+                "shasum": "b87e43e9bbaaf6cff6d8946d5e45db492978cbb6"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-rc5",
+                    "datestamp": "1723550576",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "acbramley",
+                    "homepage": "https://www.drupal.org/user/1036766"
+                },
+                {
+                    "name": "berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "fenstrat",
+                    "homepage": "https://www.drupal.org/user/362649"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                },
+                {
+                    "name": "michaellander",
+                    "homepage": "https://www.drupal.org/user/636494"
+                },
+                {
+                    "name": "paulocs",
+                    "homepage": "https://www.drupal.org/user/3640109"
+                }
+            ],
+            "description": "Provides a field that allows a content entity to create and configure custom block instances.",
+            "homepage": "https://www.drupal.org/project/block_field",
+            "support": {
+                "source": "https://git.drupalcode.org/project/block_field"
             }
         },
         {
@@ -2774,6 +2838,64 @@
             }
         },
         {
+            "name": "drupal/first_paragraph",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/first_paragraph.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/first_paragraph-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "c496a032bb3a8c5760cf37487bf9eeb106ac2f8b"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "ext-dom": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1729545865",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Nicholas Thompson",
+                    "homepage": "https://www.drupal.org/user/1225806",
+                    "email": "nick@fullfatthings.com"
+                },
+                {
+                    "name": "JeremyFrench",
+                    "homepage": "https://www.drupal.org/user/419876"
+                },
+                {
+                    "name": "nicholasthompson",
+                    "homepage": "https://www.drupal.org/user/59351"
+                },
+                {
+                    "name": "stewsnooze",
+                    "homepage": "https://www.drupal.org/user/243255"
+                }
+            ],
+            "description": "Provides a field formatter to allow teasers to show the first paragraph of text.",
+            "homepage": "https://www.drupal.org/project/first_paragraph",
+            "support": {
+                "source": "https://git.drupalcode.org/project/first_paragraph"
+            }
+        },
+        {
             "name": "drupal/gin",
             "version": "5.0.9",
             "source": {
@@ -3526,67 +3648,6 @@
                 "source": "https://git.drupalcode.org/project/search_api",
                 "issues": "https://www.drupal.org/project/issues/search_api",
                 "irc": "irc://irc.freenode.org/drupal-search-api"
-            }
-        },
-        {
-            "name": "drupal/smart_trim",
-            "version": "2.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/smart_trim.git",
-                "reference": "2.2.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/smart_trim-2.2.0.zip",
-                "reference": "2.2.0",
-                "shasum": "564737cf0895e1b8a38af575ab7ca23f55335d9a"
-            },
-            "require": {
-                "drupal/core": "^9.5 || ^10 || ^11",
-                "drupal/token": "^1.0",
-                "php": ">=8.1"
-            },
-            "require-dev": {
-                "drupal/token_filter": "^2.1 || ^2.2"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "2.2.0",
-                    "datestamp": "1723847275",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Mark Casias (markie)",
-                    "homepage": "https://www.drupal.org/u/markie",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "AmyJune Hineline (volkswagenchick)",
-                    "homepage": "https://www.drupal.org/u/volkswagenchick",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Michael Anello (ultimike)",
-                    "homepage": "https://www.drupal.org/u/ultimike",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Provides a more robust alternative to 'summary or trimmed' textfield format.",
-            "homepage": "https://drupal.org/project/smart_trim",
-            "support": {
-                "source": "https://git.drupalcode.org/project/smart_trim",
-                "issues": "https://drupal.org/project/issues/smart_trim"
             }
         },
         {
@@ -9033,6 +9094,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "drupal/block_field": 5,
         "omscllc/clean_blog_theme": 20
     },
     "prefer-stable": true,

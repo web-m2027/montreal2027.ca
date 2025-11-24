@@ -1,6 +1,6 @@
 uuid: 0b0fc33e-5973-463c-a764-53a245a4a090
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.connect-with-us
@@ -10,7 +10,7 @@ dependencies:
     - montreal2027
 id: montreal2027_connectwithus
 theme: montreal2027
-region: footer_first
+region: header
 weight: -7
 provider: null
 plugin: 'menu_block:connect-with-us'

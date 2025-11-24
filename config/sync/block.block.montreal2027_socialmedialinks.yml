@@ -8,8 +8,8 @@ dependencies:
     - montreal2027
 id: montreal2027_socialmedialinks
 theme: montreal2027
-region: primary_menu
-weight: -9
+region: footer_first
+weight: -12
 provider: null
 plugin: social_media_links_block
 settings:
@@ -163,14 +163,14 @@ settings:
       description: ''
       weight: '-11'
   appearance:
-    orientation: h
+    orientation: v
     show_name: 0
     suggestion: ''
   link_attributes:
     target: '<none>'
     rel: '<none>'
   iconset:
-    style: 'fontawesome:2x'
+    style: 'fontawesome:in'
     installed_iconsets:
       fontawesome:
         examples: ''

@@ -5,3 +5,7 @@
 @use 'navigation';
 @use 'page';
 @use 'region';
+@use 'views';
+@use 'paragraph';
+
+@layer external, clean_blog_theme, layout, theme, views-responsive-grid;
