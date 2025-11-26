@@ -207,7 +207,7 @@ display:
         options:
           uses_fields: false
           columns: 2
-          cell_min_width: 100
+          cell_min_width: 515
           grid_gutter: 10
           alignment: horizontal
       row:
