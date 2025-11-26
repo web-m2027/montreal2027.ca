@@ -36,3 +36,105 @@ function montreal2027_preprocess_block__system_branding_block(&$variables) {
     $variables['site_slogan'] = ['#markup' => $wrapped];
   }
 }
+
+/**
+ * Preprocess for the node guest teaser template.
+ *
+ * Extracts the first image item's alt text and builds an image-style URL for
+ * use in the twig template. This ensures the alt text is available even when
+ * the render array structure differs between environments.
+ */
+function montreal2027_preprocess_node__guest__teaser(array &$variables) {
+  // Default values.
+  $variables['guest_image_alt'] = '';
+  $variables['guest_image_url'] = '';
+
+  if (isset($variables['node']) && $variables['node']->hasField('field_guest_photo') && !$variables['node']->get('field_guest_photo')->isEmpty()) {
+    $item = $variables['node']->get('field_guest_photo')->first();
+
+    $alt = '';
+    $file = null;
+
+    // If the field is a media reference, resolve the image item on the media entity.
+    if ($item->entity && $item->entity->getEntityTypeId() === 'media') {
+      $media = $item->entity;
+
+      $image_item = null;
+
+      if ($media->hasField('field_media_image') && !$media->get('field_media_image')->isEmpty()) {
+        $image_item = $media->get('field_media_image')->first();
+      }
+
+
+      if ($image_item) {
+        // Extract alt from the media's image field item if available.
+        if (isset($image_item->alt)) {
+          $alt = (string) $image_item->alt;
+        } else {
+          try {
+            $altVal = $image_item->get('alt')->getValue();
+            if (is_array($altVal)) {
+              $alt = reset($altVal) ?: '';
+            } elseif (is_string($altVal)) {
+              $alt = $altVal;
+            }
+          } catch (\Throwable $e) {
+            // ignore; we'll fallback later
+          }
+        }
+
+        // File entity referenced by the media image field.
+        $file = $image_item->entity;
+      }
+
+      // Some media types store the image URI directly on a property; try common fallbacks.
+      if (!$file && $media->hasField('field_media_image') && !$media->get('field_media_image')->isEmpty()) {
+        $maybe = $media->get('field_media_image')->first();
+        if ($maybe && $maybe->entity) {
+          $file = $maybe->entity;
+        }
+      }
+    }
+    else {
+      // Not a media reference — treat as a regular image/file field item.
+      if (isset($item->alt)) {
+        $alt = (string) $item->alt;
+      } else {
+        try {
+          $altVal = $item->get('alt')->getValue();
+          if (is_array($altVal)) {
+            $alt = reset($altVal) ?: '';
+          } elseif (is_string($altVal)) {
+            $alt = $altVal;
+          }
+        } catch (\Throwable $e) {
+          // ignore; fallback below
+        }
+      }
+
+      $file = $item->entity;
+    }
+
+    // Build a URL from the file entity using an image style if available, otherwise fall back to a file URL.
+    $image_url = '';
+    if ($file) {
+      try {
+        $uri = $file->getFileUri();
+        if ($uri) {
+          $style = \Drupal\image\Entity\ImageStyle::load('guest_photos');
+          if ($style) {
+            $image_url = $style->buildUrl($uri);
+          } else {
+            $image_url = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
+          }
+        }
+      } catch (\Throwable $e) {
+        // ignore and leave $image_url empty
+      }
+    }
+
+    // Final fallbacks: use node label if alt is empty.
+    $variables['guest_image_alt'] = $alt !== '' ? $alt : $variables['node']->label();
+    $variables['guest_image_url'] = $image_url ?: '';
+  }
+}
