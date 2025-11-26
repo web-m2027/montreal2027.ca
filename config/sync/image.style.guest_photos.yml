@@ -5,25 +5,17 @@ dependencies: {  }
 name: guest_photos
 label: 'Guest Photos'
 effects:
-  e4e283b5-5452-462f-8e8a-21bbac14971c:
-    uuid: e4e283b5-5452-462f-8e8a-21bbac14971c
-    id: image_crop
-    weight: -9
+  1bd3dc13-a823-4f0b-84aa-b7d47d783a8f:
+    uuid: 1bd3dc13-a823-4f0b-84aa-b7d47d783a8f
+    id: image_convert_avif
+    weight: -7
+    data:
+      extension: webp
+  83e085df-3c3a-4996-9c20-1079c49fa835:
+    uuid: 83e085df-3c3a-4996-9c20-1079c49fa835
+    id: image_scale_and_crop
+    weight: -10
     data:
       width: 480
       height: 480
       anchor: center-center
-  45179097-be20-4fba-94dc-b67858d2c686:
-    uuid: 45179097-be20-4fba-94dc-b67858d2c686
-    id: image_scale
-    weight: -10
-    data:
-      width: 480
-      height: null
-      upscale: true
-  1bd3dc13-a823-4f0b-84aa-b7d47d783a8f:
-    uuid: 1bd3dc13-a823-4f0b-84aa-b7d47d783a8f
-    id: image_convert_avif
-    weight: 3
-    data:
-      extension: webp
