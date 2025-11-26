@@ -11,7 +11,14 @@
 {{ attach_library('classy/node') }}
 <article{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content.field_guest_photo}}
+    {# Use the values set in montreal2027_preprocess_node__guest__teaser() #}
+    {% if guest_image_url is defined and guest_image_url %}
+      <img src="{{ guest_image_url }}" alt="{{ guest_image_alt|e }}" />
+    {% else %}
+      {# Fallback to the rendered field if preprocess didn't supply a URL/alt #}
+      {{ content.field_guest_photo }}
+    {% endif %}
+
     <div>
       {{ title_prefix }}
       <h3{{ title_attributes }}>
