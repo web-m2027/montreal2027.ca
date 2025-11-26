@@ -1,6 +1,10 @@
+@use 'mixins' as *;
+
 #block-montreal2027 {
   &-mainnavigation {
-    background-color: var(--color-blue);
+    @container page-wrapper (min-width: var(--bs-breakpoint-lg)) {
+      background-color: var(--color-blue);
+    }
   }
 
   &-searchform {
@@ -70,28 +74,47 @@
       margin: 0 0 0 1rem;
 
       & img {
-        height: 6rem;
+        height: 4rem;
+
+        @container page-wrapper (min-width: 768px) {
+          height: 6rem;
+        }
       }
     }
   }
 
   &-masthead {
     text-align: center;
+    display: none;
+
+    @container page-wrapper (min-width: 768px) {
+      display: block;
+    }
 
     & p {
-      color: var(--color-black);
-      font-size: 1.5rem;
+      color: var(--color-white);
+      font-size: 0.9rem;
       font-family: var(--title-font);
       font-weight: 700;
-      line-height: 1.7rem;
+      line-height: 1.1rem;
       margin: 0;
+      text-wrap-style: balance;
+
+        @container page-wrapper (min-width: 768px) {
+          font-size: 1.5rem;
+          line-height: 1.7rem;
+        }
+      }
 
       & .slogan-word {
         text-transform: uppercase;
         display: inline-block;
 
         &::first-letter {
-          font-size: 1.9rem;
+          font-size: 1.2rem;
+
+          @container page-wrapper (min-width: 768px) {
+            font-size: 1.9rem;
         }
       }
     }
@@ -142,6 +165,7 @@
   }
 
   &-breadcrumbs {
+    @include drop-shadow-slight();
     & nav {
       &.breadcrumb {
         padding: 0 0 0 2rem;
