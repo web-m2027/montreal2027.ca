@@ -19,8 +19,8 @@ jobs:
         with:
           host: ${{ vars.DEPLOY_HOST }}
           username: ${{ vars.DEPLOY_USER }}
-#          key: ${{ secrets.DEPLOY_KEY }}
-          port: 22
+          key: ${{ secrets.DEPLOY_KEY }}
+#          port: 22
           script: |
             set -euo pipefail
             echo "Changing to deploy path"
