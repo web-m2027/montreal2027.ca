@@ -19,7 +19,7 @@ jobs:
         with:
           host: ${{ vars.DEPLOY_HOST }}
           username: ${{ vars.DEPLOY_USER }}
-          key: ${{ secrets.DEPLOY_KEY }}
+#          key: ${{ secrets.DEPLOY_KEY }}
           port: 22
           script: |
             set -euo pipefail
