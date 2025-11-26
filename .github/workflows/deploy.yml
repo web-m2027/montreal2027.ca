@@ -68,7 +68,7 @@ jobs:
           script: |
             set -euo pipefail
             echo "Changing to deploy path"
-            cd ${{ vars.STG_DEPLOY_PATH }}
+            cd ${{ vars.STG_DEPLOY_PATH }}/web/themes/custom/montreal2027
             echo "Installing npm dependencies"
             npm install
 
@@ -82,9 +82,9 @@ jobs:
           script: |
             set -euo pipefail
             echo "Changing to deploy path"
-            cd ${{ vars.STG_DEPLOY_PATH }}
+            cd ${{ vars.STG_DEPLOY_PATH }}/web/themes/custom/montreal2027
             echo "Building assets"
-            npm run build
+            npm run build:css
 
       - name: Clean up node_modules
         uses: appleboy/ssh-action@v1
@@ -96,7 +96,7 @@ jobs:
           script: |
             set -euo pipefail
             echo "Changing to deploy path"
-            cd ${{ vars.STG_DEPLOY_PATH }}
+            cd ${{ vars.STG_DEPLOY_PATH }}/web/themes/custom/montreal2027
             echo "Cleaning up node_modules"
             rm -rf node_modules
             git restore package-lock.json
