@@ -1,3 +1,5 @@
+@use 'mixins' as *;
+
 .view {
   &-id-guest_list {
     .views {
@@ -7,6 +9,7 @@
             background: var(--color-dark-blue);
             padding: .8rem;
             border-radius: .5rem;
+            @include drop-shadow-slight();
 
             & p {
               color: var(--color-white);
