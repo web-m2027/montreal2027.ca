@@ -20,7 +20,7 @@ jobs:
           host: ${{ vars.DEPLOY_HOST }}
           username: ${{ vars.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
-          port: ${{ vars.DEPLOY_PORT }}
+          port: 22
           script: |
             set -euo pipefail
             echo "Changing to deploy path"
@@ -36,6 +36,7 @@ jobs:
           host: ${{ vars.DEPLOY_HOST }}
           username: ${{ vars.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
+          port: ${{ vars.DEPLOY_PORT }}
           script: |
             set -euo pipefail
             echo "Changing to deploy path"
@@ -49,6 +50,7 @@ jobs:
           host: ${{ vars.DEPLOY_HOST }}
           username: ${{ vars.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
+          port: ${{ vars.DEPLOY_PORT }}
           script: |
             set -euo pipefail
             echo "Changing to deploy path"
@@ -62,6 +64,7 @@ jobs:
           host: ${{ vars.DEPLOY_HOST }}
           username: ${{ vars.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
+          port: ${{ vars.DEPLOY_PORT }}
           script: |
             set -euo pipefail
             echo "Changing to deploy path"
@@ -75,6 +78,7 @@ jobs:
           host: ${{ vars.DEPLOY_HOST }}
           username: ${{ vars.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
+          port: ${{ vars.DEPLOY_PORT }}
           script: |
             set -euo pipefail
             echo "Changing to deploy path"
@@ -88,6 +92,7 @@ jobs:
           host: ${{ vars.DEPLOY_HOST }}
           username: ${{ vars.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
+          port: ${{ vars.DEPLOY_PORT }}
           script: |
             set -euo pipefail
             echo "Changing to deploy path"
@@ -102,6 +107,7 @@ jobs:
           host: ${{ vars.DEPLOY_HOST }}
           username: ${{ vars.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
+          port: ${{ vars.DEPLOY_PORT }}
           script: |
             set -euo pipefail
             echo "Changing to deploy path"
