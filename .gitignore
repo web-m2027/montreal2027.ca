@@ -420,4 +420,5 @@ phpcs.xml
 /web/themes/custom/montreal2027/node_modules/.package-lock.json
 /web/libraries/jquery-mb-ytplayer/.gitignore
 web/assets/*
+!web/assets/m2027-logo.svg
 web/themes/custom/montreal2027/css/montreal2027.min.css
