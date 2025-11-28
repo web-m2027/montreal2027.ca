@@ -24,16 +24,16 @@
     }
     width: 100%;
     padding-top: 0;
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    z-index: 500;
     box-sizing: border-box;
 
     & .container {
       & .region-header {
         display: grid;
         align-items: center;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: 400px 1fr 400px;
         container-type: inline-size;
         container-name: header;
         justify-content: space-between;
@@ -45,11 +45,12 @@
     min-height: 0; /* neutralize clean_blog_theme's min-height: 750px */
     box-sizing: border-box;
     transition: padding-bottom 220ms ease, padding-top 220ms ease;
-    position: sticky;
+    //position: sticky;
     top: var(--site-main-content-top);
-    height: var(--site-main-content-height);
     overflow: auto;
     container: main / inline-size;
+    flex-grow: 1;
+    margin: 12rem 0 0 0;
 
     & .container {
       @include frosted-glass($border-radius: 1rem);
@@ -67,7 +68,7 @@
   footer.site-footer {
     height: var(--site-footer-height);
     box-sizing: border-box;
-    position: static;
+    //position: static;
     transition: transform 220ms ease, box-shadow 220ms ease;
     width: 100%;
   }
@@ -76,11 +77,11 @@
   /* Fallback: explicit media query for broad browser support */
   @media (min-width: 64rem) {
     footer.site-footer {
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1000;
+      position: sticky;
+      //left: 0;
+      //right: 0;
+      //bottom: 0;
+      //z-index: 1000;
       transform: translateY(0);
       box-shadow: 0 -8px 16px rgba(0,0,0,0.06);
       background-color: var(--color-blue);

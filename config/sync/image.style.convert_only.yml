@@ -1,0 +1,13 @@
+uuid: c9b964ce-3886-4192-9b4c-ced188d58851
+langcode: en
+status: true
+dependencies: {  }
+name: convert_only
+label: 'Convert to AVIF'
+effects:
+  ad429c61-6ac7-42d3-b691-e4276e3ea633:
+    uuid: ad429c61-6ac7-42d3-b691-e4276e3ea633
+    id: image_convert_avif
+    weight: 1
+    data:
+      extension: webp

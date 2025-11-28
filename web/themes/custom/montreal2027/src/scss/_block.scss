@@ -135,7 +135,6 @@
 
   &-location-3 {
     display: grid;
-    align-items: center;
 
     & img {
       max-height: 8rem;
@@ -173,4 +172,20 @@
       }
     }
   }
+
+  &-mapleleaf {
+    text-align: end;
+  }
+
+  &-lefleur {
+    padding: 1rem;
+
+    & img {
+      height: 7rem;
+      width: auto;
+    }
+  }
 }
+
+
+

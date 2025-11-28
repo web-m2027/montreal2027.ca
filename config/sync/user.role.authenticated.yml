@@ -2,12 +2,9 @@ uuid: 41e2a67d-c7b6-4f27-b23e-d83b02356a08
 langcode: en
 status: true
 dependencies:
-  config:
-    - filter.format.basic_html
   module:
     - comment
     - file
-    - filter
     - media
     - search
     - system
@@ -24,5 +21,4 @@ permissions:
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
-  - 'use text format basic_html'
   - 'view media'

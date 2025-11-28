@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.full_html
     - node.type.article
     - node.type.guest
     - node.type.page
@@ -11,6 +12,7 @@ dependencies:
     - comment
     - contextual
     - file
+    - filter
     - node
     - path
     - system
@@ -46,6 +48,7 @@ permissions:
   - 'edit own page content'
   - 'edit terms in tags'
   - 'revert all revisions'
+  - 'use text format full_html'
   - 'view all revisions'
   - 'view guest revisions'
   - 'view own unpublished content'
