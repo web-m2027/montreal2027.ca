@@ -1,0 +1,25 @@
+uuid: c7308bd8-f0ed-41fa-b80e-8433dc078560
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:theme_image:09f700c7-42b2-43cc-a8f6-8e48c15857d1'
+  module:
+    - block_content
+  theme:
+    - montreal2027
+id: montreal2027_lefleur
+theme: montreal2027
+region: footer_first
+weight: -14
+provider: null
+plugin: 'block_content:09f700c7-42b2-43cc-a8f6-8e48c15857d1'
+settings:
+  id: 'block_content:09f700c7-42b2-43cc-a8f6-8e48c15857d1'
+  label: Lefleur
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

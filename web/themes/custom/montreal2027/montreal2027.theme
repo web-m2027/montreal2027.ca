@@ -38,68 +38,60 @@ function montreal2027_preprocess_block__system_branding_block(&$variables) {
 }
 
 /**
- * Preprocess for the node guest teaser template.
+ * Get the image alt text and a usable URL from a variety of field item entities.
  *
- * Extracts the first image item's alt text and builds an image-style URL for
- * use in the twig template. This ensures the alt text is available even when
- * the render array structure differs between environments.
+ * @param mixed $item A field item, media field item, or render array fragment.
+ * @param string $image_style The machine name of the image style to use for the URL.
+ * @returns array An associative array with keys 'alt' and 'url'.
  */
-function montreal2027_preprocess_node__guest__teaser(array &$variables) {
-  // Default values.
-  $variables['guest_image_alt'] = '';
-  $variables['guest_image_url'] = '';
+function get_image_info(mixed $item, string $image_style='convert_only') {
+  $result = [
+    'alt' => '',
+    'url' => '',
+  ];
 
-  if (isset($variables['node']) && $variables['node']->hasField('field_guest_photo') && !$variables['node']->get('field_guest_photo')->isEmpty()) {
-    $item = $variables['node']->get('field_guest_photo')->first();
+  // Handle render-array wrapping where the raw field item is stored under '#item'.
+  if (is_array($item) && isset($item['#item'])) {
+    $item = $item['#item'];
+  }
 
+  // If item is a render array that is itself a file render element, try '#file'.
+  if (is_array($item) && isset($item['#file']) && is_object($item['#file'])) {
+    $file = $item['#file'];
+    // Try to get alt from '#options' if provided.
     $alt = '';
-    $file = null;
+    if (isset($item['#options']['alt'])) {
+      $alt = (string) $item['#options']['alt'];
+    }
+    $result['alt'] = $alt;
 
-    // If the field is a media reference, resolve the image item on the media entity.
-    if ($item->entity && $item->entity->getEntityTypeId() === 'media') {
-      $media = $item->entity;
-
-      $image_item = null;
-
-      if ($media->hasField('field_media_image') && !$media->get('field_media_image')->isEmpty()) {
-        $image_item = $media->get('field_media_image')->first();
-      }
-
-
-      if ($image_item) {
-        // Extract alt from the media's image field item if available.
-        if (isset($image_item->alt)) {
-          $alt = (string) $image_item->alt;
+    // Build URL from file entity if possible.
+    if (method_exists($file, 'getFileUri')) {
+      $uri = $file->getFileUri();
+      if ($uri) {
+        $style = \Drupal\image\Entity\ImageStyle::load($image_style);
+        if ($style) {
+          $result['url'] = $style->buildUrl($uri);
         } else {
-          try {
-            $altVal = $image_item->get('alt')->getValue();
-            if (is_array($altVal)) {
-              $alt = reset($altVal) ?: '';
-            } elseif (is_string($altVal)) {
-              $alt = $altVal;
-            }
-          } catch (\Throwable $e) {
-            // ignore; we'll fallback later
-          }
-        }
-
-        // File entity referenced by the media image field.
-        $file = $image_item->entity;
-      }
-
-      // Some media types store the image URI directly on a property; try common fallbacks.
-      if (!$file && $media->hasField('field_media_image') && !$media->get('field_media_image')->isEmpty()) {
-        $maybe = $media->get('field_media_image')->first();
-        if ($maybe && $maybe->entity) {
-          $file = $maybe->entity;
+          $result['url'] = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
         }
       }
     }
-    else {
-      // Not a media reference — treat as a regular image/file field item.
-      if (isset($item->alt)) {
-        $alt = (string) $item->alt;
-      } else {
+
+    return $result;
+  }
+
+  // If $item is an object (FieldItem, File, Media, etc.) inspect it.
+  if (is_object($item)) {
+    $alt = '';
+    $file = null;
+
+    // If the item directly has an alt property (common for image field items).
+    if (isset($item->alt)) {
+      $alt = (string) $item->alt;
+    } else {
+      // Try method-based access; some FieldItem implementations expose get('alt').
+      if (method_exists($item, 'get')) {
         try {
           $altVal = $item->get('alt')->getValue();
           if (is_array($altVal)) {
@@ -108,33 +100,150 @@ function montreal2027_preprocess_node__guest__teaser(array &$variables) {
             $alt = $altVal;
           }
         } catch (\Throwable $e) {
-          // ignore; fallback below
+          // ignore
         }
       }
-
-      $file = $item->entity;
     }
 
-    // Build a URL from the file entity using an image style if available, otherwise fall back to a file URL.
-    $image_url = '';
+    // If the item references an entity (could be a file or a media entity).
+    if (isset($item->entity) && is_object($item->entity)) {
+      $entity = $item->entity;
+      try {
+        $etype = method_exists($entity, 'getEntityTypeId') ? $entity->getEntityTypeId() : '';
+      } catch (\Throwable $e) {
+        $etype = '';
+      }
+
+      // If it's a media entity, find the media's image field item and extract file/alt.
+      if ($etype === 'media') {
+        $media = $entity;
+        $possible_image_fields = [
+          'field_media_image',
+          'field_media_photo',
+          'field_image',
+          'image',
+          'field_media_picture',
+        ];
+        $image_item = null;
+        foreach ($possible_image_fields as $field_name) {
+          if ($media->hasField($field_name) && !$media->get($field_name)->isEmpty()) {
+            $image_item = $media->get($field_name)->first();
+            break;
+          }
+        }
+        if ($image_item) {
+          // Extract alt from the media's image field item if available.
+          if (isset($image_item->alt)) {
+            $alt = (string) $image_item->alt;
+          } else {
+            try {
+              $altVal = $image_item->get('alt')->getValue();
+              if (is_array($altVal)) {
+                $alt = reset($altVal) ?: '';
+              } elseif (is_string($altVal)) {
+                $alt = $altVal;
+              }
+            } catch (\Throwable $e) {
+              // ignore
+            }
+          }
+
+          // File entity referenced by the media image field.
+          if (isset($image_item->entity) && is_object($image_item->entity)) {
+            $file = $image_item->entity;
+          }
+        }
+
+        // Fallback: if no image_item resolved, try the media's field_media_image directly.
+        if (!$file && $media->hasField('field_media_image') && !$media->get('field_media_image')->isEmpty()) {
+          $maybe = $media->get('field_media_image')->first();
+          if ($maybe && isset($maybe->entity) && is_object($maybe->entity)) {
+            $file = $maybe->entity;
+          }
+        }
+      }
+      else {
+        // If the referenced entity is a file entity, use it directly.
+        if ($etype === 'file' || is_subclass_of(get_class($entity), 'Drupal\\file\\Entity\\File') || method_exists($entity, 'getFileUri')) {
+          $file = $entity;
+        }
+      }
+    }
+
+    // Build the image URL from the resolved file entity when possible.
     if ($file) {
       try {
-        $uri = $file->getFileUri();
+        $uri = method_exists($file, 'getFileUri') ? $file->getFileUri() : '';
         if ($uri) {
-          $style = \Drupal\image\Entity\ImageStyle::load('guest_photos');
+          $style = \Drupal\image\Entity\ImageStyle::load($image_style);
           if ($style) {
-            $image_url = $style->buildUrl($uri);
+            $result['url'] = $style->buildUrl($uri);
           } else {
-            $image_url = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
+            $result['url'] = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
           }
         }
       } catch (\Throwable $e) {
-        // ignore and leave $image_url empty
+        // ignore
       }
     }
 
-    // Final fallbacks: use node label if alt is empty.
-    $variables['guest_image_alt'] = $alt !== '' ? $alt : $variables['node']->label();
-    $variables['guest_image_url'] = $image_url ?: '';
+    $result['alt'] = $alt;
+    return $result;
+  }
+
+  // Nothing resolved.
+  return $result;
+}
+
+/**
+ * Preprocess for the node guest teaser template.
+ *
+ * This uses the generic resolver above to expose guest_image_alt and
+ * guest_image_url to the twig template.
+ */
+function montreal2027_preprocess_node__guest__teaser(array &$variables) {
+  // Default values.
+  $variables['guest_image_alt'] = '';
+  $variables['guest_image_url'] = '';
+
+  if (isset($variables['node']) && $variables['node']->hasField('field_guest_photo') && !$variables['node']->get('field_guest_photo')->isEmpty()) {
+    $item = $variables['node']->get('field_guest_photo')->first();
+    $info = get_image_info($item, 'guest_photos');
+
+    // Fallback alt to node label if empty.
+    $variables['guest_image_alt'] = $info['alt'] !== '' ? $info['alt'] : $variables['node']->label();
+    $variables['guest_image_url'] = $info['url'] ?: '';
   }
 }
+
+//function montreal2027_preprocess_block__montreal2027_lefleur(&$variables) {
+//  $variables['lefleur_alt'] = '';
+//  $variables['lefleur_url'] = '';
+//
+//  $item = null;
+//
+//  if (!empty($variables['content']['field_block_image'])) {
+//    $render_field = $variables['content']['field_block_image'];
+//
+//    // Common places where the raw FieldItem may be stored.
+//    if (isset($render_field[0]['#item'])) {
+//      $item = $render_field[0]['#item'];
+//    } elseif (isset($render_field['#items'])) {
+//      $items = $render_field['#items'];
+//      // #items is often an ArrayObject or array of items.
+//      if (is_array($items)) {
+//        $item = reset($items);
+//      } elseif ($items instanceof \ArrayObject) {
+//        $arr = $items->getArrayCopy();
+//        $item = reset($arr);
+//      }
+//    } elseif (isset($render_field[0]['#raw_value'])) {
+//      // Some renderers provide a '#raw_value' or similar.
+//      $item = $render_field[0]['#raw_value'];
+//    }
+//
+//    $info = get_image_info($item);
+//    $variables['lefleur_alt'] = $info['alt'] ?? $variables['lefleur_alt'];
+//    $variables['lefleur_url'] = $info['url'] ?? '';
+//  }
+//}
