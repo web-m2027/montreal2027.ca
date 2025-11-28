@@ -1,0 +1,25 @@
+uuid: ca0ad186-432c-4dff-b17c-34140c699d85
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: '16_9'
+label: '16:9'
+effects:
+  d3ff90a2-6b00-4323-998c-71b83dc8e35c:
+    uuid: d3ff90a2-6b00-4323-998c-71b83dc8e35c
+    id: image_effects_relative_crop
+    weight: 1
+    data:
+      width: 1600
+      height: 900
+      anchor:
+        width: center
+        height: center
+  858dd315-bb2d-44f3-843d-81882da3c1e7:
+    uuid: 858dd315-bb2d-44f3-843d-81882da3c1e7
+    id: image_convert_avif
+    weight: 2
+    data:
+      extension: webp

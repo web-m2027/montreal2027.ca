@@ -4,28 +4,32 @@
   &-primary-menu {
     display: grid;
     background: linear-gradient(90deg, rgba(51, 51, 153, 0.19) 0%, rgba(51, 51, 153) 50%, rgb(51, 51, 153) 100%),#fff;
-    @container page-wrapper (min-width: var(--bs-breakpoint-lg) ) {
-      background-color: var(--color-blue);
-    }
-    position: sticky;
+    //@container page-wrapper (min-width: var(--bs-breakpoint-lg) ) {
+    //  background-color: var(--color-blue);
+    //}
+    position: fixed;
     top: var(--site-primary-menu-top);
     padding: 0 0 0 1rem;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto;
+    width: 100%;
+    z-index: 900;
+
   }
 
   &-breadcrumb {
     height: var(--site-breadcrumb-height);
-    position: sticky;
+    position: fixed;
     top: var(--site-breadcrumb-top);
     z-index: 900;
     margin:0;
     @include frosted-glass($border-radius: 0);
+    width: 100%;
   }
 
   &-footer {
     &-first {
       display: grid;
-      grid-template-columns: 1fr 1fr auto auto;
+      grid-template-columns: auto auto 1fr auto auto;
       grid-gap: 1rem;
       padding: 0 1rem 0 0;
 
