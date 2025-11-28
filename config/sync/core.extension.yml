@@ -68,6 +68,7 @@ module:
   path_alias: 0
   photoswipe: 0
   raven: 0
+  recreate_block_content: 0
   search: 0
   search_api: 0
   search_api_db: 0
