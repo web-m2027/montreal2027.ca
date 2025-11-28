@@ -47,6 +47,7 @@
         "drupal/metatag": "^2.2",
         "drupal/pathauto": "^1.14",
         "drupal/raven": "^7.3",
+        "drupal/recreate_block_content": "^3.0",
         "drupal/search_api": "^1.39",
         "drupal/social_media_links": "^2.10",
         "drupal/svg_image": "^3.2",
