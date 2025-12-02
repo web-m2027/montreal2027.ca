@@ -82,7 +82,8 @@
 
   /* Footer: default is static (in-flow) for mobile/smaller screens */
   footer.site-footer {
-    height: calc(var(--site-footer-height) + var(--drupal-displace-offset-top, 0px));
+    height: auto;
+    // calc(var(--site-footer-height) + var(--drupal-displace-offset-top, 0px));
     box-sizing: border-box;
     transition: transform 220ms ease, box-shadow 220ms ease;
     width: 100%;
