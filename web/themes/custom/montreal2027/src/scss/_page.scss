@@ -62,15 +62,14 @@
       & .under-construction h1 {
         font-size: 5rem;
         color: var(--color-red);
+        margin: 1rem 0 0 0;
       }
       & .under-construction h1::first-letter {
         font-size: 7.5rem;
       }
       & p.under-construction {
         font-size: 3rem;
-      }
-      & p::first-letter .under-construction{
-        font-size: 4rem;
+        line-height: 3rem;
       }
     }
 
