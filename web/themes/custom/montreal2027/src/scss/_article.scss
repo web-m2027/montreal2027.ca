@@ -59,6 +59,10 @@ article {
     & p::first-letter {
       font-size: 1.2rem;
       color: var(--color-maroon);
+
+      .under-construction {
+        font-size: 4rem;
+      }
     }
   }
 }
