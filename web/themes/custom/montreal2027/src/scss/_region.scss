@@ -8,19 +8,19 @@
     //  background-color: var(--color-blue);
     //}
     position: fixed;
-    top: var(--site-primary-menu-top);
+    top: calc(var(--site-primary-menu-top) + var(--drupal-displace-offset-top, 0px));
     padding: 0 0 0 1rem;
     grid-template-columns: auto;
     width: 100%;
-    z-index: 900;
+    z-index: 500;
 
   }
 
   &-breadcrumb {
     height: var(--site-breadcrumb-height);
     position: fixed;
-    top: var(--site-breadcrumb-top);
-    z-index: 900;
+    top: calc(var(--site-breadcrumb-top) + var(--drupal-displace-offset-top, 0px));
+    z-index: 500;
     margin:0;
     @include frosted-glass($border-radius: 0);
     width: 100%;
