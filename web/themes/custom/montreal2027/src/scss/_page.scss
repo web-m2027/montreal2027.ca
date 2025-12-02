@@ -63,13 +63,13 @@
         font-size: 5rem;
         color: var(--color-red);
       }
-      & .under-construction h1:first-letter {
+      & .under-construction h1::first-letter {
         font-size: 7.5rem;
       }
       & p.under-construction {
         font-size: 3rem;
       }
-      & p:first-letter .under-construction{
+      & p::first-letter .under-construction{
         font-size: 4rem;
       }
     }
