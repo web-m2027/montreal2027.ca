@@ -2,6 +2,7 @@ _core:
   default_config_hash: 4GIX5Esnc_umpXUBj4IIocRX7Mt5fPhm4AgXfE3E56E
 module:
   admin_theme: 0
+  admin_toolbar: 0
   automated_cron: 0
   block: 0
   block_content: 0
@@ -12,7 +13,6 @@ module:
   comment: 0
   config: 0
   config_ignore: 0
-  content_moderation: 0
   contextual: 0
   datetime: 0
   datetime_range: 0
@@ -28,6 +28,8 @@ module:
   embed: 0
   entity_embed: 0
   entity_reference_revisions: 0
+  entity_workflow: 0
+  entity_workflow_workspace: 0
   ept_basic_button: 0
   ept_core: 0
   ept_hero: 0
@@ -86,6 +88,10 @@ module:
   user: 0
   views_ui: 0
   workflows: 0
+  workspaces: 0
+  workspaces_access: 0
+  workspaces_ui: 0
+  wse: 0
   pathauto: 1
   views: 10
   paragraphs: 11

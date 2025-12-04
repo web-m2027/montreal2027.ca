@@ -3,35 +3,52 @@
 .region {
   &-primary-menu {
     display: grid;
-    background: linear-gradient(90deg, rgba(51, 51, 153, 0.19) 0%, rgba(51, 51, 153) 50%, rgb(51, 51, 153) 100%),#fff;
-    //@container page-wrapper (min-width: var(--bs-breakpoint-lg) ) {
-    //  background-color: var(--color-blue);
-    //}
     position: fixed;
-    top: calc(var(--site-primary-menu-top) + var(--drupal-displace-offset-top, 0px));
-    padding: 0 0 0 1rem;
-    grid-template-columns: auto;
-    width: 100%;
+    top: 0;
+    padding: 0;
+    grid-template-rows: auto;
+    width: 4rem;
+    background: #adadd6;
+    height: var(--site-header-height);
     z-index: 500;
+
+    @container (min-width: 768px) {
+      top: calc(var(--site-primary-menu-top) + var(--drupal-displace-offset-top, 0px));
+      padding: 0 0 0 1rem;
+      grid-template-columns: auto;
+      width: 100%;
+      height: auto;
+      background: linear-gradient(90deg, rgba(51, 51, 153, 0.19) 0%, rgba(51, 51, 153) 50%, rgb(51, 51, 153) 100%),#fff;
+    }
 
   }
 
   &-breadcrumb {
     height: var(--site-breadcrumb-height);
     position: fixed;
-    top: calc(var(--site-breadcrumb-top) + var(--drupal-displace-offset-top, 0px));
+    top: var(--site-header-height);
     z-index: 500;
     margin:0;
     @include frosted-glass($border-radius: 0);
     width: 100%;
+
+    @container (min-width: 768px) {
+      top: calc(var(--site-breadcrumb-top) + var(--drupal-displace-offset-top, 0px));
+    }
   }
 
   &-footer {
     &-first {
       display: grid;
-      grid-template-columns: auto auto 1fr auto auto;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
       grid-gap: 1rem;
-      padding: 0 1rem 0 0;
+
+      @container (min-width: 768px) {
+        grid-template-columns: auto auto 1fr auto auto;
+        grid-template-rows: auto;
+        padding: 0 1rem 0 0;
+      }
 
       & nav {
         line-height: 1rem;

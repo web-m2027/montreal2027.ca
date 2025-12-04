@@ -8,13 +8,15 @@ dependencies:
     - comment
     - filter
     - media
+    - media_gallery
     - search
     - system
+    - workspaces_access
 _core:
   default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
 id: anonymous
 label: 'Anonymous user'
-weight: 0
+weight: -10
 is_admin: false
 permissions:
   - 'access comments'
@@ -22,3 +24,5 @@ permissions:
   - 'search content'
   - 'use text format restricted_html'
   - 'view media'
+  - 'view published media gallery entities'
+  - workspace_live_view_content
