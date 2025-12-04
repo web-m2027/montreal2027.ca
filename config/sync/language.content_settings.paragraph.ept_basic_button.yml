@@ -1,0 +1,18 @@
+uuid: 5f5160ee-889d-4380-87f5-4d0596faeea9
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.ept_basic_button
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.ept_basic_button
+target_entity_type_id: paragraph
+target_bundle: ept_basic_button
+default_langcode: site_default
+language_alterable: false

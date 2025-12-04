@@ -1,0 +1,18 @@
+uuid: 6b9e3e9b-2824-42d9-a599-4c06ec7122af
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_tiles
+id: block_content.ebt_tiles.info
+field_name: info
+entity_type: block_content
+bundle: ebt_tiles
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

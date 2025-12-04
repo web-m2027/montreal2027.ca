@@ -17,18 +17,20 @@ bundle: ebt_text
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 0
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
     region: content
   field_ebt_settings:
-    weight: 1
+    type: ebt_settings_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: ebt_settings_default
+    weight: 1
     region: content
 hidden:
+  entity_workspace_status: true
+  langcode: true
   search_api_excerpt: true

@@ -16,7 +16,7 @@ bundle: ebt_text
 label: 'Block settings'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

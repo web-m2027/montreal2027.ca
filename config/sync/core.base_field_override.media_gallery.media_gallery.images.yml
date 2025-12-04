@@ -1,0 +1,32 @@
+uuid: b7699bc8-0108-4328-82d3-1c410b37a8dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+  module:
+    - media_gallery
+id: media_gallery.media_gallery.images
+field_name: images
+entity_type: media_gallery
+bundle: media_gallery
+label: 'Gallery images'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings:
+    target_bundles:
+      audio: audio
+      document: document
+      image: image
+      remote_video: remote_video
+      video: video
+field_type: entity_reference

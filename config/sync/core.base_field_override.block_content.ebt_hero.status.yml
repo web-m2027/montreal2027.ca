@@ -1,0 +1,22 @@
+uuid: dcd0ac3f-a3d4-46ec-abaf-c03dc03a1adb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_hero
+id: block_content.ebt_hero.status
+field_name: status
+entity_type: block_content
+bundle: ebt_hero
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -162,6 +162,10 @@ settings:
       value: ''
       description: ''
       weight: '-11'
+    bluesky:
+      value: '#'
+      description: ''
+      weight: '-10'
   appearance:
     orientation: h
     show_name: 0

@@ -1,0 +1,18 @@
+uuid: 8ca33fca-cfd0-4604-a0a1-f9ebaf524908
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.guests
+id: paragraph.guests.created
+field_name: created
+entity_type: paragraph
+bundle: guests
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

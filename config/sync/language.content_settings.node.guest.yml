@@ -1,0 +1,18 @@
+uuid: 7a233d1a-030c-43a7-8bfa-8df47b250a01
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.guest
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.guest
+target_entity_type_id: node
+target_bundle: guest
+default_langcode: site_default
+language_alterable: true

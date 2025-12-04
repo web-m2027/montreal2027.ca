@@ -26,8 +26,8 @@ content:
     type: photoswipe_field_formatter
     label: hidden
     settings:
-      photoswipe_image_style: ''
       photoswipe_thumbnail_style: media_gallery_image
+      photoswipe_image_style: ''
     third_party_settings: {  }
     weight: 2
     region: content
@@ -41,6 +41,7 @@ content:
     region: content
 hidden:
   created: true
+  langcode: true
   search_api_excerpt: true
   status: true
   uid: true
