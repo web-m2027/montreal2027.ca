@@ -1,0 +1,18 @@
+uuid: c0d5295e-497d-4435-ad5b-8bd88ee37a0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_hero
+id: block_content.ebt_hero.changed
+field_name: changed
+entity_type: block_content
+bundle: ebt_hero
+label: Changed
+description: 'The time that the content block was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

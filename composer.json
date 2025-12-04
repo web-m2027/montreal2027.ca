@@ -83,6 +83,11 @@
         "sort-packages": true
     },
     "extra": {
+        "patches": {
+            "drupal/social_media_links": {
+                "Add Bluesky": "https://www.drupal.org/files/issues/2025-01-28/3485279-2.patch"
+            }
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"

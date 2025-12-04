@@ -1,0 +1,18 @@
+uuid: 14ce90d0-3a2c-4d41-a3e3-8b5c61fa5aee
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_gallery
+id: media_gallery.media_gallery.title
+field_name: title
+entity_type: media_gallery
+bundle: media_gallery
+label: Title
+description: 'The title of the media gallery entity.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

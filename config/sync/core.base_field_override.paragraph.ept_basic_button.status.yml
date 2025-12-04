@@ -1,0 +1,22 @@
+uuid: 78c2ba33-ce2c-4b8f-a8a2-7ff9e8a5f2f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.ept_basic_button
+id: paragraph.ept_basic_button.status
+field_name: status
+entity_type: paragraph
+bundle: ept_basic_button
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

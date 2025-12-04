@@ -1,0 +1,18 @@
+uuid: 89fc088b-071c-4970-9f50-f25b580c212f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.connect-with-us
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: menu_link_content.connect-with-us
+target_entity_type_id: menu_link_content
+target_bundle: connect-with-us
+default_langcode: site_default
+language_alterable: true

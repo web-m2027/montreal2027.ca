@@ -1,0 +1,20 @@
+uuid: 7e1df6d6-1d65-4284-8f6b-4005f6ef8633
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_hero
+  module:
+    - metatag
+id: block_content.ebt_hero.metatag
+field_name: metatag
+entity_type: block_content
+bundle: ebt_hero
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

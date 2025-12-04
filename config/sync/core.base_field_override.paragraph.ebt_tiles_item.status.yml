@@ -1,0 +1,22 @@
+uuid: 1e91bcce-fac1-41e4-aed3-906489e7dcdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.ebt_tiles_item
+id: paragraph.ebt_tiles_item.status
+field_name: status
+entity_type: paragraph
+bundle: ebt_tiles_item
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

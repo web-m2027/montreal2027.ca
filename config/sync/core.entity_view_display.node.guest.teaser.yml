@@ -38,6 +38,8 @@ content:
     weight: 0
     region: content
 hidden:
+  entity_workspace_status: true
   field_type_of_guest: true
+  langcode: true
   links: true
   search_api_excerpt: true

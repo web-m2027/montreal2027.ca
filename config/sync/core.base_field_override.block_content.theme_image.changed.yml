@@ -1,0 +1,18 @@
+uuid: b43df92a-0ee9-4d01-aa66-c87f3eb8e385
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.theme_image
+id: block_content.theme_image.changed
+field_name: changed
+entity_type: block_content
+bundle: theme_image
+label: Changed
+description: 'The time that the content block was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed
