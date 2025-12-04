@@ -225,3 +225,198 @@ function montreal2027_preprocess_block__montreal2027_content(&$variables) {
     $variables['current_node'] = $node;
   }
 }
+
+/**
+ * Preprocess for paragraph--guest-block.twig template.
+ *
+ * Resolve the referenced block entity (paragraph.field_block) and pick the
+ * appropriate translation using a robust server-side language detection
+ * strategy. Expose 'guest_block_entity_translated' and simple conveniences
+ * to Twig so templates don't need to reimplement language detection logic.
+ */
+function montreal2027_preprocess_paragraph__guest_block(array &$variables)
+{
+  if (empty($variables['paragraph'])) {
+    return;
+  }
+  $paragraph = $variables['paragraph'];
+
+  // Default exposures for Twig.
+  $variables['guest_block_entity_translated'] = NULL;
+  $variables['guest_block_langcode'] = NULL;
+  $variables['guest_block_title'] = '';
+  $variables['guest_block_title_plural'] = '';
+  $variables['guest_block_description'] = '';
+
+  // Get the referenced block entity from paragraph.field_block (adjust if field name differs).
+  if (!$paragraph->hasField('field_block') || $paragraph->get('field_block')->isEmpty()) {
+    return;
+  }
+
+  $referenced = $paragraph->get('field_block')->entity;
+  if (!$referenced) {
+    return;
+  }
+
+  // Robust language detection (server-side): prefer entity langcode, then
+  // current language from language manager, then request attributes.
+  $langcode = NULL;
+
+  // 1) Prefer the entity's own langcode (this is safe and explicit).
+  try {
+    $entity_lang = method_exists($referenced, 'getLangcode') ? $referenced->getLangcode() : NULL;
+    if ($entity_lang) {
+      $langcode = $entity_lang;
+    }
+  } catch (\Throwable $e) {
+    // ignore
+  }
+
+  // 2) Language manager current language
+  if (empty($langcode)) {
+    try {
+      $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    } catch (\Throwable $e) {
+      // ignore
+    }
+  }
+
+  // 3) Request attributes (Negotiation may set these)
+  if (empty($langcode)) {
+    $request = \Drupal::request();
+    if ($request) {
+      $req_lang = $request->attributes->get('_language');
+      if ($req_lang && method_exists($req_lang, 'getId')) {
+        $langcode = $req_lang->getId();
+      }
+    }
+  }
+
+  // 4) Locale fallback
+  if (empty($langcode)) {
+    $request = \Drupal::request();
+    if ($request) {
+      $locale_attr = $request->attributes->get('_locale');
+      if ($locale_attr) {
+        $langcode = preg_split('/[_-]/', (string)$locale_attr)[0];
+      } else {
+        $locale = $request->getLocale();
+        if ($locale) {
+          $langcode = preg_split('/[_-]/', (string)$locale)[0];
+        }
+      }
+    }
+  }
+
+  // 5) Fallback: derive language from the first URL path segment (path prefix)
+  // This handles cases where language negotiation uses path prefixes (e.g. /fr/...).
+  if (empty($langcode)) {
+    $request = \Drupal::request();
+    if ($request) {
+      $path = trim($request->getPathInfo(), '/');
+
+      // If getPathInfo() has had the language prefix removed (some middlewares
+      // or language negotiation can do this), try the original request URI
+      // and strip base path.
+      if ($path === '') {
+        $raw = $request->getRequestUri();
+        // Remove query string
+        $raw = preg_replace('/\?.*/', '', $raw);
+        $base = $request->getBasePath() ?: '';
+        if ($base && strpos($raw, $base) === 0) {
+          $raw = substr($raw, strlen($base));
+        }
+        $raw = trim($raw, '/');
+        $path = $raw;
+      }
+
+      if ($path !== '') {
+        $first_segment = preg_split('#/+#', $path)[0];
+        // Check against configured languages. Accept exact matches or primary-subtag matches
+        try {
+          $languages = \Drupal::languageManager()->getLanguages();
+          foreach ($languages as $lid => $lang) {
+            // Exact key match first.
+            if ($first_segment === $lid) {
+              $langcode = $lid;
+              break;
+            }
+            // Accept matching the primary subtag (e.g. 'fr' for 'fr-FR' or 'fr_CA').
+            $primary = preg_split('/[_-]/', $lid)[0];
+            if ($first_segment === $primary) {
+              $langcode = $lid;
+              break;
+            }
+          }
+        } catch (\Throwable $e) {
+          // ignore
+        }
+      }
+    }
+  }
+
+  // --- DEBUG LOG: record detection values to watchdog for troubleshooting ---
+//  try {
+//    $request = \Drupal::request();
+//    $req_lang_attr = $request ? $request->attributes->get('_language') : NULL;
+//    $req_locale_attr = $request ? $request->attributes->get('_locale') : NULL;
+//    $path_info = $request ? $request->getPathInfo() : '';
+//    $lang_manager = NULL;
+//    try {
+//      $lang_manager = \Drupal::languageManager()->getCurrentLanguage()->getId();
+//    } catch (\Throwable $e) {
+//      $lang_manager = NULL;
+//    }
+//
+//    // build a compact debug message
+//    $msg = 'montreal2027: lang detection — entity_lang=' . var_export($entity_lang, TRUE)
+//      . ', lang_manager=' . var_export($lang_manager, TRUE)
+//      . ', req_lang_attr=' . (is_object($req_lang_attr) && method_exists($req_lang_attr, 'getId') ? $req_lang_attr->getId() : var_export($req_lang_attr, TRUE))
+//      . ', req_locale_attr=' . var_export($req_locale_attr, TRUE)
+//      . ', path=' . var_export($path_info, TRUE)
+//      . ', path_first=' . var_export(isset($first_segment) ? $first_segment : NULL, TRUE)
+//      . ', final_langcode=' . var_export($langcode, TRUE);
+//
+//    \Drupal::logger('montreal2027')->debug($msg);
+//  } catch (\Throwable $e) {
+//    // Do not break page rendering for logging failures.
+//  }
+
+  // Determine translated entity (if available)
+  $translated = $referenced;
+  if ($langcode && $referenced->hasTranslation($langcode)) {
+    try {
+      $translated = $referenced->getTranslation($langcode);
+    } catch (\Throwable $e) {
+      // ignore and fall back to original
+    }
+  }
+
+  $variables['guest_block_entity_translated'] = $translated;
+  $variables['guest_block_langcode'] = $langcode;
+
+  // Convenience values for the template
+  try {
+    $variables['guest_block_title'] = $translated->label();
+  } catch (\Throwable $e) {
+    $variables['guest_block_title'] = '';
+  }
+
+  // Title plural (field_plural)
+  if ($translated && $translated->hasField('field_plural') && !$translated->get('field_plural')->isEmpty()) {
+    try {
+      $variables['guest_block_title_plural'] = (string)$translated->get('field_plural')->first()->value;
+    } catch (\Throwable $e) {
+      $variables['guest_block_title_plural'] = '';
+    }
+  }
+
+  // Description - guard for the field existence
+  if ($translated && $translated->hasField('description') && !$translated->get('description')->isEmpty()) {
+    try {
+      $variables['guest_block_description'] = (string) $translated->get('description')->first()->value;
+    } catch (\Throwable $e) {
+      $variables['guest_block_description'] = '';
+    }
+  }
+}
