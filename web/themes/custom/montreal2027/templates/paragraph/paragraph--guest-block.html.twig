@@ -1,12 +1,13 @@
-{% set block_title = paragraph.field_block.entity.name.value %}
+{% set block_title = guest_block_title %}
 <h1 class="paragraph--guest_type">
-  {% if paragraph.field_block.entity.field_plural.value %}
-    {% set block_title = paragraph.field_block.entity.field_plural.value %}
+  {% if guest_block_title_plural is not empty %}
+    {% set block_title = guest_block_title_plural %}
   {% endif %}
   {{ block_title }}
 </h1>
-{% if paragrah.field_block.entity.description.0 %}
-<h4 class="paragraph--guest_type">{{ paragraph.field_block.entity.description.0.value|striptags }}</h4>
+
+{% if guest_block_description is not empty %}
+  <h2>{{ guest_block_description|striptags }}</h2>
 {% endif %}
 
 {{ drupal_view('guest_list', 'guests', paragraph.field_block.entity.id) }}
