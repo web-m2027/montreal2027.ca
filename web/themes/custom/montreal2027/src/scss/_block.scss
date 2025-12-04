@@ -8,14 +8,27 @@
   }
 
   &-searchform {
-    display: flex;
-    align-content: center;
+    grid-column: span 2 / span 2;
+    grid-row-start: 2;
+    margin: 0 auto;
+
+    @container page-wrapper (min-width: 768px) {
+      display: flex;
+      align-content: center;
+      grid-column: unset;
+      grid-row-start: unset;
+    }
+
     & #search-block-form {
       display: grid;
       grid-template-columns: auto auto;
       grid-gap: 1rem;
-      margin:auto;
-      width: 35dvw;
+      margin: 0 auto;
+
+      @container page-wrapper (min-width: 768px) {
+        margin:auto;
+        width: 35dvw;
+      }
 
       & input[type="search"] {
         font-size: 1rem;
@@ -60,11 +73,20 @@
 
   &-site-branding {
     align-content: center;
+    margin: 0 auto;
+
+    @container page-wrapper (min-width: 768px) {
+      margin: 0;
+    }
 
     & > div {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
+
+      @container page-wrapper (min-width: 768px) {
+        align-items: center;
+      }
     }
 
     & .site-logo {
@@ -72,8 +94,11 @@
       width: auto;
       height: auto;
       margin: 0 0 0 1rem;
+      //background: url('/assets/m2027-logo-white.svg') no-repeat center;
+      //background-size: contain;
 
       & img {
+        //display: none;
         height: 4rem;
 
         @container page-wrapper (min-width: 768px) {
@@ -134,7 +159,14 @@
   }
 
   &-location-3 {
-    display: grid;
+    //display: grid;
+    margin: 0 auto;
+    grid-column: span 2 / span 2;
+
+    @container page-wrapper (min-width: 768px) {
+      grid-column: unset;
+    }
+
     & ~ #block-montreal2027-lafleur {
       margin: 0 0 0 1rem;
     }
@@ -177,23 +209,41 @@
   }
 
   &-mapleleaf {
+    display: none;
     text-align: end;
+
+    @container page-wrapper (min-width: 768px) {
+      display: block;
+    }
   }
 
   &-lefleur {
     padding: 1rem;
+    display: none;
 
-    &:has(~ #block-montreal2027-location-3) {
-      margin: 1rem 0;
-
-      & + img {
-        transform: rotateY(180deg);
-      }
+    @container page-wrapper (min-width: 768px) {
+      display: block;
     }
 
     & img {
       height: 7rem;
       width: auto;
+    }
+  }
+
+  &-important-pages-3-menu {
+    grid-row-start: 3;
+
+    @container page-wrapper (min-width: 768px) {
+      grid-row-start: unset;
+    }
+  }
+
+  &-externallinks-3-menu {
+    grid-row-start: 3;
+
+    @container page-wrapper (min-width: 768px) {
+      grid-row-start: unset;
     }
   }
 }

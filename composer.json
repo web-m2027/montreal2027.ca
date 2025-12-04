@@ -22,9 +22,11 @@
         "composer/installers": "^2.3",
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_theme": "^1.1",
+        "drupal/admin_toolbar": "^3.6",
         "drupal/block_field": "^1.0@RC",
         "drupal/ckeditor5_paste_filter": "^1.1",
         "drupal/config_ignore": "^3.3",
+        "drupal/content_lock": "^3.0@alpha",
         "drupal/core-composer-scaffold": "^11.2",
         "drupal/core-project-message": "^11.2",
         "drupal/core-recipe-unpack": "^11.2",
@@ -34,6 +36,7 @@
         "drupal/ebt_text": "^1.4",
         "drupal/ebt_tiles": "^1.4",
         "drupal/entity_embed": "^1.7",
+        "drupal/entity_workflow": "^2.0@beta",
         "drupal/ept_hero": "^1.4",
         "drupal/ept_text": "^1.4",
         "drupal/ept_tiles": "^1.4",
@@ -53,6 +56,8 @@
         "drupal/svg_image": "^3.2",
         "drupal/svg_image_field": "^2.3",
         "drupal/twig_tweak": "^3.4",
+        "drupal/workspaces_access": "^1.1",
+        "drupal/wse": "^2.0@alpha",
         "drush/drush": "^13.6",
         "omscllc/clean_blog_theme": "dev-develop",
         "wikimedia/composer-merge-plugin": "^2.1"
@@ -60,7 +65,7 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "allow-plugins": {

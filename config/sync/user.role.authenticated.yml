@@ -6,19 +6,22 @@ dependencies:
     - comment
     - file
     - media
+    - media_gallery
     - search
     - system
+    - workspaces_access
 _core:
   default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
 id: authenticated
 label: 'Authenticated user'
-weight: 1
+weight: -9
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
   - 'delete own files'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
   - 'view media'
+  - 'view published media gallery entities'
+  - workspace_live_view_content
