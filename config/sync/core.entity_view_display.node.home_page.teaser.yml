@@ -29,5 +29,7 @@ content:
     weight: 100
     region: content
 hidden:
+  entity_workspace_status: true
   field_guests: true
+  langcode: true
   search_api_excerpt: true

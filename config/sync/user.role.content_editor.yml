@@ -96,6 +96,8 @@ permissions:
   - 'edit terms in tags'
   - 'revert all revisions'
   - 'use text format full_html'
+  - 'use workspace transition back_to_draft'
+  - 'use workspace transition reviewed'
   - 'use workspace transition submit_for_review'
   - 'view any workspace'
   - 'view media'

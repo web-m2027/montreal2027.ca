@@ -1,0 +1,18 @@
+uuid: 5263cca5-348f-4008-a1b9-7e44bca60c3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.ept_tiles_item
+id: paragraph.ept_tiles_item.created
+field_name: created
+entity_type: paragraph
+bundle: ept_tiles_item
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

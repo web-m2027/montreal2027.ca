@@ -1,0 +1,22 @@
+uuid: bc68c5a3-2286-40e9-a261-b36b8a7a2f22
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_basic_button
+id: block_content.ebt_basic_button.status
+field_name: status
+entity_type: block_content
+bundle: ebt_basic_button
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

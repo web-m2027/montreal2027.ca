@@ -1,0 +1,20 @@
+uuid: faa7cacc-0c87-448e-98ba-061ed7f58c1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_tiles
+  module:
+    - metatag
+id: block_content.ebt_tiles.metatag
+field_name: metatag
+entity_type: block_content
+bundle: ebt_tiles
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

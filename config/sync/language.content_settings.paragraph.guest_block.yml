@@ -1,0 +1,18 @@
+uuid: adebd869-0788-4e30-8e6e-fdb580207adf
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.guest_block
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.guest_block
+target_entity_type_id: paragraph
+target_bundle: guest_block
+default_langcode: site_default
+language_alterable: false

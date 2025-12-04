@@ -1,0 +1,20 @@
+uuid: 7e297188-0364-489e-ae93-143a91930bf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.theme_image
+  module:
+    - metatag
+id: block_content.theme_image.metatag
+field_name: metatag
+entity_type: block_content
+bundle: theme_image
+label: 'Metatags (Hidden field for JSON support)'
+description: 'The computed meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag_computed

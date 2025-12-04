@@ -1,0 +1,22 @@
+uuid: e718c8af-a8f4-412a-9413-74aceb8b4e11
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.theme_image
+id: block_content.theme_image.status
+field_name: status
+entity_type: block_content
+bundle: theme_image
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

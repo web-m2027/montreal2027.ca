@@ -1,0 +1,18 @@
+uuid: 03dd8453-2da8-49d1-9cf7-49be9f375ca7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_basic_button
+id: block_content.ebt_basic_button.info
+field_name: info
+entity_type: block_content
+bundle: ebt_basic_button
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

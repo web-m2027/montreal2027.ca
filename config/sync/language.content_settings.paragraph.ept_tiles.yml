@@ -1,0 +1,18 @@
+uuid: 52e5c33d-d07d-45e8-a6ba-c1041ee78b2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.ept_tiles
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.ept_tiles
+target_entity_type_id: paragraph
+target_bundle: ept_tiles
+default_langcode: site_default
+language_alterable: false

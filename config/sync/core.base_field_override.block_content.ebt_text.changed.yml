@@ -1,0 +1,18 @@
+uuid: ed819edb-f032-4859-8539-52e84f0a9bb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_text
+id: block_content.ebt_text.changed
+field_name: changed
+entity_type: block_content
+bundle: ebt_text
+label: Changed
+description: 'The time that the content block was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

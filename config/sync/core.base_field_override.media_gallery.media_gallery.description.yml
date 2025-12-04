@@ -1,0 +1,20 @@
+uuid: 63ac87af-2188-4216-a94e-09d6c7024678
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_gallery
+    - text
+id: media_gallery.media_gallery.description
+field_name: description
+entity_type: media_gallery
+bundle: media_gallery
+label: Description
+description: 'A description of the media gallery.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

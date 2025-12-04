@@ -1,0 +1,18 @@
+uuid: 1503e071-2711-48eb-b6d1-4dec1432ff24
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_text
+id: block_content.ebt_text.info
+field_name: info
+entity_type: block_content
+bundle: ebt_text
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
