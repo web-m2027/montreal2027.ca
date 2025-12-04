@@ -1,0 +1,21 @@
+_core:
+  default_config_hash: kG_BDQzVaJOzsLDSHQI-PbmXnWjVmJVRddayR_YWHIo
+append_current_workspace_to_url: false
+simplified_toolbar_switcher: true
+recent_workspaces_max_age: 72
+switcher_max_options: 10
+save_published_revisions: published
+override_save_published_revisions: false
+squash_on_publish: false
+squash_on_publish_interval: 0
+clone_on_publish: false
+safe_forms:
+  - ''
+entity_workspace_status:
+  node: node
+  block_content: block_content
+  menu_link_content: menu_link_content
+  media: media
+  taxonomy_term: taxonomy_term
+  path_alias: path_alias
+disable_sub_workspaces: false

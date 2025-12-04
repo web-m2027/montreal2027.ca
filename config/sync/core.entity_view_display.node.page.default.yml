@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_guests
+    - field.field.node.page.field_show_title
     - node.type.page
   module:
     - entity_reference_revisions
@@ -39,4 +40,6 @@ content:
     weight: 2
     region: content
 hidden:
+  entity_workspace_status: true
+  field_show_title: true
   search_api_excerpt: true

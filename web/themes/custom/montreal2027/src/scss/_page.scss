@@ -17,26 +17,35 @@
 
   & #header {
     height: calc(var(--site-header-height) + var(--drupal-displace-offset-top, 0px));
-    background: linear-gradient(90deg, rgba(51, 51, 153, 0.19) 0%, rgba(51, 51, 153) 50%, rgb(51, 51, 153) 100%),#fff;
-    @container page-wrapper (min-width: var(--bs-breakpoint-lg) ) {
-      background: linear-gradient(90deg, rgba(237, 28, 36, 0.19) 0%, rgba(237, 28, 36, 0.91) 50%, rgba(153, 0, 51, 1) 100%),
-      #fff;
-    }
-    width: 100%;
+    background: #adadd6;
+    width: calc(100dvw - 2rem);
     padding-top:var(--drupal-displace-offset-top, 0px);
     position: fixed;
     top: 0;
+    left: 3rem;
     z-index: 500;
     box-sizing: border-box;
+    align-content: center;
+
+    @container page-wrapper (min-width: 768px ) {
+      background: linear-gradient(90deg, rgba(51, 51, 153, 0.19) 0%, rgb(51, 51, 153) 50%, rgb(51, 51, 153) 100%),#fff;
+      width: 100%;
+      left: 0;
+    }
 
     & .container {
       & .region-header {
-        display: grid;
-        align-items: center;
-        grid-template-columns: 400px 1fr 400px;
-        container-type: inline-size;
-        container-name: header;
-        justify-content: space-between;
+          display: flex;
+          flex-direction: row;
+
+        @container page-wrapper (min-width: 768px ) {
+          display: grid;
+          align-items: center;
+          grid-template-columns: 400px 1fr 400px;
+          container-type: inline-size;
+          container-name: header;
+          justify-content: space-between;
+        }
       }
     }
   }
@@ -50,7 +59,11 @@
     overflow: auto;
     container: main / inline-size;
     flex-grow: 1;
-    margin: 12rem 0 0 0;
+    margin: 8rem 0 0 0;
+
+    @container page-wrapper (min-width: 768px ) {
+      margin: 12rem 0 0 0;
+    }
 
     & .container {
       @include frosted-glass($border-radius: 1rem);
@@ -87,6 +100,12 @@
     box-sizing: border-box;
     transition: transform 220ms ease, box-shadow 220ms ease;
     width: 100%;
+    background-color: #adadd6;
+
+    @container page-wrapper (min-width: 768px ) {
+      background-color: unset;
+      padding: 0.5rem 0;
+    }
   }
 
   /* Make footer fixed on larger viewports and give a subtle slide-up/box-shadow */

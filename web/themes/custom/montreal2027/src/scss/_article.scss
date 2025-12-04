@@ -13,6 +13,11 @@ article {
         border-radius: 50%;
         width: auto;
         max-height: 10rem;
+        height: 6rem;
+
+        @container page-wrapper (min-width: 768px) {
+          height: auto;
+        }
       }
 
       & h3 {
@@ -49,16 +54,26 @@ article {
 
       & img {
         @include drop-shadow-slight;
-        margin: 1rem;
+        margin: 0 0 1rem;
         border-radius: 1rem;
         float: left;
         aspect-ratio: 1;
+
+        @container page-wrapper (min-width: 768px) {
+          margin: 1rem;
+        }
       }
     }
 
     & p::first-letter {
       font-size: 1.2rem;
       color: var(--color-maroon);
+    }
+
+    & .node__content {
+      & p {
+        line-height: 1.5rem;
+      }
     }
 
     & .under-construction {

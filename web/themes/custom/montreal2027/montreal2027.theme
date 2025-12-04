@@ -216,34 +216,12 @@ function montreal2027_preprocess_node__guest__teaser(array &$variables) {
   }
 }
 
-//function montreal2027_preprocess_block__montreal2027_lefleur(&$variables) {
-//  $variables['lefleur_alt'] = '';
-//  $variables['lefleur_url'] = '';
-//
-//  $item = null;
-//
-//  if (!empty($variables['content']['field_block_image'])) {
-//    $render_field = $variables['content']['field_block_image'];
-//
-//    // Common places where the raw FieldItem may be stored.
-//    if (isset($render_field[0]['#item'])) {
-//      $item = $render_field[0]['#item'];
-//    } elseif (isset($render_field['#items'])) {
-//      $items = $render_field['#items'];
-//      // #items is often an ArrayObject or array of items.
-//      if (is_array($items)) {
-//        $item = reset($items);
-//      } elseif ($items instanceof \ArrayObject) {
-//        $arr = $items->getArrayCopy();
-//        $item = reset($arr);
-//      }
-//    } elseif (isset($render_field[0]['#raw_value'])) {
-//      // Some renderers provide a '#raw_value' or similar.
-//      $item = $render_field[0]['#raw_value'];
-//    }
-//
-//    $info = get_image_info($item);
-//    $variables['lefleur_alt'] = $info['alt'] ?? $variables['lefleur_alt'];
-//    $variables['lefleur_url'] = $info['url'] ?? '';
-//  }
-//}
+function montreal2027_preprocess_block__montreal2027_content(&$variables) {
+  // Get the current node object if available.
+  $node = \Drupal::routeMatch()->getParameter('node');
+
+  // Check if a node was found and pass it to the template.
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    $variables['current_node'] = $node;
+  }
+}
