@@ -1,0 +1,23 @@
+uuid: acf1c59d-98d3-4890-a684-b17a719bdb41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_usd_price
+    - taxonomy.vocabulary.wsfs_membership
+id: taxonomy_term.wsfs_membership.field_usd_price
+field_name: field_usd_price
+entity_type: taxonomy_term
+bundle: wsfs_membership
+label: 'USD Price'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: 'USD*'
+field_type: decimal

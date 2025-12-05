@@ -1,0 +1,29 @@
+uuid: 91f325ff-a4f4-44d1-a120-37528c764a63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_wsfs_membership
+    - taxonomy.vocabulary.membership
+    - taxonomy.vocabulary.wsfs_membership
+id: taxonomy_term.membership.field_wsfs_membership
+field_name: field_wsfs_membership
+entity_type: taxonomy_term
+bundle: membership
+label: 'WSFS Membership'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      wsfs_membership: wsfs_membership
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

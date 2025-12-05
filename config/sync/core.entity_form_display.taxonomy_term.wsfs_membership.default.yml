@@ -1,0 +1,75 @@
+uuid: a823a0e9-0858-4578-b775-219b8ca12263
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.wsfs_membership.field_cad_price
+    - field.field.taxonomy_term.wsfs_membership.field_conversion_rate_date
+    - field.field.taxonomy_term.wsfs_membership.field_usd_price
+    - taxonomy.vocabulary.wsfs_membership
+  module:
+    - datetime
+    - path
+    - text
+id: taxonomy_term.wsfs_membership.default
+targetEntityType: taxonomy_term
+bundle: wsfs_membership
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_cad_price:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_conversion_rate_date:
+    type: datetime_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_usd_price:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 5
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden: {  }

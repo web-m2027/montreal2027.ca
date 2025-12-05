@@ -1,0 +1,23 @@
+uuid: 5e2b13cf-0fde-41c9-9cb1-3c1faec2aa71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_usd_price
+    - taxonomy.vocabulary.membership
+id: taxonomy_term.membership.field_usd_price
+field_name: field_usd_price
+entity_type: taxonomy_term
+bundle: membership
+label: 'USD Price'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: 'USD*'
+field_type: decimal
