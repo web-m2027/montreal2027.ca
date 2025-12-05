@@ -1,5 +1,4 @@
-{% set term = element['#items'].0.entity ?? null %}
-{#{{ dd(term) }}#}
+{% set term = items.0.content['#entity'] ?? null %}
 {% if term and term.name is defined %}
   <div class="guest-type">
     <h3>{{ term.name.value }}</h3>
