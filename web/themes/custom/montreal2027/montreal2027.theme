@@ -213,6 +213,9 @@ function montreal2027_preprocess_node__guest__teaser(array &$variables) {
     // Fallback alt to node label if empty.
     $variables['guest_image_alt'] = $info['alt'] !== '' ? $info['alt'] : $variables['node']->label();
     $variables['guest_image_url'] = $info['url'] ?: '';
+
+    $language = \Drupal::languageManager()->getCurrentLanguage();
+    $variables['current_langcode'] = $language->getId();
   }
 }
 
