@@ -1,0 +1,23 @@
+uuid: f4f3d79d-f41c-4c50-85ac-158e141307b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_cad_price
+    - taxonomy.vocabulary.membership
+id: taxonomy_term.membership.field_cad_price
+field_name: field_cad_price
+entity_type: taxonomy_term
+bundle: membership
+label: 'CAD Price'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ' CAD'
+field_type: decimal
