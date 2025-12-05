@@ -1,0 +1,19 @@
+uuid: fd16e514-c95d-4899-8d63-8dc5bc859aec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_ages
+    - taxonomy.vocabulary.membership
+id: taxonomy_term.membership.field_ages
+field_name: field_ages
+entity_type: taxonomy_term
+bundle: membership
+label: Ages
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

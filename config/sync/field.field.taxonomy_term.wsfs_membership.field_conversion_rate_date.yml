@@ -1,0 +1,21 @@
+uuid: f4a52524-2b96-4b80-b1ce-334df494e8e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_conversion_rate_date
+    - taxonomy.vocabulary.wsfs_membership
+  module:
+    - datetime
+id: taxonomy_term.wsfs_membership.field_conversion_rate_date
+field_name: field_conversion_rate_date
+entity_type: taxonomy_term
+bundle: wsfs_membership
+label: 'Conversion Rate Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

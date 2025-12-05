@@ -1,0 +1,9 @@
+uuid: 594a89ff-ed8c-424b-a06b-c3dcad868e1d
+langcode: en
+status: true
+dependencies: {  }
+name: 'WSFS Membership'
+vid: wsfs_membership
+description: null
+weight: 0
+new_revision: false

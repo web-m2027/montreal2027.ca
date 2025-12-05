@@ -1,0 +1,51 @@
+uuid: 0ee1c8fa-bff1-40f8-ba4a-a54172265c13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.wsfs_membership.field_cad_price
+    - field.field.taxonomy_term.wsfs_membership.field_conversion_rate_date
+    - field.field.taxonomy_term.wsfs_membership.field_usd_price
+    - taxonomy.vocabulary.wsfs_membership
+  module:
+    - datetime
+    - text
+id: taxonomy_term.wsfs_membership.default
+targetEntityType: taxonomy_term
+bundle: wsfs_membership
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_cad_price:
+    type: number_unformatted
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_conversion_rate_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: html_date
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_usd_price:
+    type: number_unformatted
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  entity_workspace_status: true
+  langcode: true
+  search_api_excerpt: true
