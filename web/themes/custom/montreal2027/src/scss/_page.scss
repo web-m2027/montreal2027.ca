@@ -19,7 +19,7 @@
     height: calc(var(--site-header-height) + var(--drupal-displace-offset-top, 0px));
     background: #adadd6;
     width: calc(100dvw - 2rem);
-    padding-top:var(--drupal-displace-offset-top, 0px);
+    padding-top: var(--drupal-displace-offset-top, 0px);
     position: fixed;
     top: 0;
     left: 3rem;
@@ -27,18 +27,18 @@
     box-sizing: border-box;
     align-content: center;
 
-    @container page-wrapper (min-width: 992px ) {
-      background: linear-gradient(90deg, rgba(51, 51, 153, 0.19) 0%, rgb(51, 51, 153) 50%, rgb(51, 51, 153) 100%),#fff;
+    @container page-wrapper (min-width: 992px) {
+      background: linear-gradient(90deg, rgba(51, 51, 153, 0.19) 0%, rgb(51, 51, 153) 50%, rgb(51, 51, 153) 100%), #fff;
       width: 100%;
       left: 0;
     }
 
     & .container {
       & .region-header {
-          display: flex;
-          flex-direction: row;
+        display: flex;
+        flex-direction: row;
 
-        @container page-wrapper (min-width: 992px ) {
+        @container page-wrapper (min-width: 992px) {
           display: grid;
           align-items: center;
           grid-template-columns: 400px 1fr 96px;
@@ -52,7 +52,8 @@
   }
 
   & #main {
-    min-height: 0; /* neutralize clean_blog_theme's min-height: 750px */
+    min-height: 0;
+    /* neutralize clean_blog_theme's min-height: 750px */
     box-sizing: border-box;
     transition: padding-bottom 220ms ease, padding-top 220ms ease;
     //position: sticky;
@@ -67,7 +68,7 @@
       margin: 8rem 0 0 0;
     }
 
-    @container page-wrapper (min-width: 992px ) {
+    @container page-wrapper (min-width: 992px) {
       margin: 12rem 0 0 0;
     }
 
@@ -76,20 +77,25 @@
       padding: 1rem 1.5rem;
 
       & .node--type-article {
-        justify-self: center;
+        & .field--name-field-image {
+          justify-self: center;
+        }
       }
 
       & .under-construction {
         text-align: center;
       }
+
       & .under-construction h1 {
         font-size: 5rem;
         color: var(--color-red);
         margin: 1rem 0 0 0;
       }
+
       & .under-construction h1::first-letter {
         font-size: 7.5rem;
       }
+
       & p.under-construction {
         font-size: 3rem;
         line-height: 3rem;
@@ -112,7 +118,7 @@
     width: 100%;
     background-color: #adadd6;
 
-    @container page-wrapper (min-width: 1200px ) {
+    @container page-wrapper (min-width: 1200px) {
       background-color: unset;
       padding: 0.5rem 0;
     }
@@ -128,7 +134,7 @@
       //bottom: 0;
       //z-index: 1000;
       transform: translateY(0);
-      box-shadow: 0 -8px 16px rgba(0,0,0,0.06);
+      box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.06);
       background-color: var(--color-blue);
     }
   }
@@ -142,7 +148,7 @@
       bottom: 0;
       z-index: 1000;
       transform: translateY(0);
-      box-shadow: 0 -8px 16px rgba(0,0,0,0.06);
+      box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.06);
       background-color: var(--color-blue);
     }
   }
