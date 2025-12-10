@@ -14,5 +14,5 @@ type: home_page
 description: 'Site home page'
 help: null
 new_revision: false
-preview_mode: 1
+preview_mode: 0
 display_submitted: false

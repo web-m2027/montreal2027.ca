@@ -15,7 +15,7 @@ article {
         max-height: 10rem;
         height: 6rem;
 
-        @container page-wrapper (min-width: 768px) {
+        @container page-wrapper (min-width: 1200px) {
           height: auto;
         }
       }
@@ -59,7 +59,7 @@ article {
         float: left;
         aspect-ratio: 1;
 
-        @container page-wrapper (min-width: 768px) {
+        @container page-wrapper (min-width: 1200px) {
           margin: 1rem;
         }
       }
@@ -83,5 +83,3 @@ article {
     }
   }
 }
-
-

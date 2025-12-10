@@ -1,0 +1,10 @@
+form {
+    & #edit-submit {
+        &::before {
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            content: '\f002';
+            color: var(--color-dark-blue);
+        }
+    }
+}
