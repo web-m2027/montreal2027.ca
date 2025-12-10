@@ -25,6 +25,7 @@
         "drupal/admin_toolbar": "^3.6",
         "drupal/block_field": "^1.0@RC",
         "drupal/ckeditor5_paste_filter": "^1.1",
+        "drupal/ckeditor_media_resize": "^1.1",
         "drupal/config_ignore": "^3.3",
         "drupal/content_lock": "^3.0@alpha",
         "drupal/core-composer-scaffold": "^11.2",
