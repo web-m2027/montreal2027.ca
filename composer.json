@@ -37,7 +37,6 @@
         "drupal/ebt_text": "^1.4",
         "drupal/ebt_tiles": "^1.4",
         "drupal/entity_embed": "^1.7",
-        "drupal/entity_workflow": "^2.0@beta",
         "drupal/ept_hero": "^1.4",
         "drupal/ept_text": "^1.4",
         "drupal/ept_tiles": "^1.4",

@@ -16,7 +16,6 @@ dependencies:
     - taxonomy.vocabulary.guest_type
     - taxonomy.vocabulary.tags
   module:
-    - entity_workflow_workspace
     - file
     - filter
     - layout_builder
@@ -70,9 +69,6 @@ permissions:
   - 'edit own page content'
   - 'update media'
   - 'use text format full_html'
-  - 'use workspace transition back_to_draft'
-  - 'use workspace transition new_draft'
-  - 'use workspace transition submit_for_review'
   - 'view any workspace'
   - 'view own unpublished content'
   - 'view published media gallery entities'

@@ -29,8 +29,6 @@ module:
   embed: 0
   entity_embed: 0
   entity_reference_revisions: 0
-  entity_workflow: 0
-  entity_workflow_workspace: 0
   ept_basic_button: 0
   ept_core: 0
   ept_hero: 0
