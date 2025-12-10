@@ -11,7 +11,7 @@ dependencies:
 id: montreal2027_copyright_3
 theme: montreal2027
 region: footer_fifth
-weight: -14
+weight: -15
 provider: null
 plugin: 'block_content:8dc4bdf1-7c35-47d5-af43-c646d72c981e'
 settings:
