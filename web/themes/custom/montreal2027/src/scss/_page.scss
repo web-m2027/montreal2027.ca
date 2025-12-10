@@ -27,7 +27,7 @@
     box-sizing: border-box;
     align-content: center;
 
-    @container page-wrapper (min-width: 768px ) {
+    @container page-wrapper (min-width: 992px ) {
       background: linear-gradient(90deg, rgba(51, 51, 153, 0.19) 0%, rgb(51, 51, 153) 50%, rgb(51, 51, 153) 100%),#fff;
       width: 100%;
       left: 0;
@@ -38,13 +38,14 @@
           display: flex;
           flex-direction: row;
 
-        @container page-wrapper (min-width: 768px ) {
+        @container page-wrapper (min-width: 992px ) {
           display: grid;
           align-items: center;
-          grid-template-columns: 400px 1fr 400px;
+          grid-template-columns: 400px 1fr 96px;
           container-type: inline-size;
           container-name: header;
           justify-content: space-between;
+          flex-direction: unset;
         }
       }
     }
@@ -59,15 +60,24 @@
     overflow: auto;
     container: main / inline-size;
     flex-grow: 1;
-    margin: 8rem 0 0 0;
+    margin: 6rem 0 0 0;
 
-    @container page-wrapper (min-width: 768px ) {
+    @-moz-document url-prefix() {
+      /* Firefox bug workaround: https://bugzilla.mozilla.org/show_bug.cgi?id=1702193 */
+      margin: 8rem 0 0 0;
+    }
+
+    @container page-wrapper (min-width: 992px ) {
       margin: 12rem 0 0 0;
     }
 
     & .container {
       @include frosted-glass($border-radius: 1rem);
       padding: 1rem 1.5rem;
+
+      & .node--type-article {
+        justify-self: center;
+      }
 
       & .under-construction {
         text-align: center;
@@ -102,7 +112,7 @@
     width: 100%;
     background-color: #adadd6;
 
-    @container page-wrapper (min-width: 768px ) {
+    @container page-wrapper (min-width: 1200px ) {
       background-color: unset;
       padding: 0.5rem 0;
     }

@@ -2,7 +2,13 @@
 
 :root {
   --footer-fixed-breakpoint: 64rem;
-  --site-header-height: 7rem;
+  --site-header-height: 7.3rem;
+
+  @container (min-width: 992px) {
+    //--site-header-height: 5.8rem;
+    --site-primary-menu-height: 2.5rem;
+  }
+
   --site-breadcrumb-height: 1.5rem;
   --site-breadcrumb-top: calc(var(--site-header-height) + var(--site-primary-menu-height));
   --site-primary-menu-height: 3rem;
