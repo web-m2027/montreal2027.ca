@@ -1,6 +1,6 @@
 uuid: e6845109-4511-4acc-913c-33d988ba030c
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.external

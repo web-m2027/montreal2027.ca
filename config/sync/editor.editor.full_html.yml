@@ -175,6 +175,11 @@ settings:
           weight: 3
           search: '<a name="OLE_LINK[^"]*">(.*?)<\/a>'
           replace: $1
+        -
+          enabled: true
+          weight: 4
+          search: '<joomla-hidden-email.*<\/joomla-hidden-email>'
+          replace: ''
     ckeditor5_sourceEditing:
       allowed_tags: {  }
     ckeditor_media_resize_mediaResize:

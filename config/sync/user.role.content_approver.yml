@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - entity_workflow_workspace
     - media
     - media_gallery
     - system
@@ -17,8 +16,6 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access toolbar'
-  - 'use workspace transition approve'
-  - 'use workspace transition back_to_draft'
   - 'view any workspace'
   - 'view media'
   - 'view the administration theme'

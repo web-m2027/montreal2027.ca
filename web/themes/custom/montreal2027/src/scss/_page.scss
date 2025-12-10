@@ -78,7 +78,7 @@
 
       & .node--type-article {
         & .field--name-field-image {
-          justify-self: center;
+          text-align: center;
         }
       }
 
@@ -87,18 +87,41 @@
       }
 
       & .under-construction h1 {
-        font-size: 5rem;
+        font-size: 2rem;
         color: var(--color-red);
         margin: 1rem 0 0 0;
+
+        @container main (min-width: 1200px) {
+          font-size: 5rem;
+        }
       }
 
       & .under-construction h1::first-letter {
-        font-size: 7.5rem;
+        font-size: 3rem;
+
+        @container main (min-width: 1200px) {
+          font-size: 7.5rem;
+        }
       }
 
       & p.under-construction {
-        font-size: 3rem;
-        line-height: 3rem;
+        font-size: 2rem;
+        line-height: 2rem;
+        margin: 1rem 0 0 0;
+        text-wrap-style: balance;
+
+        @container main (min-width: 1200px) {
+          font-size: 3rem;
+          line-height: 3rem;
+        }
+
+        &::first-letter {
+          font-size: 3rem;
+
+          @container main (min-width: 1200px) {
+            font-size: 4rem;
+          }
+        }
       }
     }
 
