@@ -6,5 +6,5 @@ _core:
   default_config_hash: eTgR86D-XlSSjL0DOkUgyDx9iqTLZCeiiE1Wz1CNl8o
 id: ebt_basic_button
 label: 'EBT Basic Button'
-revision: 0
+revision: false
 description: 'Extra Block Type (EBT): Basic Button'

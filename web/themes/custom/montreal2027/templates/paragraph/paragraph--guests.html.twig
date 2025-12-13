@@ -10,4 +10,9 @@
   <h2 class="paragraph--guest-type">{{ guest_block_description|striptags }}</h2>
 {% endif %}
 
-{{ drupal_view('guest_list', 'guests', paragraph.field_block.entity.id) }}
+{# Iterate over guests #}
+<div class="paragraph--guest-list">
+{% for guest in paragraph.field_guests %}
+    {{ drupal_entity('node', guest.entity.id, 'teaser') }}
+{% endfor %}
+</div>

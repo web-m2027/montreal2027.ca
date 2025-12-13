@@ -3,18 +3,37 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.guests.field_guest_type
     - field.field.paragraph.guests.field_guests
+    - field.field.paragraph.guests.field_use_plural
     - paragraphs.paragraphs_type.guests
 id: paragraph.guests.default
 targetEntityType: paragraph
 bundle: guests
 mode: default
 content:
-  field_guests:
+  field_guest_type:
     type: options_select
     weight: 0
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_guests:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_use_plural:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
 hidden:
   created: true

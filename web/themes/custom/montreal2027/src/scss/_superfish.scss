@@ -1,0 +1,48 @@
+ul:not(.sf-accordion) {
+    &.sf-menu {
+        &.sf-style-default {
+             & a,
+             & a:visited,
+             span.nolink {
+                padding: .75rem 2rem .75rem 0;
+             }
+            & li:not(.sf-depth-2),
+            &.sf-navbar {
+                background: transparent;
+            }
+
+            & li:hover:not(.sf-depth-2),
+            & a:hover:not(.sf-depth-2),
+            & span.nolink:hover:not(.sf-depth-2) {
+                background: transparent
+            }
+
+            & .sf-depth-2 {
+                & a {
+                    background: #cfdeff;
+                    padding: .75rem 1rem .75rem .75rem;
+                }
+            }
+        }
+    }
+}
+
+div {
+    &.sf-accordion-toggle {
+        &.sf-style-default {
+            & a {
+                background: transparent;
+                font-size: 1.5rem;
+                padding: 2rem 3rem 1rem 1rem;
+
+                & span {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+#superfish-main-toggle {
+    background: transparent;
+}

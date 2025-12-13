@@ -1,0 +1,23 @@
+uuid: f0561312-5af4-4914-8f4b-19ca0edfbb5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_use_plural
+    - paragraphs.paragraphs_type.guests
+id: paragraph.guests.field_use_plural
+field_name: field_use_plural
+entity_type: paragraph
+bundle: guests
+label: 'Use plural?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean
