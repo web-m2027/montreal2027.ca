@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_guests
     - field.field.node.page.field_show_title
+    - field.field.node.page.field_tags
     - node.type.page
   module:
     - text
@@ -25,6 +26,14 @@ content:
       trim_length: 600
     third_party_settings: {  }
     weight: 100
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
     region: content
   links:
     weight: 101

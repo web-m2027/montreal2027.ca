@@ -1,19 +1,19 @@
-uuid: e094f2e4-484f-4650-ba9d-d8491e9084a7
+uuid: 9c945d85-5783-4645-b3be-bd17687d72dd
 langcode: en
 status: true
 dependencies:
   module:
-    - node
     - paragraphs
-id: paragraph.field_guests
-field_name: field_guests
+    - taxonomy
+id: paragraph.field_guest_type
+field_name: field_guest_type
 entity_type: paragraph
 type: entity_reference
 settings:
-  target_type: node
+  target_type: taxonomy_term
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
