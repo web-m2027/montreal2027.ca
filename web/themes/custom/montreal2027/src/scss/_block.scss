@@ -13,7 +13,7 @@
     grid-area: top;
     grid-column: 4;
     align-self: center;
-    margin:  0 1rem 0 auto;
+    margin: 0 1rem 0 auto;
 
     @container page-wrapper (min-width: 768px) {
       grid-column: 3/span 2;
@@ -49,7 +49,7 @@
       background-color: var(--color-dark-blue);
       margin: 0;
       border-radius: 0 6px 6px 0;
-      }
+    }
 
     & #search-block-form {
       display: flex;
@@ -65,7 +65,7 @@
 
 
       @container page-wrapper (min-width: 1200px) {
-        margin:1.2rem auto 1rem;
+        margin: 1.2rem auto 1rem;
         width: auto;
         grid-template-columns: 2fr auto;
       }
@@ -125,10 +125,27 @@
   }
 
   &-mapleleaf {
+    display: none;
+    text-align: end;
+
+    @container page-wrapper (min-width: 768px) {
+      display: block;
+      margin: 0 1rem;
+    }
+
+    @container page-wrapper (min-width: 992px) {
+      grid-column: 3;
+      grid-row: 1;
+    }
+
     & img {
-      height: 6rem;
+      height: 4rem;
       width: auto;
       margin: .5rem 0 0 0;
+
+      @container page-wrapper (min-width: 992px) {
+        height: 6rem;
+      }
     }
   }
 
@@ -138,9 +155,11 @@
 
     @container page-wrapper (min-width: 992px) {
       margin: 0;
+      grid-column: 1;
+      grid-row: 1;
     }
 
-    & > div {
+    &>div {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -155,11 +174,8 @@
       width: auto;
       height: auto;
       margin: 0 0 0 1rem;
-      //background: url('/assets/m2027-logo-white.svg') no-repeat center;
-      //background-size: contain;
 
       & img {
-        //display: none;
         height: 4rem;
 
         @container page-wrapper (min-width: 992px) {
@@ -175,6 +191,13 @@
 
     @container page-wrapper (min-width: 992px) {
       display: block;
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    @container page-wrapper (min-width: 1920px) {
+      grid-column: 1/span 3;
+      grid-row: 1;
     }
 
     & p {
@@ -186,21 +209,21 @@
       margin: 0;
       text-wrap: balance;
 
-        @container page-wrapper (min-width: 1200px) {
-          font-size: 1.5rem;
-          line-height: 1.7rem;
-        }
+      @container page-wrapper (min-width: 1200px) {
+        font-size: 1.5rem;
+        line-height: 1.7rem;
       }
+    }
 
-      & .slogan-word {
-        text-transform: uppercase;
-        display: inline-block;
+    & .slogan-word {
+      text-transform: uppercase;
+      display: inline-block;
 
-        &::first-letter {
-          font-size: 1.2rem;
+      &::first-letter {
+        font-size: 1.2rem;
 
-          @container page-wrapper (min-width: 1200px) {
-            font-size: 1.9rem;
+        @container page-wrapper (min-width: 1200px) {
+          font-size: 1.9rem;
         }
       }
     }
@@ -225,22 +248,12 @@
     padding: 0;
     grid-area: top;
 
-
-    // @container page-wrapper (min-width: 768px) {
-    //   grid-column: 2/span 2;
-    //   margin: 0 0 0 1rem;
-    // }
-
-    // @container page-wrapper (min-width: 992px) {
-    //   margin: 0 auto 0 1rem;
-    //   padding: 0;
-    // }
-
     & img {
       max-height: 8rem;
       width: auto;
       margin: 0.6rem 0.6rem auto;
     }
+
     & h3 {
       color: var(--color-red);
       font-size: 1.3rem;
@@ -267,21 +280,12 @@
 
   &-breadcrumbs {
     @include drop-shadow-slight();
+
     & nav {
       &.breadcrumb {
         padding: 0 0 0 2rem;
         margin: 0;
       }
-    }
-  }
-
-  &-mapleleaf {
-    display: none;
-    text-align: end;
-
-    @container page-wrapper (min-width: 768px) { // Don't change this one
-      display: block;
-      margin: 0 1rem;
     }
   }
 

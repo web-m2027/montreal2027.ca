@@ -18,11 +18,11 @@
   & #header {
     height: calc(var(--site-header-height) + var(--drupal-displace-offset-top, 0px));
     background: #adadd6;
-    width: calc(100dvw - 2rem);
+    width: 100%;
     padding-top: var(--drupal-displace-offset-top, 0px);
     position: fixed;
     top: 0;
-    left: 3rem;
+    left: 0;
     z-index: 500;
     box-sizing: border-box;
     align-content: center;
@@ -45,7 +45,6 @@
           container-type: inline-size;
           container-name: header;
           justify-content: space-between;
-          flex-direction: unset;
         }
       }
     }
@@ -56,7 +55,6 @@
     /* neutralize clean_blog_theme's min-height: 750px */
     box-sizing: border-box;
     transition: padding-bottom 220ms ease, padding-top 220ms ease;
-    //position: sticky;
     top: var(--site-main-content-top);
     overflow: auto;
     container: main / inline-size;
@@ -70,11 +68,15 @@
 
     @container page-wrapper (min-width: 992px) {
       margin: 12rem 0 0 0;
+      z-index: 1;
+      padding: 0;
     }
 
     & .container {
       @include frosted-glass($border-radius: 1rem);
       padding: 1rem 1.5rem;
+      margin: 0 auto 2rem auto;
+      max-width: calc(100% - 4rem);
 
       & .node--type-article {
         & .field--name-field-image {
@@ -124,12 +126,6 @@
         }
       }
     }
-
-    @container main (min-width: 60ch) {
-      & .container {
-        max-width: calc(100% - 10rem);
-      }
-    }
   }
 
   /* Footer: default is static (in-flow) for mobile/smaller screens */
@@ -174,10 +170,5 @@
       box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.06);
       background-color: var(--color-blue);
     }
-  }
-
-  /* Utility: leftover class remains but footer is fixed by default now */
-  .site-footer--fixed {
-    /* kept for compatibility; footer becomes fixed at desktop widths via media query */
   }
 }

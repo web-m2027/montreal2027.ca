@@ -6,5 +6,5 @@ _core:
   default_config_hash: 7NM6NtKtRJqDl2LKF2ttqtshhXn4nV3DIIr56XEhBGw
 id: ebt_tiles
 label: 'EBT Tiles'
-revision: 0
+revision: false
 description: 'Extra Block Type (EBT): Tiles'

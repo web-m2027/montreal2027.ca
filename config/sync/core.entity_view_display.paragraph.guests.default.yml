@@ -3,13 +3,23 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.guests.field_guest_type
     - field.field.paragraph.guests.field_guests
+    - field.field.paragraph.guests.field_use_plural
     - paragraphs.paragraphs_type.guests
 id: paragraph.guests.default
 targetEntityType: paragraph
 bundle: guests
 mode: default
 content:
+  field_guest_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_guests:
     type: entity_reference_entity_view
     label: hidden
@@ -18,6 +28,16 @@ content:
       link: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_use_plural:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden:
   search_api_excerpt: true

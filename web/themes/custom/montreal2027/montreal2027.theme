@@ -230,14 +230,35 @@ function montreal2027_preprocess_block__montreal2027_content(&$variables) {
 }
 
 /**
- * Preprocess for paragraph--guest-block.twig template.
+ * Preprocess for paragraph--guest-block.twig and paragraph--guests.twig templates.
  *
- * Resolve the referenced block entity (paragraph.field_block) and pick the
- * appropriate translation using a robust server-side language detection
- * strategy. Expose 'guest_block_entity_translated' and simple conveniences
- * to Twig so templates don't need to reimplement language detection logic.
+ * Resolve the referenced taxonomy term entity from either paragraph.field_block
+ * (guest_block) or paragraph.field_guest_type (guests) and pick the appropriate
+ * translation using a robust server-side language detection strategy.
+ * Expose 'guest_block_entity_translated' and simple conveniences to Twig so
+ * templates don't need to reimplement language detection logic.
  */
 function montreal2027_preprocess_paragraph__guest_block(array &$variables)
+{
+  montreal2027_preprocess_guest_taxonomy_paragraph($variables);
+}
+
+/**
+ * Preprocess for paragraph--guests.twig template.
+ *
+ * Uses the same logic as guest_block to resolve taxonomy term translations.
+ */
+function montreal2027_preprocess_paragraph__guests(array &$variables)
+{
+  montreal2027_preprocess_guest_taxonomy_paragraph($variables);
+}
+
+/**
+ * Shared preprocessing logic for guest taxonomy paragraphs.
+ *
+ * Handles both field_block (guest_block) and field_guest_type (guests).
+ */
+function montreal2027_preprocess_guest_taxonomy_paragraph(array &$variables)
 {
   if (empty($variables['paragraph'])) {
     return;
@@ -251,12 +272,14 @@ function montreal2027_preprocess_paragraph__guest_block(array &$variables)
   $variables['guest_block_title_plural'] = '';
   $variables['guest_block_description'] = '';
 
-  // Get the referenced block entity from paragraph.field_block (adjust if field name differs).
-  if (!$paragraph->hasField('field_block') || $paragraph->get('field_block')->isEmpty()) {
-    return;
+  // Determine which field to use based on paragraph type
+  $referenced = NULL;
+  if ($paragraph->hasField('field_block') && !$paragraph->get('field_block')->isEmpty()) {
+    $referenced = $paragraph->get('field_block')->entity;
+  } elseif ($paragraph->hasField('field_guest_type') && !$paragraph->get('field_guest_type')->isEmpty()) {
+    $referenced = $paragraph->get('field_guest_type')->entity;
   }
 
-  $referenced = $paragraph->get('field_block')->entity;
   if (!$referenced) {
     return;
   }
@@ -357,33 +380,6 @@ function montreal2027_preprocess_paragraph__guest_block(array &$variables)
       }
     }
   }
-
-  // --- DEBUG LOG: record detection values to watchdog for troubleshooting ---
-//  try {
-//    $request = \Drupal::request();
-//    $req_lang_attr = $request ? $request->attributes->get('_language') : NULL;
-//    $req_locale_attr = $request ? $request->attributes->get('_locale') : NULL;
-//    $path_info = $request ? $request->getPathInfo() : '';
-//    $lang_manager = NULL;
-//    try {
-//      $lang_manager = \Drupal::languageManager()->getCurrentLanguage()->getId();
-//    } catch (\Throwable $e) {
-//      $lang_manager = NULL;
-//    }
-//
-//    // build a compact debug message
-//    $msg = 'montreal2027: lang detection — entity_lang=' . var_export($entity_lang, TRUE)
-//      . ', lang_manager=' . var_export($lang_manager, TRUE)
-//      . ', req_lang_attr=' . (is_object($req_lang_attr) && method_exists($req_lang_attr, 'getId') ? $req_lang_attr->getId() : var_export($req_lang_attr, TRUE))
-//      . ', req_locale_attr=' . var_export($req_locale_attr, TRUE)
-//      . ', path=' . var_export($path_info, TRUE)
-//      . ', path_first=' . var_export(isset($first_segment) ? $first_segment : NULL, TRUE)
-//      . ', final_langcode=' . var_export($langcode, TRUE);
-//
-//    \Drupal::logger('montreal2027')->debug($msg);
-//  } catch (\Throwable $e) {
-//    // Do not break page rendering for logging failures.
-//  }
 
   // Determine translated entity (if available)
   $translated = $referenced;
