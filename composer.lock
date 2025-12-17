@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a27ec7542fccfb258dffbaefe482df60",
+    "content-hash": "1f70225b0870ea1d5ffca77b091d4a97",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4707,20 +4707,20 @@
         },
         {
             "name": "drupal/wse",
-            "version": "2.0.0-alpha12",
+            "version": "2.0.0-alpha13",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/wse.git",
-                "reference": "2.0.0-alpha12"
+                "reference": "2.0.0-alpha13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/wse-2.0.0-alpha12.zip",
-                "reference": "2.0.0-alpha12",
-                "shasum": "0b3ad4e799ef2a54b8fd34f564a81c8542c6d924"
+                "url": "https://ftp.drupal.org/files/projects/wse-2.0.0-alpha13.zip",
+                "reference": "2.0.0-alpha13",
+                "shasum": "84e66797cc83d76372cedeee5226ad2ecf5574ea"
             },
             "require": {
-                "drupal/core": "^10.3 || ^11"
+                "drupal/core": "^10.3 || >=11 <11.3"
             },
             "require-dev": {
                 "drupal/depcalc": "*",
@@ -4732,8 +4732,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0-alpha12",
-                    "datestamp": "1763130381",
+                    "version": "2.0.0-alpha13",
+                    "datestamp": "1765467305",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."

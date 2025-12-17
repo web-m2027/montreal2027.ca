@@ -116,6 +116,8 @@ jobs:
             drush cr
             echo "Importing config"
             drush cim -y
+            echo "Clearing Drupal cache"
+            drush cr
             echo "Updating database"
             drush updb -y
             echo "Final cache clear"
