@@ -1,0 +1,80 @@
+uuid: fa56b85a-24bc-4e4f-9cc9-3e7e1bd6b57a
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.article
+    - node.type.guest
+    - node.type.home_page
+    - node.type.page
+    - taxonomy.vocabulary.guest_type
+    - taxonomy.vocabulary.tags
+  module:
+    - block_content
+    - content_translation
+    - entity_workflow_workspace
+    - file
+    - filter
+    - help
+    - media
+    - media_gallery
+    - node
+    - system
+    - taxonomy
+    - toolbar
+    - workspaces
+id: content_creator
+label: 'Content creator'
+weight: -8
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'access files overview'
+  - 'access help pages'
+  - 'access media overview'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'add media gallery entities'
+  - 'create article content'
+  - 'create audio media'
+  - 'create content translations'
+  - 'create document media'
+  - 'create guest content'
+  - 'create home_page content'
+  - 'create image media'
+  - 'create media'
+  - 'create page content'
+  - 'create remote_video media'
+  - 'create terms in guest_type'
+  - 'create terms in tags'
+  - 'create video media'
+  - 'edit own article content'
+  - 'edit own guest content'
+  - 'edit own home_page content'
+  - 'edit own page content'
+  - 'translate article node'
+  - 'translate block_content'
+  - 'translate guest node'
+  - 'translate home_page node'
+  - 'translate page node'
+  - 'update content translations'
+  - 'update media'
+  - 'use text format full_html'
+  - 'use workspace transition back_to_draft'
+  - 'use workspace transition new_draft'
+  - 'use workspace transition submit_for_review'
+  - 'view any workspace'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view published media gallery entities'
+  - 'view the administration theme'
+  - 'view unpublished media gallery entities'
+  - 'view vocabulary labels'
