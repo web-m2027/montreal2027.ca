@@ -8,7 +8,7 @@ save_published_revisions: published
 override_save_published_revisions: false
 squash_on_publish: false
 squash_on_publish_interval: 0
-clone_on_publish: false
+clone_on_publish: true
 safe_forms:
   - ''
 entity_workspace_status:
@@ -18,4 +18,4 @@ entity_workspace_status:
   media: media
   taxonomy_term: taxonomy_term
   path_alias: path_alias
-disable_sub_workspaces: false
+disable_sub_workspaces: true
