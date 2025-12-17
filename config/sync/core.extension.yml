@@ -29,6 +29,8 @@ module:
   embed: 0
   entity_embed: 0
   entity_reference_revisions: 0
+  entity_workflow: 0
+  entity_workflow_workspace: 0
   ept_basic_button: 0
   ept_core: 0
   ept_hero: 0
@@ -69,7 +71,6 @@ module:
   path: 0
   path_alias: 0
   photoswipe: 0
-  raven: 0
   recreate_block_content: 0
   search: 0
   search_api: 0
@@ -93,6 +94,8 @@ module:
   workspaces_access: 0
   workspaces_ui: 0
   wse: 0
+  wse_config: 0
+  wse_preview: 0
   wse_task_monitor: 0
   pathauto: 1
   content_translation: 10
