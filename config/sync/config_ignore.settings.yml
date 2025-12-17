@@ -3,3 +3,4 @@ _core:
 mode: simple
 ignored_config_entities:
   - system.site
+  - views.view.workflow_transition_log

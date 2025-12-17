@@ -1,0 +1,15 @@
+diff --git a/src/EventSubscriber/WorkspacePublishingEventSubscriber.php b/src/EventSubscriber/WorkspacePublishingEventSubscriber.php
+index 1234567..abcdefg 100644
+--- a/src/EventSubscriber/WorkspacePublishingEventSubscriber.php
++++ b/src/EventSubscriber/WorkspacePublishingEventSubscriber.php
+@@ -147,6 +147,10 @@ class WorkspacePublishingEventSubscriber implements EventSubscriberInterface {
+       if ($new_workspace->hasField('publish_on')) {
+         $new_workspace->set('publish_on', NULL);
+       }
++      // Reset the workflow state to draft when cloning.
++      if ($new_workspace->hasField('entity_workflow_workspace')) {
++        $new_workspace->set('entity_workflow_workspace', 'draft');
++      }
+       $new_workspace->save();
+ 
+       // And switch to the new workspace.
