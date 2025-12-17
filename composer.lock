@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0231c465ac1bd68c9ad269387bffe017",
+    "content-hash": "a27ec7542fccfb258dffbaefe482df60",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1592,97 +1592,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/config_ignore",
                 "issues": "http://drupal.org/project/config_ignore"
-            }
-        },
-        {
-            "name": "drupal/content_lock",
-            "version": "3.0.0-alpha4",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/content_lock.git",
-                "reference": "3.0.0-alpha4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/content_lock-3.0.0-alpha4.zip",
-                "reference": "3.0.0-alpha4",
-                "shasum": "6292c1c78a4c9fa272edaae0cdb742202911e7a8"
-            },
-            "require": {
-                "drupal/core": "^10.2 || ^11"
-            },
-            "require-dev": {
-                "drupal/conflict": "^3.0@ALPHA",
-                "drupal/trash": "^3.0"
-            },
-            "suggest": {
-                "drupal/conflict": "For entity translation level locking"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "3.0.0-alpha4",
-                    "datestamp": "1751989968",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Christian Fritsch (chr.fritsch)",
-                    "homepage": "https://www.drupal.org/u/chrfritsch",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Daniel Bosen (daniel.bosen)",
-                    "homepage": "https://www.drupal.org/u/danielbosen",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Christopher Gervais (ergonlogic)",
-                    "homepage": "https://www.drupal.org/u/ergonlogic",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Joseph Zhao (pandaski)",
-                    "homepage": "https://www.drupal.org/u/pandaski",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Volker Killesreiter (volkerk)",
-                    "homepage": "https://www.drupal.org/u/volkerk",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Alex Pott (alexpott)",
-                    "homepage": "https://www.drupal.org/u/alexpott",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "mark burdett (mfb)",
-                    "homepage": "https://www.drupal.org/u/mfb",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Viktor Holovachek (AstonVictor)",
-                    "homepage": "https://www.drupal.org/u/astonvictor",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Prevents multiple users from trying to edit a content entity simultaneously to prevent edit conflicts.",
-            "homepage": "https://www.drupal.org/project/content_lock",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "https://git.drupalcode.org/project/content_lock",
-                "issues": "https://www.drupal.org/project/issues/content_lock"
             }
         },
         {
@@ -4189,69 +4098,6 @@
             }
         },
         {
-            "name": "drupal/raven",
-            "version": "7.3.2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/raven.git",
-                "reference": "7.3.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/raven-7.3.2.zip",
-                "reference": "7.3.2",
-                "shasum": "b2614327039424b25ae454e96be793369d05d6e6"
-            },
-            "require": {
-                "drupal/core": "^11.1",
-                "sentry/sentry": "^4.12"
-            },
-            "require-dev": {
-                "drupal/csp": "^1.17 || ^2.0",
-                "drupal/monitoring": "^1.13",
-                "drupal/seckit": "^2.0",
-                "drush/drush": "^13.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "7.3.2",
-                    "datestamp": "1763445965",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Mark Burdett (mfb)",
-                    "homepage": "https://www.drupal.org/u/mfb",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Integrates with Sentry application monitoring and error tracking platform (sentry.io).",
-            "homepage": "https://www.drupal.org/project/raven",
-            "support": {
-                "source": "https://git.drupalcode.org/project/raven",
-                "issues": "https://www.drupal.org/project/issues/raven"
-            },
-            "funding": [
-                {
-                    "type": "github",
-                    "url": "https://github.com/sponsors/mfb"
-                },
-                {
-                    "type": "patreon",
-                    "url": "https://www.patreon.com/mfb"
-                }
-            ]
-        },
-        {
             "name": "drupal/recreate_block_content",
             "version": "3.0.1",
             "source": {
@@ -5687,66 +5533,6 @@
                 }
             ],
             "time": "2025-03-27T12:30:47+00:00"
-        },
-        {
-            "name": "jean85/pretty-package-versions",
-            "version": "2.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Jean85/pretty-package-versions.git",
-                "reference": "4d7aa5dab42e2a76d99559706022885de0e18e1a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Jean85/pretty-package-versions/zipball/4d7aa5dab42e2a76d99559706022885de0e18e1a",
-                "reference": "4d7aa5dab42e2a76d99559706022885de0e18e1a",
-                "shasum": ""
-            },
-            "require": {
-                "composer-runtime-api": "^2.1.0",
-                "php": "^7.4|^8.0"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.2",
-                "jean85/composer-provided-replaced-stub-package": "^1.0",
-                "phpstan/phpstan": "^2.0",
-                "phpunit/phpunit": "^7.5|^8.5|^9.6",
-                "rector/rector": "^2.0",
-                "vimeo/psalm": "^4.3 || ^5.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Jean85\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alessandro Lai",
-                    "email": "alessandro.lai85@gmail.com"
-                }
-            ],
-            "description": "A library to get pretty versions strings of installed dependencies",
-            "keywords": [
-                "composer",
-                "package",
-                "release",
-                "versions"
-            ],
-            "support": {
-                "issues": "https://github.com/Jean85/pretty-package-versions/issues",
-                "source": "https://github.com/Jean85/pretty-package-versions/tree/2.1.1"
-            },
-            "time": "2025-03-19T14:43:43+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -7338,94 +7124,6 @@
             "time": "2025-02-07T04:55:46+00:00"
         },
         {
-            "name": "sentry/sentry",
-            "version": "4.18.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/getsentry/sentry-php.git",
-                "reference": "04dcf20b39742b731b676f8b8d4f02d1db488af8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/getsentry/sentry-php/zipball/04dcf20b39742b731b676f8b8d4f02d1db488af8",
-                "reference": "04dcf20b39742b731b676f8b8d4f02d1db488af8",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-json": "*",
-                "ext-mbstring": "*",
-                "guzzlehttp/psr7": "^1.8.4|^2.1.1",
-                "jean85/pretty-package-versions": "^1.5|^2.0.4",
-                "php": "^7.2|^8.0",
-                "psr/log": "^1.0|^2.0|^3.0",
-                "symfony/options-resolver": "^4.4.30|^5.0.11|^6.0|^7.0|^8.0"
-            },
-            "conflict": {
-                "raven/raven": "*"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.4",
-                "guzzlehttp/promises": "^2.0.3",
-                "guzzlehttp/psr7": "^1.8.4|^2.1.1",
-                "monolog/monolog": "^1.6|^2.0|^3.0",
-                "phpbench/phpbench": "^1.0",
-                "phpstan/phpstan": "^1.3",
-                "phpunit/phpunit": "^8.5|^9.6",
-                "vimeo/psalm": "^4.17"
-            },
-            "suggest": {
-                "monolog/monolog": "Allow sending log messages to Sentry by using the included Monolog handler."
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/functions.php"
-                ],
-                "psr-4": {
-                    "Sentry\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sentry",
-                    "email": "accounts@sentry.io"
-                }
-            ],
-            "description": "PHP SDK for Sentry (http://sentry.io)",
-            "homepage": "http://sentry.io",
-            "keywords": [
-                "crash-reporting",
-                "crash-reports",
-                "error-handler",
-                "error-monitoring",
-                "log",
-                "logging",
-                "profiling",
-                "sentry",
-                "tracing"
-            ],
-            "support": {
-                "issues": "https://github.com/getsentry/sentry-php/issues",
-                "source": "https://github.com/getsentry/sentry-php/tree/4.18.1"
-            },
-            "funding": [
-                {
-                    "url": "https://sentry.io/",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://sentry.io/pricing/",
-                    "type": "custom"
-                }
-            ],
-            "time": "2025-11-11T09:34:53+00:00"
-        },
-        {
             "name": "symfony/console",
             "version": "v7.3.8",
             "source": {
@@ -8425,77 +8123,6 @@
                 }
             ],
             "time": "2025-11-16T10:09:06+00:00"
-        },
-        {
-            "name": "symfony/options-resolver",
-            "version": "v7.3.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/options-resolver.git",
-                "reference": "0ff2f5c3df08a395232bbc3c2eb7e84912df911d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/0ff2f5c3df08a395232bbc3c2eb7e84912df911d",
-                "reference": "0ff2f5c3df08a395232bbc3c2eb7e84912df911d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.2",
-                "symfony/deprecation-contracts": "^2.5|^3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\OptionsResolver\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Provides an improved replacement for the array_replace PHP function",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "config",
-                "configuration",
-                "options"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/options-resolver/tree/v7.3.3"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2025-08-05T10:16:07+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -10301,7 +9928,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/block_field": 5,
-        "drupal/content_lock": 15,
         "drupal/entity_workflow": 10,
         "drupal/wse": 15,
         "omscllc/clean_blog_theme": 20
