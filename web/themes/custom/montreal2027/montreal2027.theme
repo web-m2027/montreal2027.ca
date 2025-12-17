@@ -4,6 +4,17 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Component\Utility\Html;
 
 /**
+ * Implements hook_entity_type_alter().
+ *
+ * Adds workspace handler to node entity type to fix workspace publishing errors.
+ */
+function montreal2027_entity_type_alter(array &$entity_types) {
+  if (isset($entity_types['node'])) {
+    $entity_types['node']->setHandlerClass('workspace', 'Drupal\workspaces\EntityTypeInfo\WorkspaceHandler');
+  }
+}
+
+/**
  * Implements hook_form_alter().
  */
 function montreal2027_form_alter(&$form, FormStateInterface $form_state, $form_id) {
