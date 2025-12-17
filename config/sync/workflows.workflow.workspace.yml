@@ -73,6 +73,9 @@ type_settings:
       label: Publish
       from:
         - approved
+        - draft
+        - review
+        - reviewed
       to: published
       weight: 1
       access_callback: entity_workflow_workspace_transition_access

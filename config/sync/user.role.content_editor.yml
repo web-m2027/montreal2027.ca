@@ -1,0 +1,96 @@
+uuid: 4c71481c-187d-4d6a-b790-a2563c9315be
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - block_content.type.ebt_basic_button
+    - block_content.type.ebt_hero
+    - block_content.type.ebt_text
+    - block_content.type.ebt_tiles
+    - block_content.type.theme_image
+    - filter.format.full_html
+    - node.type.article
+    - node.type.guest
+    - node.type.home_page
+    - node.type.page
+    - taxonomy.vocabulary.guest_type
+    - taxonomy.vocabulary.tags
+  module:
+    - block_content
+    - content_translation
+    - contextual
+    - entity_workflow_workspace
+    - file
+    - filter
+    - help
+    - media
+    - media_gallery
+    - node
+    - system
+    - taxonomy
+    - toolbar
+    - workspaces
+    - workspaces_access
+_core:
+  default_config_hash: e_wG1u7SrGaJbY2-Szgbgl-c8T3kdirU3uTNq2c_QJQ
+id: content_editor
+label: 'Content editor'
+weight: -7
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access help pages'
+  - 'access media overview'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'create article content'
+  - 'create content translations'
+  - 'create guest content'
+  - 'create home_page content'
+  - 'create media'
+  - 'create page content'
+  - 'create terms in guest_type'
+  - 'create terms in tags'
+  - 'edit any article content'
+  - 'edit any basic block content'
+  - 'edit any ebt_basic_button block content'
+  - 'edit any ebt_hero block content'
+  - 'edit any ebt_text block content'
+  - 'edit any ebt_tiles block content'
+  - 'edit any guest content'
+  - 'edit any home_page content'
+  - 'edit any media gallery entities'
+  - 'edit any page content'
+  - 'edit any theme_image block content'
+  - 'edit own article content'
+  - 'edit own guest content'
+  - 'edit own home_page content'
+  - 'edit own media gallery entities'
+  - 'edit own page content'
+  - 'edit terms in guest_type'
+  - 'edit terms in tags'
+  - 'translate article node'
+  - 'translate block_content'
+  - 'translate guest node'
+  - 'translate home_page node'
+  - 'translate page node'
+  - 'update any media'
+  - 'update content translations'
+  - 'use text format full_html'
+  - 'use workspace transition back_to_draft'
+  - 'use workspace transition reviewed'
+  - 'use workspace transition submit_for_review'
+  - 'view any workspace'
+  - 'view media'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view published media gallery entities'
+  - 'view the administration theme'
+  - 'view unpublished media gallery entities'
+  - 'view vocabulary labels'
+  - workspace_live_view_content

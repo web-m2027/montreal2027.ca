@@ -1,0 +1,32 @@
+uuid: 1d64e722-eaa4-4350-9e98-da6278dcd073
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_workflow_workspace
+    - help
+    - media
+    - media_gallery
+    - node
+    - system
+    - taxonomy
+    - toolbar
+    - workspaces
+id: content_approver
+label: 'Content approver'
+weight: -6
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'access help pages'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'use workspace transition approve'
+  - 'use workspace transition back_to_draft'
+  - 'view any workspace'
+  - 'view media'
+  - 'view the administration theme'
+  - 'view unpublished media gallery entities'
+  - 'view vocabulary labels'

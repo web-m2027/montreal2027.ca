@@ -3,8 +3,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - comment
-    - file
     - media
     - media_gallery
     - search
@@ -18,10 +16,7 @@ weight: -9
 is_admin: false
 permissions:
   - 'access content'
-  - 'delete own files'
-  - 'post comments'
   - 'search content'
-  - 'skip comment approval'
   - 'view media'
   - 'view published media gallery entities'
   - workspace_live_view_content
