@@ -133,9 +133,44 @@
         align-items: start;
         margin: 1rem 0;
 
+        &-top-nav {
+          & h2 {
+            margin: 0 0 0.5rem 0;
+          }
+
+          & p {
+            color: var(--color-dim-gray)
+          }
+
+          & a {
+            color: var(--color-dim-gray);
+          }
+        }
+
         & img {
           @include drop-shadow-slight();
         }
+      }
+    }
+
+    .page--text-area-top {
+      position: fixed;
+      bottom: 20px;
+      right: 35px;
+      padding: 0;
+      text-decoration: none;
+      z-index: 999;
+
+      & em {
+        border: 3px solid var(--color-white);
+        border-radius: 50%;
+        background-color: var(--color-white);
+      }
+
+      & a {
+        color: var(--color-black);
+        font-size: 3rem;
+        opacity: 50%;
       }
     }
   }
