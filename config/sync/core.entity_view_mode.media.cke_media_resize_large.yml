@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: AZjVNMfdNL0uccWBjhhMFB7ujWpKhNFhTSaFk8ydRr4
 id: media.cke_media_resize_large
-label: 'CKE Media Resize Large'
+label: '800 Pixels'
 description: null
 targetEntityType: media
 cache: true

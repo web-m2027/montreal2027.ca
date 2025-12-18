@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: PBMSP2gS6mm3Fe-JSoQdv8rI2-lQbqjzZF2gUhVVn5g
 name: cke_media_resize_xl
-label: 'CKE Media Resize Extra Large (width 1200)'
+label: '1200 Pixels'
 effects:
   c34ad257-454d-466e-b3e4-2c4c0107049e:
     uuid: c34ad257-454d-466e-b3e4-2c4c0107049e
