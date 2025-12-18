@@ -1,0 +1,11 @@
+uuid: 574041ad-24fb-4078-8f58-8119e26cc6fe
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.1400_pixels
+label: '1400 Pixels'
+description: null
+targetEntityType: media
+cache: true
