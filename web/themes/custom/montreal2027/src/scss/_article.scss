@@ -81,4 +81,30 @@ article {
       }
     }
   }
+
+  &.media--type-hero-image {
+    & div.field--type-image {
+      display: grid;
+
+      & figure {
+        justify-self: center;
+
+        & img {
+         @include drop-shadow-slight();
+        }
+        
+        & figcaption {
+          & p {
+            text-align: center;
+            margin: .5rem 0 0 0;
+            font-size: 0.8rem;
+
+            &::first-letter {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }

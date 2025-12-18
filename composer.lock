@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f70225b0870ea1d5ffca77b091d4a97",
+    "content-hash": "0cb2e3b94080e0c970f1d5a3b8f5b9be",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3491,6 +3491,82 @@
             "homepage": "https://www.drupal.org/project/image_effects",
             "support": {
                 "source": "https://git.drupalcode.org/project/image_effects"
+            }
+        },
+        {
+            "name": "drupal/image_field_caption",
+            "version": "4.0.0-rc6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/image_field_caption.git",
+                "reference": "4.0.0-rc6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/image_field_caption-4.0.0-rc6.zip",
+                "reference": "4.0.0-rc6",
+                "shasum": "61c7ea4286440a98b256408b32f929af7ee0c1f9"
+            },
+            "require": {
+                "drupal/core": "^10.3.2 || ^11"
+            },
+            "require-dev": {
+                "drupal/core-dev": "^10.3.2 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.0.0-rc6",
+                    "datestamp": "1763116200",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "awm",
+                    "homepage": "https://www.drupal.org/user/1059398"
+                },
+                {
+                    "name": "foxy-vikvik",
+                    "homepage": "https://www.drupal.org/user/3706169"
+                },
+                {
+                    "name": "hanoii",
+                    "homepage": "https://www.drupal.org/user/23157"
+                },
+                {
+                    "name": "ironsizide",
+                    "homepage": "https://www.drupal.org/user/787980"
+                },
+                {
+                    "name": "istryker",
+                    "homepage": "https://www.drupal.org/user/303676"
+                },
+                {
+                    "name": "kksandr",
+                    "homepage": "https://www.drupal.org/user/3710922"
+                },
+                {
+                    "name": "robloach",
+                    "homepage": "https://www.drupal.org/user/61114"
+                },
+                {
+                    "name": "tyler.frankenstein",
+                    "homepage": "https://www.drupal.org/user/150680"
+                }
+            ],
+            "description": "Provides captions for image fields.",
+            "homepage": "https://www.drupal.org/project/image_field_caption",
+            "support": {
+                "source": "https://git.drupalcode.org/project/image_field_caption",
+                "issues": "https://www.drupal.org/project/issues/image_field_caption"
             }
         },
         {
@@ -9929,6 +10005,7 @@
     "stability-flags": {
         "drupal/block_field": 5,
         "drupal/entity_workflow": 10,
+        "drupal/image_field_caption": 5,
         "drupal/wse": 15,
         "omscllc/clean_blog_theme": 20
     },

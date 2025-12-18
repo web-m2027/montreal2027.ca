@@ -51,4 +51,7 @@ settings:
       guests:
         weight: 15
         enabled: true
+      text_area:
+        weight: 18
+        enabled: false
 field_type: entity_reference_revisions

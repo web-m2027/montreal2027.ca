@@ -1,0 +1,21 @@
+uuid: d63de4d5-328d-4896-b11e-a78fe7a81f0c
+langcode: en
+status: true
+dependencies: {  }
+name: wide_1200px
+label: 'Wide (1200px)'
+effects:
+  028bfcba-dc2c-410b-9c07-e288dda0d883:
+    uuid: 028bfcba-dc2c-410b-9c07-e288dda0d883
+    id: image_scale
+    weight: 1
+    data:
+      width: 1200
+      height: null
+      upscale: true
+  acbe433a-f5da-4f63-8b75-76c15042b277:
+    uuid: acbe433a-f5da-4f63-8b75-76c15042b277
+    id: image_convert_avif
+    weight: 2
+    data:
+      extension: webp
