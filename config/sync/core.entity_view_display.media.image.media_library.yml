@@ -1,10 +1,9 @@
 uuid: 788a03ec-4872-4214-af8e-a7192da814b3
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.media.media_library
-    - field.field.media.image.field_caption
     - field.field.media.image.field_media_image
     - image.style.medium
     - media.type.image
@@ -31,7 +30,6 @@ content:
 hidden:
   created: true
   entity_workspace_status: true
-  field_caption: true
   field_media_image: true
   langcode: true
   name: true
