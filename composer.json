@@ -44,6 +44,7 @@
         "drupal/first_paragraph": "^2.0",
         "drupal/gin": "^5.0",
         "drupal/image_effects": "^4.0",
+        "drupal/image_field_caption": "^4.0@RC",
         "drupal/media_gallery": "^3.2",
         "drupal/menu_block": "^1.14",
         "drupal/menu_item_extras": "^3.1",

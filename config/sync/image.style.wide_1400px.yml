@@ -1,0 +1,21 @@
+uuid: a6819e68-a88a-458f-adb9-d305c0814162
+langcode: en
+status: true
+dependencies: {  }
+name: wide_1400px
+label: 'Wide (1400px)'
+effects:
+  9ee1efcf-43a9-4beb-a4d9-e91c529d916f:
+    uuid: 9ee1efcf-43a9-4beb-a4d9-e91c529d916f
+    id: image_scale
+    weight: 1
+    data:
+      width: 1400
+      height: null
+      upscale: true
+  3588d5ae-5c2d-46e9-9a27-03280da7ce90:
+    uuid: 3588d5ae-5c2d-46e9-9a27-03280da7ce90
+    id: image_convert_avif
+    weight: 2
+    data:
+      extension: webp

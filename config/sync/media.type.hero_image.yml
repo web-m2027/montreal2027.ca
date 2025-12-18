@@ -1,0 +1,13 @@
+uuid: 9c8713fc-2877-4c6a-91fc-1cfb8540feaf
+langcode: en
+status: true
+dependencies: {  }
+id: hero_image
+label: 'Hero Image'
+description: 'Hero image for the top of a page'
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image
+field_map: {  }
