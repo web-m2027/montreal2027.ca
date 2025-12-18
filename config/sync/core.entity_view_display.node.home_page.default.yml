@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.home_page.body
     - field.field.node.home_page.field_guests
+    - field.field.node.home_page.field_hero_image
     - node.type.home_page
   module:
     - entity_reference_revisions
@@ -29,12 +30,21 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 1
+    weight: 2
+    region: content
+  field_hero_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 3
     region: content
 hidden:
   entity_workspace_status: true

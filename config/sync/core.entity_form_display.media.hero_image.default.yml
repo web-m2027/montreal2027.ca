@@ -1,20 +1,17 @@
-uuid: a81d4a73-18ad-4888-aa00-6815df2f135d
+uuid: 2d1882f1-072c-4558-a465-9166076fb6d3
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.image.field_caption
-    - field.field.media.image.field_media_image
+    - field.field.media.hero_image.field_media_image
     - image.style.thumbnail
-    - media.type.image
+    - media.type.hero_image
   module:
     - path
     - svg_image
-_core:
-  default_config_hash: JSY4-JPyNZBiYYo6imdRYF6_SdtWQexPndrLvn3-vw4
-id: media.image.default
+id: media.hero_image.default
 targetEntityType: media
-bundle: image
+bundle: hero_image
 mode: default
 content:
   created:
@@ -22,14 +19,6 @@ content:
     weight: 10
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_caption:
-    type: string_textfield
-    weight: 101
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   field_media_image:
     type: image_image
@@ -46,6 +35,14 @@ content:
     settings:
       include_locked: true
     third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   path:
     type: path
     weight: 30
@@ -59,11 +56,6 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
-  translation:
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
     weight: 5
@@ -74,5 +66,4 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden:
-  name: true
+hidden: {  }

@@ -26,6 +26,8 @@ settings:
     title: ''
     width: null
     height: null
+    caption: ''
+    caption_format: null
 module: image
 locked: false
 cardinality: 1
