@@ -8,5 +8,6 @@
 @use 'views';
 @use 'paragraph';
 @use 'superfish';
+@use 'grid';
 
 @layer external, clean_blog_theme, layout, theme, views-responsive-grid;
