@@ -1,0 +1,19 @@
+diff --git a/recreate_block_content.module b/recreate_block_content.module
+index 1234567..abcdefg 100644
+--- a/recreate_block_content.module
++++ b/recreate_block_content.module
+@@ -29,6 +29,14 @@ function recreate_block_content_help($route_name, RouteMatchInterface $route_ma
+  * Implements hook_rebuild().
+  */
+ function recreate_block_content_rebuild() {
++  // Skip if workspaces module is enabled but no active workspace context exists.
++  // This can happen during CLI operations like drush cr.
++  if (\Drupal::moduleHandler()->moduleExists('workspaces')) {
++    $workspace_manager = \Drupal::service('workspaces.manager');
++    if (!$workspace_manager->hasActiveWorkspace()) {
++      return;
++    }
++  }
+   $config_manager = \Drupal::service('config.manager');
+   $missing_content = $config_manager->findMissingContentDependencies();
+   $block_bundles = BlockContentType::loadMultiple();
