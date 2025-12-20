@@ -27,8 +27,7 @@
       {{ title_suffix }}
 
       {{ content.field_bio }}
-{#      {{ drupal_field('field_bio', 'node', node.id(), 'teaser', current_langcode) }}#}
-      <div class="more-link"><a href="{{ url }}" rel="bookmark">Read {{ label }}'s Full Bio</a></div>
+      <div class="more-link"><a href="{{ url }}" rel="bookmark">Read {{ node.title.value }}'s Full Bio</a></div>
     </div>
   </div>
 </article>
