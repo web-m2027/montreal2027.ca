@@ -1,7 +1,7 @@
 .grid {
     &--table {
         display: grid;
-        grid-template-rows: repeat(29, 1fr);
+        grid-template-rows: repeat(35, 1fr);
         gap: 0px 0px;
         grid-auto-flow: column;
 

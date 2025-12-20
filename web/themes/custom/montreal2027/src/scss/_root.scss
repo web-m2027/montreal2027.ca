@@ -9,8 +9,10 @@
   --color-dark-blue: #161a37;
   --color-white: #ffffff;
   --color-red: #c70012;
+  --color-bright-red: #ff0000;
   --color-maroon: #990033;
   --color-black: #000000;
+  --color-gray: #999999;
   --color-light-gray: #d3d3d3;
   --color-medium-gray: #c0c0c0;
   --color-dark-gray: #a9a9a9;
@@ -45,6 +47,15 @@ body {
   @include noto-serif-font();
 }
 
+body,
+p {
+  font-size: clamp(.75rem, 1vw, 1rem);
+}
+
+p::first-letter {
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+}
+
 h1,
 h2,
 h3,
@@ -56,7 +67,7 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(1.2rem, 2vw , 2rem);
+  font-size: clamp(1.2rem, 2.5vw, 2.5rem);
 
   &.paragraph--guest-type {
     padding-top: 1rem;
@@ -64,7 +75,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(.75rem, 1.5vw, 1.75rem);
+  font-size: clamp(1rem, 2vw, 2rem);
 
   &.paragraph--guest-type {
     padding-bottom: 1rem;
@@ -76,19 +87,19 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: clamp(.9rem, 1.5vw, 1.5rem);
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: clamp(.8rem, 1.25vw, 1.25rem);
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: clamp(.7rem, 1vw, 1rem);
 }
 
 h6 {
-  font-size: 0.75rem;
+  font-size: clamp(.6rem, .75vw, .75rem);
 }
 
 p {

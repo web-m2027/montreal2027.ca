@@ -61,11 +61,6 @@
     flex-grow: 1;
     margin: 6rem 0 0 0;
 
-    @-moz-document url-prefix() {
-      /* Firefox bug workaround: https://bugzilla.mozilla.org/show_bug.cgi?id=1702193 */
-      margin: 8rem 0 0 0;
-    }
-
     @container page-wrapper (min-width: 992px) {
       margin: 12rem 0 0 0;
       z-index: 1;
@@ -75,8 +70,8 @@
     & .container {
       @include frosted-glass($border-radius: 1rem);
       @include drop-shadow-slight();
-      padding: 1rem 1.5rem;
-      margin: 0 auto 2rem auto;
+      padding: clamp(.75rem, 1vh, 1rem) clamp(.9rem, 1.5vw, 1.5rem);
+      margin: 0 auto clamp(1rem, 2vh, 2rem) auto;
       max-width: calc(100% - 4rem);
 
       & .node--type-article {
