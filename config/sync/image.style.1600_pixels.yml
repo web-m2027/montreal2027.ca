@@ -1,0 +1,25 @@
+uuid: e121462b-a1f0-4b66-99fa-c7c6bb0fe59a
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: 1600_pixels
+label: '1600 Pixels'
+effects:
+  707dec77-6d80-43d6-abfd-c894085ee493:
+    uuid: 707dec77-6d80-43d6-abfd-c894085ee493
+    id: image_effects_scale_and_smart_crop
+    weight: 1
+    data:
+      width: '1600'
+      height: ''
+      upscale: true
+      simulate: false
+      algorithm: entropy_slice
+  376a17ab-9b54-4f8f-87cd-1ddde8b64054:
+    uuid: 376a17ab-9b54-4f8f-87cd-1ddde8b64054
+    id: image_convert_avif
+    weight: 2
+    data:
+      extension: webp

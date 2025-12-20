@@ -14,8 +14,9 @@
       padding: 0 0 0 1rem;
       width: 100%;
       height: 2rem;
-      background: linear-gradient(90deg, rgba(51, 51, 153, 0.19) 0%, rgba(51, 51, 153) 50%, rgb(51, 51, 153) 100%),#fff;
+      background: linear-gradient(90deg, rgba(51, 51, 153, 0.19) 0%, rgba(51, 51, 153) 50%, rgb(51, 51, 153) 100%), #fff;
       z-index: 100;
+      @include drop-shadow-slight(0, 2px, 4px, 0, var(--color-black));
     }
 
   }
@@ -25,9 +26,12 @@
     position: fixed;
     top: var(--site-header-height);
     z-index: 90;
-    margin:0;
+    margin: 0;
     @include frosted-glass($border-radius: 0);
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    @include drop-shadow-slight(0, 2px, 4px, 0, var(--color-black));
 
     @container (min-width: 992px) {
       top: calc(var(--site-breadcrumb-top) + var(--drupal-displace-offset-top, 0px));
@@ -39,7 +43,7 @@
       display: grid;
       grid-template-rows: auto;
       grid-gap: 0;
-      grid-template-columns: auto repeat(3, 1fr);
+      grid-template-columns: auto repeat(2, 1fr) auto;
       grid-template-areas:
         "top top top top"
         ". middle middle ."

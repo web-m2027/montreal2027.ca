@@ -1,0 +1,11 @@
+uuid: 9776fbc9-d0e7-4a4e-bd22-d6fed6fc2b41
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.1600_pixels
+label: '1600 Pixels'
+description: null
+targetEntityType: media
+cache: true
