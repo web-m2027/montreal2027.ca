@@ -56,7 +56,7 @@ filters:
     status: false
     weight: -45
     settings:
-      allowed_html: ''
+      allowed_html: '<a hreflang target>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_html_escape:
