@@ -18,3 +18,9 @@ effects:
       width: 1200
       height: null
       upscale: true
+  31eda21e-224e-4ea5-8e88-41a385e1c2d9:
+    uuid: 31eda21e-224e-4ea5-8e88-41a385e1c2d9
+    id: image_convert_avif
+    weight: 2
+    data:
+      extension: webp

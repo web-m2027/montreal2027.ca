@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: wide_1400px
-label: 'Wide (1400px)'
+label: '1400 Pixels'
 effects:
   9ee1efcf-43a9-4beb-a4d9-e91c529d916f:
     uuid: 9ee1efcf-43a9-4beb-a4d9-e91c529d916f

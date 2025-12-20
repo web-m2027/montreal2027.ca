@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.media.hero_image.field_media_image
-    - image.style.wide_1400px
+    - image.style.hero_image
     - media.type.hero_image
   module:
     - image_field_caption
@@ -18,7 +18,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: wide_1400px
+      image_style: hero_image
       image_loading:
         attribute: eager
     third_party_settings: {  }

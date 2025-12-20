@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: 7so-vfeOEscmOqLfjPU7OeaeJLYTzGXBwi-nrmu8i4A
 name: cke_media_resize_small
-label: '200 pixels'
+label: '200 Pixels'
 effects:
   a2e21076-e6f8-416a-9d8a-b548a684fbd9:
     uuid: a2e21076-e6f8-416a-9d8a-b548a684fbd9
@@ -18,3 +18,9 @@ effects:
       width: 200
       height: null
       upscale: true
+  357199a5-22ba-4bb4-88d8-206334f253a6:
+    uuid: 357199a5-22ba-4bb4-88d8-206334f253a6
+    id: image_convert_avif
+    weight: 2
+    data:
+      extension: webp
