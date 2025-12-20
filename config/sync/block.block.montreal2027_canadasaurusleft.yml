@@ -1,0 +1,25 @@
+uuid: 88368bc2-1800-4923-8b1f-e7f05a888af4
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:theme_image:c8468a7a-8200-420c-8f46-109428fb4d68'
+  module:
+    - block_content
+  theme:
+    - montreal2027
+id: montreal2027_canadasaurusleft
+theme: montreal2027
+region: footer_first
+weight: -14
+provider: null
+plugin: 'block_content:c8468a7a-8200-420c-8f46-109428fb4d68'
+settings:
+  id: 'block_content:c8468a7a-8200-420c-8f46-109428fb4d68'
+  label: 'Canadasaurus - Left'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

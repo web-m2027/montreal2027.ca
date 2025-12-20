@@ -1,0 +1,181 @@
+uuid: 7446117b-6c67-4a08-9797-f29e5f811d4f
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_media_links
+  theme:
+    - montreal2027
+id: montreal2027_socialmedialinks_2
+theme: montreal2027
+region: breadcrumb
+weight: 0
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Social Media Links'
+  label_display: '0'
+  provider: social_media_links
+  platforms:
+    email:
+      value: info@montreal2027.ca
+      description: ''
+      weight: '-47'
+    facebook:
+      value: MontrealWorldCon27
+      description: ''
+      weight: '-46'
+    bluesky:
+      value: montrealworldcon27.bsky.social
+      description: ''
+      weight: '-45'
+    mastodon:
+      value: mastodon.social/@montreal27worldcon
+      description: ''
+      weight: '-44'
+    rss:
+      value: ''
+      description: ''
+      weight: '-43'
+    whatsapp_channel:
+      value: ''
+      description: ''
+      weight: '-42'
+    goodreads:
+      value: ''
+      description: ''
+      weight: '-41'
+    googleplay:
+      value: ''
+      description: ''
+      weight: '-40'
+    telegram:
+      value: ''
+      description: ''
+      weight: '-39'
+    meetup:
+      value: ''
+      description: ''
+      weight: '-38'
+    youtube_channel:
+      value: ''
+      description: ''
+      weight: '-37'
+    website:
+      value: ''
+      description: ''
+      weight: '-36'
+    instagram:
+      value: ''
+      description: ''
+      weight: '-35'
+    vimeo:
+      value: ''
+      description: ''
+      weight: '-34'
+    github:
+      value: ''
+      description: ''
+      weight: '-33'
+    gitlab:
+      value: ''
+      description: ''
+      weight: '-32'
+    bitbucket:
+      value: ''
+      description: ''
+      weight: '-31'
+    drupal:
+      value: ''
+      description: ''
+      weight: '-30'
+    tumblr:
+      value: ''
+      description: ''
+      weight: '-29'
+    yandex_zen:
+      value: ''
+      description: ''
+      weight: '-28'
+    contact:
+      value: ''
+      description: ''
+      weight: '-27'
+    behance:
+      value: ''
+      description: ''
+      weight: '-26'
+    flickr:
+      value: ''
+      description: ''
+      weight: '-25'
+    tiktok:
+      value: ''
+      description: ''
+      weight: '-24'
+    glassdoor:
+      value: ''
+      description: ''
+      weight: '-23'
+    soundcloud:
+      value: ''
+      description: ''
+      weight: '-22'
+    linkedin:
+      value: ''
+      description: ''
+      weight: '-21'
+    twitter:
+      value: ''
+      description: ''
+      weight: '-20'
+    patreon:
+      value: ''
+      description: ''
+      weight: '-19'
+    xing:
+      value: ''
+      description: ''
+      weight: '-18'
+    youtube:
+      value: ''
+      description: ''
+      weight: '-17'
+    pinterest:
+      value: ''
+      description: ''
+      weight: '-16'
+    whatsapp:
+      value: ''
+      description: ''
+      weight: '-15'
+    vkontakte:
+      value: ''
+      description: ''
+      weight: '-14'
+    amazon:
+      value: ''
+      description: ''
+      weight: '-13'
+    googleplus:
+      value: ''
+      description: ''
+      weight: '-12'
+    slideshare:
+      value: ''
+      description: ''
+      weight: '-11'
+  appearance:
+    orientation: h
+    show_name: 0
+    suggestion: ''
+  link_attributes:
+    target: '<none>'
+    rel: '<none>'
+  iconset:
+    style: 'fontawesome:in'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility: {  }

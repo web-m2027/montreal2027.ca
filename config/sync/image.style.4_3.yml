@@ -1,0 +1,25 @@
+uuid: e22c33da-59a9-49be-9d44-bc753f3a8d51
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: '4_3'
+label: '4:3'
+effects:
+  73762a91-6551-4db0-8c1c-800568c58f16:
+    uuid: 73762a91-6551-4db0-8c1c-800568c58f16
+    id: image_convert_avif
+    weight: -9
+    data:
+      extension: webp
+  b771079e-addb-4257-920e-e8c39d845175:
+    uuid: b771079e-addb-4257-920e-e8c39d845175
+    id: image_effects_scale_and_smart_crop
+    weight: -10
+    data:
+      width: '400'
+      height: '300'
+      upscale: true
+      simulate: false
+      algorithm: entropy_slice

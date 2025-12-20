@@ -61,7 +61,7 @@ article {
       }
 
       & img {
-        @include drop-shadow-slight;
+        @include drop-shadow-slight();
         margin: 0 clamp(0px, .75vw, 1rem) 0 0;
         border-radius: 1rem;
         float: left;
@@ -75,7 +75,7 @@ article {
 
     & .node__content {
       & p {
-        line-height: 1.5rem;
+        line-height: clamp(1rem,1vw,1.25rem);
       }
     }
 
@@ -101,10 +101,11 @@ article {
           & p {
             text-align: center;
             margin: .5rem 0 0 0;
-            font-size: 0.8rem;
+            font-size:clamp(.6rem, .75vw, .75rem);
+            line-height: clamp(.6rem, .75vw, .75rem);
 
             &::first-letter {
-              font-size: 0.8rem;
+              font-size:clamp(.6rem, .75vw, .75rem);
             }
           }
         }

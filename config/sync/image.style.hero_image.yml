@@ -1,0 +1,25 @@
+uuid: d26fdeda-51ec-4f03-bd21-af3e7debcc9e
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: hero_image
+label: 'Hero Image (1200 Pixels)'
+effects:
+  5c321929-b15e-468e-9971-599770d8730a:
+    uuid: 5c321929-b15e-468e-9971-599770d8730a
+    id: image_effects_scale_and_smart_crop
+    weight: 1
+    data:
+      width: '1200'
+      height: ''
+      upscale: true
+      simulate: false
+      algorithm: entropy_slice
+  657ddee4-3cdc-4f8a-8796-cc2ecc14c69c:
+    uuid: 657ddee4-3cdc-4f8a-8796-cc2ecc14c69c
+    id: image_convert_avif
+    weight: 2
+    data:
+      extension: webp
