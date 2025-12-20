@@ -74,6 +74,11 @@ article {
     }
 
     & .node__content {
+      & img {
+        margin: 0 1rem 0 0;
+        @include drop-shadow-slight();
+      }
+      
       & p {
         line-height: clamp(1rem,1vw,1.25rem);
       }
