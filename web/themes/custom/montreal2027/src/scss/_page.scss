@@ -213,4 +213,22 @@
   //     background-color: var(--color-blue);
   //   }
   // }
+
+  .frontpage {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+
+    & button {
+      background: var(--color-blue);
+      color: var(--color-bright-red);
+      font-weight: 900;
+      font-size: clamp(1rem, 2vw, 2rem);
+      box-sizing: border-box;
+      padding: 1rem;
+      border-radius: 1rem;
+      @include drop-shadow-slight();
+    }
+  }
+
 }
