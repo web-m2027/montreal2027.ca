@@ -414,4 +414,24 @@
       grid-column: unset;
     }
   }
+
+  &-languageselector {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 0 1rem 0 0;
+
+    & .language {
+      display: flex;
+      flex-direction: row;
+
+      & .lang-code {
+        margin: 0 .2rem 0;
+      }
+
+      & img {
+        height: 1rem;
+        width: auto;
+      }
+    }
+  }
 }
