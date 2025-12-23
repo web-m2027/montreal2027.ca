@@ -30,7 +30,7 @@
     @include frosted-glass($border-radius: 0);
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr auto auto;
     @include drop-shadow-slight(0, 2px, 4px, 0, var(--color-black));
 
     @container (min-width: 992px) {
