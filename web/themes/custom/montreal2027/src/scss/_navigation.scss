@@ -187,3 +187,11 @@
     }
   }
 }
+
+#superfish-main {
+  & li {
+    & span {
+      color: var(--color-black)
+    }
+  }
+}
