@@ -6,7 +6,7 @@
   --site-footer-height: 13rem;
   --shadow-color: var(--color-black);
   --color-blue: oklch(0.391 0.1616 275.91);
-  --color-dark-blue: oklch(0.30 0.18 275); 
+  --color-dark-blue: oklch(0.30 0.18 275);
   --color-white: oklch(1 0 0);
   --color-red: oklch(0.5217 0.2128 27.35);
   --color-bright-red: oklch(0.628 0.2577 29.23);
@@ -31,7 +31,7 @@
   margin: 0;
   min-height: 100dvh;
 
-  @container (min-width: 992px) {
+  @media (min-width: 992px) {
     --site-primary-menu-height: 2rem;
   }
 }
@@ -50,11 +50,17 @@ body {
 
 body,
 p {
-  font-size: clamp(.75rem, 1vw, 1rem);
+  font-size: calc(0.536rem + 0.595vw);
+  font-size: clamp(0.75rem, calc(0.536rem + 0.595vw), 1.25rem);
+  line-height: calc(0.893rem + 0.298vw);
+  line-height: clamp(1.00rem, calc(0.893rem + 0.298vw), 1.25rem);
 }
 
 p::first-letter {
-  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  font-size: calc(0.786rem + 0.595vw);
+  font-size: clamp(1.00rem, calc(0.786rem + 0.595vw), 1.50rem);
+  line-height: calc(1.036rem + 0.595vw);
+  line-height: clamp(1.25rem, calc(1.036rem + 0.595vw), 1.75rem);
 }
 
 h1,
@@ -68,7 +74,8 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(1.2rem, 2.5vw, 2.5rem);
+  font-size: calc(2.036rem + 0.595vw);
+  font-size: clamp(2.25rem, calc(2.036rem + 0.595vw), 2.75rem);
 
   &.paragraph--guest-type {
     padding-top: 1rem;
@@ -76,7 +83,8 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: calc(1.7857rem + 0.5952vw);
+  font-size: clamp(2rem, 1.7857rem + 0.5952vw, 2.5rem);
 
   &.paragraph--guest-type {
     padding-bottom: 1rem;
@@ -88,19 +96,23 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(.9rem, 1.5vw, 1.5rem);
+  font-size: calc(1.536rem + 0.595vw);
+  font-size: clamp(1.75rem, calc(1.536rem + 0.595vw), 2.25rem);
 }
 
 h4 {
-  font-size: clamp(.8rem, 1.25vw, 1.25rem);
+  font-size: calc(1.286rem + 0.595vw);
+  font-size: clamp(1.50rem, calc(1.286rem + 0.595vw), 2.00rem);
 }
 
 h5 {
-  font-size: clamp(.7rem, 1vw, 1rem);
+  font-size: calc(1.036rem + 0.595vw);
+  font-size: clamp(1.25rem, calc(1.036rem + 0.595vw), 1.75rem);
 }
 
 h6 {
-  font-size: clamp(.6rem, .75vw, .75rem);
+  font-size: calc(0.786rem + 0.595vw);
+  font-size: clamp(1.00rem, calc(0.786rem + 0.595vw), 1.50rem);
 }
 
 p {

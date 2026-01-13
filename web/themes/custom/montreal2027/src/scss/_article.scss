@@ -62,7 +62,8 @@ article {
 
       & img {
         @include drop-shadow-slight();
-        margin: 0 clamp(0px, .75vw, 1rem) 0 0;
+        margin: 0 .5rem 0 0;
+        margin: 0 clamp(0.00rem, calc(-0.429rem + 1.190vw), 1.00rem) 0 0;
         border-radius: 1rem;
         float: left;
         // aspect-ratio: 1;
@@ -77,10 +78,6 @@ article {
       & img {
         margin: 0 1rem 0 0;
         @include drop-shadow-slight();
-      }
-      
-      & p {
-        line-height: clamp(1rem,1vw,1.25rem);
       }
     }
 
@@ -106,11 +103,12 @@ article {
           & p {
             text-align: center;
             margin: .5rem 0 0 0;
-            font-size:clamp(.6rem, .75vw, .75rem);
-            line-height: clamp(.6rem, .75vw, .75rem);
+            font-size: .75rem;
+            font-size: clamp(0.50rem, calc(0.286rem + 0.595vw), 1.00rem);
 
             &::first-letter {
-              font-size:clamp(.6rem, .75vw, .75rem);
+              font-size: 1rem;
+              font-size: clamp(0.75rem, calc(0.536rem + 0.595vw), 1.25rem);
             }
           }
         }

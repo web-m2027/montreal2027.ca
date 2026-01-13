@@ -5,8 +5,7 @@
   flex-direction: column;
   min-height: 100vh;
   min-height: 100dvh;
-  container-name: page-wrapper;
-  container-type: inline-size;
+  container: page-wrapper / inline-size;
 
   & header[role="banner"] {
     & .container {
@@ -27,7 +26,7 @@
     box-sizing: border-box;
     align-content: center;
 
-    @container page-wrapper (min-width: 992px) {
+    @media (min-width: 992px) {
       background: linear-gradient(90deg, oklch(from var(--color-blue) l c h / 0.19) 0%, var(--color-blue) 50%, var(--color-blue) 100%), var(--color-white);
       width: 100%;
       left: 0;
@@ -38,12 +37,10 @@
         display: flex;
         flex-direction: row;
 
-        @container page-wrapper (min-width: 992px) {
+        @media (min-width: 992px) {
           display: grid;
           align-items: center;
           grid-template-columns: 400px 1fr 96px;
-          container-type: inline-size;
-          container-name: header;
           justify-content: space-between;
         }
       }
@@ -56,7 +53,7 @@
     box-sizing: border-box;
     transition: padding-bottom 220ms ease, padding-top 220ms ease;
     top: var(--site-main-content-top);
-    overflow: auto;
+    // overflow: auto;
     container: main / inline-size;
     flex-grow: 1;
     margin: 6rem 0 0 0;
@@ -70,8 +67,10 @@
     & .container {
       @include frosted-glass($border-radius: 1rem);
       @include drop-shadow-slight();
-      padding: clamp(.75rem, 1vh, 1rem) clamp(.9rem, 1.5vw, 1.5rem);
-      margin: 0 auto clamp(1rem, 2vh, 2rem) auto;
+      padding: 1rem 1.25rem;
+      padding: clamp(0.75rem, calc(0.536rem + 0.595vw), 1.25rem) clamp(1.00rem, calc(0.786rem + 0.595vw), 1.50rem);
+      margin: 0 auto 1.5rem auto;
+      margin: 0 auto clamp(1.00rem, calc(0.571rem + 1.190vw), 2.00rem) auto;
       max-width: calc(100% - 4rem);
 
       & .node--type-article {
@@ -104,13 +103,11 @@
 
       & p.under-construction {
         font-size: 2rem;
-        line-height: 2rem;
         margin: 1rem 0 0 0;
         text-wrap-style: balance;
 
         @container main (min-width: 1200px) {
           font-size: 3rem;
-          line-height: 3rem;
         }
 
         &::first-letter {
@@ -186,34 +183,6 @@
     }
   }
 
-  /* Make footer fixed on larger viewports and give a subtle slide-up/box-shadow */
-  /* Fallback: explicit media query for broad browser support */
-  // @media (min-width: 64rem) {
-  //   footer.site-footer {
-  //     position: sticky;
-  //     //left: 0;
-  //     //right: 0;
-  //     //bottom: 0;
-  //     //z-index: 1000;
-  //     transform: translateY(0);
-  //     box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.06);
-  //   }
-  // }
-
-  /* CSS-variable based media query (kept so the breakpoint can be updated at runtime via CSS) */
-  // @media (min-width: calc(var(--footer-fixed-breakpoint))) {
-  //   footer.site-footer {
-  //     position: fixed;
-  //     left: 0;
-  //     right: 0;
-  //     bottom: 0;
-  //     z-index: 1000;
-  //     transform: translateY(0);
-  //     box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.06);
-  //     background-color: var(--color-blue);
-  //   }
-  // }
-
   .frontpage {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -224,7 +193,8 @@
       background: var(--color-blue);
       color: var(--color-bright-red);
       font-weight: 900;
-      font-size: clamp(1rem, 2vw, 2rem);
+      font-size: 1.5rem;
+      font-size: clamp(1.00rem, calc(0.571rem + 1.190vw), 2.00rem);
       box-sizing: border-box;
       padding: 1rem;
       border-radius: 1rem;
