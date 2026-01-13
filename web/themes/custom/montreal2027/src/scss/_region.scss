@@ -9,7 +9,7 @@
     width: auto;
     z-index: 600;
 
-    @container (min-width: 992px) {
+    @media (min-width: 992px) {
       top: calc(var(--site-primary-menu-top) + var(--drupal-displace-offset-top, 0px));
       padding: 0 0 0 1rem;
       width: 100%;
@@ -33,7 +33,7 @@
     grid-template-columns: 1fr auto auto;
     @include drop-shadow-slight(0, 2px, 4px, 0, var(--color-black));
 
-    @container (min-width: 992px) {
+    @media (min-width: 992px) {
       top: calc(var(--site-breadcrumb-top) + var(--drupal-displace-offset-top, 0px));
     }
   }
@@ -50,8 +50,6 @@
         "bottom bottom bottom bottom";
 
       & nav {
-        line-height: .6rem;
-
         & h2 {
           color: var(--color-white);
           font-size: .8rem;
