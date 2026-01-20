@@ -1,11 +1,15 @@
 @use 'mixins' as *;
 
 #block-montreal2027 {
-  &-mainnavigation {
-    padding: 0;
+  &-mainnavigation-2 {
+    font-size: clamp(0.88rem, calc(0.741rem + 0.216vw), 1.00rem);
 
-    @media (min-width: 992px) {
-      background-color: var(--color-blue);
+    & ul:not(.sf-accordion).sf-menu.sf-style-default .sf-depth-2 a {
+      background: var(--color-white);
+    }
+
+    & ul.sf-menu.sf-style-default a.is-active {
+      background: transparent;
     }
   }
 
@@ -248,17 +252,18 @@
   }
 
   &-socialmedialinks-2 {
-    margin: auto 1rem;
+    margin: 0.4rem 1rem;
     font-size: 1rem;
+    display: none;
+
+    @media (min-width: 992px) {
+      display: block;
+    }
 
     & .social-media-links--platforms {
       &.horizontal {
         & li {
           padding: 0;
-
-          & a {
-            color: var(--color-maroon);
-          }
         }
       }
     }
@@ -306,6 +311,7 @@
 
       &::first-letter {
         font-size: .7rem;
+        line-height: .9rem;
       }
     }
   }

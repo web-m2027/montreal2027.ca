@@ -19,7 +19,7 @@
     background: var(--color-blue-bell);
     width: 100%;
     padding-top: var(--drupal-displace-offset-top, 0px);
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     z-index: 500;
@@ -28,6 +28,7 @@
 
     @media (min-width: 992px) {
       background: linear-gradient(90deg, oklch(from var(--color-blue) l c h / 0.19) 0%, var(--color-blue) 50%, var(--color-blue) 100%), var(--color-white);
+      @include drop-shadow-slight(0, 2px, 4px, 0, var(--color-black));
       width: 100%;
       left: 0;
     }
@@ -56,10 +57,11 @@
     // overflow: auto;
     container: main / inline-size;
     flex-grow: 1;
-    margin: 6rem 0 0 0;
+    margin: 0;
 
     @container page-wrapper (min-width: 992px) {
-      margin: 12rem 0 0 0;
+      // margin: 12rem 0 0 0;
+      margin: 3rem 0 0 0;
       z-index: 1;
       padding: 0;
     }
@@ -120,10 +122,13 @@
       }
 
       & .page--text-area {
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        align-items: start;
-        margin: 1rem 0;
+        @container page-wrapper (min-width: 992px) {
+          display: grid;
+          grid-template-columns: repeat(2, auto);
+          align-items: start;
+          margin: 1rem 0;
+          gap: 1rem;
+        }
 
         &-top-nav {
           & h2 {
@@ -137,6 +142,10 @@
           & a {
             color: var(--color-dim-gray);
           }
+        }
+
+        & figure {
+          margin: 0 auto 1rem;
         }
 
         & img {
@@ -209,4 +218,10 @@
     }
   }
 
+}
+
+ul:not(.sf-accordion).sf-menu.sf-style-default a,
+ul:not(.sf-accordion).sf-menu.sf-style-default a:visited,
+ul:not(.sf-accordion).sf-menu.sf-style-default span.nolink {
+  padding: 0.4rem 2rem .75rem 0;
 }

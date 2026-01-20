@@ -5,6 +5,9 @@
   --site-header-height: 6rem;
   --site-footer-height: 13rem;
   --shadow-color: var(--color-black);
+  --body-color: var(--color-black);
+  --social-media-icon-color: var(--color-sm-blue);
+  --link-color: var(--color-blue);
   --color-blue: oklch(0.391 0.1616 275.91);
   --color-dark-blue: oklch(0.30 0.18 275);
   --color-white: oklch(1 0 0);
@@ -19,6 +22,10 @@
   --color-slate-gray: oklch(0.5529 0.0196 257.43);
   --color-dim-gray: oklch(0.4667 0 0);
   --color-blue-bell: oklch(76% 0.096 265);
+  --color-sm-blue: oklch(0.6246 0.1616 275.91); // oklch(from var(--color-blue) l calc(c + 0.25) h)
+  --color-facebook: oklch(0.5891 0.2029 257.86);
+  --color-bluesky: oklch(0.648 0.191659 254.4114);
+  --color-mastodon: oklch(0.5928 0.2243 276.82);
   --title-font: 'Cinzel, serif';
   --site-breadcrumb-height: 1.5rem;
   --site-primary-menu-height: 2rem;
@@ -44,23 +51,22 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   /* fills the page */
-  color: var(--color-black);
-  @include noto-serif-font();
+  color: var(--body-color);
+  @include noto-font($weight: 350);
 }
 
 body,
 p {
-  font-size: calc(0.536rem + 0.595vw);
-  font-size: clamp(0.75rem, calc(0.536rem + 0.595vw), 1.25rem);
-  line-height: calc(0.893rem + 0.298vw);
-  line-height: clamp(1.00rem, calc(0.893rem + 0.298vw), 1.25rem);
+  font-size: calc(0.650rem + 0.500vw);
+  font-size: clamp(0.75rem, calc(0.650rem + 0.500vw), 1.25rem);
+  line-height: calc(0.5vw + 1.025rem);
+  line-height: clamp(1.125rem, 0.5vw + 1.025rem, 1.625rem);
+  color: var(--body-color);
 }
 
 p::first-letter {
-  font-size: calc(0.786rem + 0.595vw);
-  font-size: clamp(1.00rem, calc(0.786rem + 0.595vw), 1.50rem);
-  line-height: calc(1.036rem + 0.595vw);
-  line-height: clamp(1.25rem, calc(1.036rem + 0.595vw), 1.75rem);
+  font-size: calc(0.900rem + 0.500vw);
+  font-size: clamp(1.00rem, calc(0.900rem + 0.500vw), 1.50rem);
 }
 
 h1,
@@ -70,24 +76,29 @@ h4,
 h5,
 h6 {
   color: var(--color-black);
-  @include noto-serif-font(700);
+  @include noto-font($weight: 700, $style: 'serif');
 }
 
 h1 {
-  font-size: calc(2.036rem + 0.595vw);
-  font-size: clamp(2.25rem, calc(2.036rem + 0.595vw), 2.75rem);
+  font-size: calc(2.150rem + 0.500vw);
+  font-size: clamp(2.25rem, calc(2.150rem + 0.500vw), 2.75rem);
 
   &.paragraph--guest-type {
     padding-top: 1rem;
+    font-size: calc(1.400rem + 0.500vw);
+    font-size: clamp(1.50rem, calc(1.400rem + 0.500vw), 2.00rem);
   }
 }
 
 h2 {
-  font-size: calc(1.7857rem + 0.5952vw);
-  font-size: clamp(2rem, 1.7857rem + 0.5952vw, 2.5rem);
+  font-size: calc(1.900rem + 0.500vw);
+  font-size: clamp(2.00rem, calc(1.900rem + 0.500vw), 2.50rem);
 
-  &.paragraph--guest-type {
+  &.paragraph--guest-type,
+  &.faq {
     padding-bottom: 1rem;
+    font-size: calc(1.150rem + 0.500vw);
+    font-size: clamp(1.25rem, calc(1.150rem + 0.500vw), 1.75rem);
   }
 
   &.bottom--margin-small {
@@ -96,29 +107,30 @@ h2 {
 }
 
 h3 {
-  font-size: calc(1.536rem + 0.595vw);
-  font-size: clamp(1.75rem, calc(1.536rem + 0.595vw), 2.25rem);
+  font-size: calc(1.650rem + 0.500vw);
+  font-size: clamp(1.75rem, calc(1.650rem + 0.500vw), 2.25rem);
+
+  &.faq {
+    font-size: calc(0.900rem + 0.500vw);
+    font-size: clamp(1.00rem, calc(0.900rem + 0.500vw), 1.50rem);
+  }
 }
 
 h4 {
-  font-size: calc(1.286rem + 0.595vw);
-  font-size: clamp(1.50rem, calc(1.286rem + 0.595vw), 2.00rem);
+  font-size: calc(1.400rem + 0.500vw);
+  font-size: clamp(1.50rem, calc(1.400rem + 0.500vw), 2.00rem);
 }
 
 h5 {
-  font-size: calc(1.036rem + 0.595vw);
-  font-size: clamp(1.25rem, calc(1.036rem + 0.595vw), 1.75rem);
+  font-size: calc(1.150rem + 0.500vw);
+  font-size: clamp(1.25rem, calc(1.150rem + 0.500vw), 1.75rem);
 }
 
 h6 {
-  font-size: calc(0.786rem + 0.595vw);
-  font-size: clamp(1.00rem, calc(0.786rem + 0.595vw), 1.50rem);
-}
-
-p {
-  color: var(--color-black);
+  font-size: calc(0.900rem + 0.500vw);
+  font-size: clamp(1.00rem, calc(0.900rem + 0.500vw), 1.50rem);
 }
 
 a {
-  color: var(--color-blue)
+  color: var(--link-color);
 }

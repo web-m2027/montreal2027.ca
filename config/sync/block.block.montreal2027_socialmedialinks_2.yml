@@ -8,8 +8,8 @@ dependencies:
     - montreal2027
 id: montreal2027_socialmedialinks_2
 theme: montreal2027
-region: breadcrumb
-weight: 0
+region: primary_menu
+weight: -14
 provider: null
 plugin: social_media_links_block
 settings:

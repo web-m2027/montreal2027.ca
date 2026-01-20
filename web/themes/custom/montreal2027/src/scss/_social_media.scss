@@ -1,0 +1,28 @@
+@use 'mixins' as *;
+
+.social-media-links {
+    &--platforms {
+        a {
+            &.social-media-link-icon {
+                &--email {
+                    color: var(--color-white);
+                }
+
+                &--facebook {
+                    color: var(--color-facebook);
+                    font-weight: 900;
+                }
+
+                &--bluesky {
+                    color: var(--color-bluesky);
+                    font-weight: 900;
+                }
+
+                &--mastodon {
+                    color: var(--color-mastodon);
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}

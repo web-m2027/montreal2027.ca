@@ -26,8 +26,13 @@
   border-radius: $border-radius;
 }
 
-@mixin noto-serif-font ($weight: 500) {
-  font-family: "Noto Serif", serif;
+@mixin noto-font ($weight: 500, $style: "sans") {
+  @if ($style == "sans") {
+    font-family: "Noto Sans", sans-serif;
+  } @else {
+    font-family: "Noto Serif", serif;
+  }
+
   font-optical-sizing: auto;
   font-weight: $weight;
   font-style: normal;
