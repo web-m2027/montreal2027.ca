@@ -70,6 +70,8 @@ jobs:
             echo "Changing to deploy path"
             cd ${{ vars.STG_DEPLOY_PATH }}/web/themes/custom/montreal2027
             echo "Installing npm dependencies"
+            echo "RUNNING ON HOST: $(hostname)"
+            echo "NVM LOCATION: $(which npm)"
             npm install
 
       - name: Build Assets
