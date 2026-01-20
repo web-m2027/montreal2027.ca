@@ -9,25 +9,30 @@
 ]
 %}
 {{ attach_library('classy/node') }}
-<article{{ attributes.addClass(classes) }}>
-  <div{{ content_attributes.addClass('node__content') }}>
-    {# Use the values set in montreal2027_preprocess_node__guest__teaser() #}
-    {% if guest_image_url is defined and guest_image_url %}
-      <img src="{{ guest_image_url }}" alt="{{ guest_image_alt|e }}" />
-    {% else %}
-      {# Fallback to the rendered field if preprocess didn't supply a URL/alt #}
-      {{ content.field_guest_photo }}
-    {% endif %}
+<article{{attributes.addClass(classes)}}>
+	<div{{content_attributes.addClass('node__content')}}>
+		<div
+			class="maple-leaf-frame">
+			{# Use the values set in montreal2027_preprocess_node__guest__teaser() #}
+			{% if guest_image_url is defined and guest_image_url %}
+				<img src="{{ guest_image_url }}" alt="{{ guest_image_alt|e }}"/>
+			{% else %}
+				{# Fallback to the rendered field if preprocess didn't supply a URL/alt #}
+				{{ content.field_guest_photo }}
+			{% endif %}
+		</div>
+		<div lang="{{ current_langcode }}">
+			{{ title_prefix }}
+			<h3{{title_attributes}}>
+				{{ label }}
+			</h3>
+			{{ title_suffix }}
 
-    <div lang="{{ current_langcode }}">
-      {{ title_prefix }}
-      <h3{{ title_attributes }}>
-        {{ label }}
-      </h3>
-      {{ title_suffix }}
-
-      {{ content.field_bio }}
-      <div class="more-link"><a href="{{ url }}" rel="bookmark">Read {{ node.title.value }}'s Full Bio</a></div>
-    </div>
-  </div>
+			{{ content.field_bio }}
+			<div class="more-link">
+				<a href="{{ url }}" rel="bookmark">Read
+					{{ node.title.value }}'s Full Bio</a>
+			</div>
+		</div>
+	</div>
 </article>
