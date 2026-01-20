@@ -20,15 +20,10 @@
       background: var(--color-dark-blue);
       padding: .8rem;
       border-radius: .5rem;
-      box-shadow: 0 2px 8px 0 var(--shadow-color, rgba(0,0,0, 0.15));
+      box-shadow: 0 2px 8px 0 var(--shadow-color, rgba(0, 0, 0, 0.15));
 
       & p {
         color: var(--color-white);
-
-        // &::first-letter {
-        //   font-size: 1.2rem;
-        //   color: var(--color-white);
-        // }
       }
     }
   }

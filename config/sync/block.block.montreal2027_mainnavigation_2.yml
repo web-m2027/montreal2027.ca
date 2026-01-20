@@ -11,7 +11,7 @@ dependencies:
 id: montreal2027_mainnavigation_2
 theme: montreal2027
 region: primary_menu
-weight: 0
+weight: -17
 provider: null
 plugin: 'superfish:main'
 settings:
@@ -39,7 +39,7 @@ settings:
   touchual: ''
   touchuam: 0
   small: 2
-  smallbp: 922
+  smallbp: 992
   smallua: 0
   smallual: ''
   smalluam: 0

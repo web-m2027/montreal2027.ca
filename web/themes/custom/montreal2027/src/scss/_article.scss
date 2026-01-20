@@ -42,7 +42,7 @@ article {
 
     &--type-guest {
       & h2 {
-        @include noto-serif-font($weight: 900);
+        @include noto-font($weight: 900, $style: 'serif');
         font-size: 2rem;
         text-align: center;
         color: var(--color-black);
@@ -54,10 +54,22 @@ article {
       }
 
       & h3 {
-        @include noto-serif-font($weight: 700);
+        @include noto-font($weight: 700, $style: 'serif');
         font-size: 1.5rem;
         text-align: center;
         color: var(--color-red);
+      }
+
+      & .node__content {
+        display: grid;
+
+        @container page-wrapper (min-width: 768px) {
+          display: block;
+        }
+      }
+
+      & .field--name-field-guest-photo {
+        margin: auto;
       }
 
       & img {
@@ -66,17 +78,12 @@ article {
         margin: 0 clamp(0.00rem, calc(-0.429rem + 1.190vw), 1.00rem) 0 0;
         border-radius: 1rem;
         float: left;
-        // aspect-ratio: 1;
-
-        // @container page-wrapper (min-width: 1200px) {
-        //   margin: 1rem;
-        // }
       }
     }
 
     & .node__content {
       & img {
-        margin: 0 1rem 0 0;
+        margin: 0 1rem 1rem 0;
         @include drop-shadow-slight();
       }
     }
@@ -94,6 +101,7 @@ article {
 
       & figure {
         justify-self: center;
+        margin: 0;
 
         & img {
           @include drop-shadow-slight();

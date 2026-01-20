@@ -188,9 +188,15 @@
 }
 
 #superfish-main {
+
+
   & li {
     & span {
       color: var(--color-black)
+    }
+
+    & ul {
+      top: 2rem;
     }
   }
 }

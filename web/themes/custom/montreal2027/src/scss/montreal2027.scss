@@ -9,5 +9,6 @@
 @use 'paragraph';
 @use 'superfish';
 @use 'grid';
+@use 'social_media';
 
 @layer external, clean_blog_theme, layout, theme, views-responsive-grid;

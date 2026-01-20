@@ -1,6 +1,10 @@
 @use 'mixins' as *;
 
 .region {
+  &-content {
+    padding: 1rem clamp(1rem, calc(0.6rem + 2vw), 3rem);
+  }
+
   &-primary-menu {
     position: fixed;
     top: 0;
@@ -14,9 +18,13 @@
       padding: 0 0 0 1rem;
       width: 100%;
       height: 2rem;
-      background: linear-gradient(90deg, rgba(51, 51, 153, 0.19) 0%, rgba(51, 51, 153) 50%, rgb(51, 51, 153) 100%), #fff;
+      // background: linear-gradient(90deg, rgba(51, 51, 153, 0.19) 0%, rgba(51, 51, 153) 50%, rgb(51, 51, 153) 100%), #fff;
       z-index: 100;
-      @include drop-shadow-slight(0, 2px, 4px, 0, var(--color-black));
+      // @include drop-shadow-slight(0, 2px, 4px, 0, var(--color-black));
+      background-color: var(--color-medium-gray);
+      border-bottom: 1px solid black;
+      display: grid;
+      grid-template-columns: 1fr auto;
     }
 
   }
@@ -27,7 +35,8 @@
     top: var(--site-header-height);
     z-index: 90;
     margin: 0;
-    @include frosted-glass($border-radius: 0);
+    // @include frosted-glass($border-radius: 0);
+    background-color: var(--color-medium-gray);
     width: 100%;
     display: grid;
     grid-template-columns: 1fr auto auto;
