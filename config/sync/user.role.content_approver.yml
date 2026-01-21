@@ -14,7 +14,7 @@ dependencies:
     - workspaces
 id: content_approver
 label: 'Content approver'
-weight: -6
+weight: -4
 is_admin: false
 permissions:
   - 'access administration pages'

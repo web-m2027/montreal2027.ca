@@ -1,0 +1,9 @@
+uuid: 8f1263e8-e1ff-4304-b921-bf84b5ee7c1c
+langcode: en
+status: true
+dependencies: {  }
+id: member
+label: Member
+weight: -8
+is_admin: false
+permissions: {  }

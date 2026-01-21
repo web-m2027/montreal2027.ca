@@ -27,6 +27,8 @@ jobs:
             cd ${{ vars.STG_DEPLOY_PATH }}
             echo "Setting proper permissions"
             chmod -R u+w web/sites/default
+            echo "Checking out ${{github.ref_name}}"
+            git checkout ${{github.ref_name}}
             echo "Pulling latest code"
             git pull
 
@@ -70,8 +72,6 @@ jobs:
             echo "Changing to deploy path"
             cd ${{ vars.STG_DEPLOY_PATH }}/web/themes/custom/montreal2027
             echo "Installing npm dependencies"
-            echo "RUNNING ON HOST: $(hostname)"
-            echo "NVM LOCATION: $(which npm)"
             npm install
 
       - name: Build Assets
