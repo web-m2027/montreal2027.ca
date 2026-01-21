@@ -86,6 +86,35 @@ article {
         margin: 0 1rem 1rem 0;
         @include drop-shadow-slight();
       }
+
+
+      & .hotel {
+        display: grid;
+        gap: 1rem;
+
+        @container page-wrapper (min-width: 768px) {
+          grid-template-columns: auto auto;
+        }
+
+        & figure {
+          margin: 0.25rem auto;
+        }
+
+        & h2 {
+          justify-self: center;
+
+          @container page-wrapper (min-width: 768px) {
+            justify-self: start;
+          }
+        }
+
+        .caption {
+          & > figcaption {
+            font-size: 1rem;
+            text-align: center;
+          }
+        }
+      }
     }
 
     & .under-construction {
