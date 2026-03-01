@@ -12,7 +12,7 @@
 #}
 
 
-{% if attributes.id is defined and attributes.id == 'edit-submit' %}
+{% if attributes.id is defined and attributes.id == 'edit-submit-search' %}
     <button{{ attributes }}><i class="fa-solid fa-magnifying-glass"></i></button>
 {% else %}
     <input{{ attributes }} />{{ children }}

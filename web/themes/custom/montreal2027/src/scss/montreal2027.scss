@@ -1,14 +1,17 @@
+@use 'mixins' as *;
+
 @use 'root';
 @use 'article';
 @use 'block';
 @use 'fonts';
+@use 'grid';
 @use 'navigation';
 @use 'page';
-@use 'region';
-@use 'views';
 @use 'paragraph';
-@use 'superfish';
-@use 'grid';
+@use 'region';
+@use 'search';
 @use 'social_media';
+@use 'superfish';
+@use 'views';
 
 @layer external, clean_blog_theme, layout, theme, views-responsive-grid;

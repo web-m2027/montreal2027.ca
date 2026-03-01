@@ -70,6 +70,42 @@
           font-size: .7rem;
         }
       }
+
+      & #edit-search-for {
+        font-size: .7rem;
+        color: var(--color-white);
+        width: 30dvw;
+        border: 0;
+        background: var(--color-black);
+        padding: .4rem 0 .5rem .5rem;
+        box-sizing: border-box;
+        border-radius: 6px 0 0 6px;
+        line-height: normal;
+        border-radius: 6px 0 0 6px;
+
+        @media (min-width: 768px) {
+          width: 45dvw;
+        }
+
+        @media (min-width: 1200px) {
+          width: 25dvw;
+        }
+
+        &::placeholder {
+          font-size: .7rem;
+          color: var(--color-white);
+        }
+      }
+
+      & #edit-submit-search {
+        background-color: var(--color-black);
+        border: 0;
+        padding: .28rem .5rem;
+        font-size: .9rem;
+        color: var(--color-white);
+        margin: 0;
+        border-radius: 0 6px 6px 0;
+      }
     }
 
     &-second {

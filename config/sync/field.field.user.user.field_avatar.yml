@@ -1,0 +1,30 @@
+uuid: 8627c92c-0f3c-4202-bff8-b533d073f03b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_avatar
+    - media.type.user_picture
+  module:
+    - user
+id: user.user.field_avatar
+field_name: field_avatar
+entity_type: user
+bundle: user
+label: Photo/Avatar
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      user_picture: user_picture
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

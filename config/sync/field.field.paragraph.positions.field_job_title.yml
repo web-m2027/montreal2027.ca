@@ -1,0 +1,19 @@
+uuid: 32d66418-295e-4522-9295-ed75e85ab549
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_job_title
+    - paragraphs.paragraphs_type.positions
+id: paragraph.positions.field_job_title
+field_name: field_job_title
+entity_type: paragraph
+bundle: positions
+label: 'Job Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

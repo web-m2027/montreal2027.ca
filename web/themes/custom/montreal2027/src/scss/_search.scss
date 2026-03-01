@@ -1,0 +1,52 @@
+@use 'mixins' as *;
+
+.views-exposed-form {
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+
+    & h2 {
+        justify-self: center;
+    }
+
+    & .form--inline {
+        display: flex;
+        flex-direction: row;
+
+        & .form-actions {
+            & .button {
+                background: var(--color-blue);
+                color: var(--color-bright-red);
+                box-sizing: border-box;
+                border-radius: 1rem;
+                border: 1px solid var(--color-black);
+                @include drop-shadow-slight();
+                transition: transform 0.1s ease, box-shadow 0.1s ease;
+
+                &:hover {
+                    transform: translateY(5px);
+                    @include drop-shadow-slight(0 0 0);
+                }
+            }
+        }
+
+        & .form-item {
+            align-self: center;
+        }
+    }
+}
+
+.view-empty {
+    display: grid;
+    grid-template-rows: auto;
+
+    & p {
+        justify-self: center;
+        font-weight: 600;
+
+        &::first-letter {
+            font-size: calc(.65rem + .5vw);
+            font-size: clamp(.75rem, .65rem + .5vw, 1.25rem);
+        }
+    }
+}

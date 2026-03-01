@@ -1,0 +1,20 @@
+uuid: 38cd7cff-3889-41ac-826f-aadeb539c5ac
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - user
+id: user.field_avatar
+field_name: field_avatar
+entity_type: user
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

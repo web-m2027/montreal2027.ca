@@ -13,7 +13,18 @@
     }
   }
 
-  &-searchform {
+  &-exposedformsearchpage-1-2 {
+    & .form--inline {
+      display: grid;
+      grid-template-columns: 2fr auto;
+
+      & .form-item {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &-searchform, &-exposedformsearchpage-1-2 {
     grid-area: middle;
     grid-column: 2/span 2;
     justify-self: center;
