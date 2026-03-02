@@ -20,13 +20,12 @@
                 box-sizing: border-box;
                 border-radius: 1rem;
                 border: 1px solid var(--color-black);
-                @include drop-shadow-slight();
                 transition: transform 0.1s ease, box-shadow 0.1s ease;
 
-                &:hover {
-                    transform: translateY(5px);
-                    @include drop-shadow-slight(0 0 0);
-                }
+                // &:hover {
+                //     transform: translateY(5px);
+                //     @include drop-shadow-slight(0 0 0);
+                // }
             }
         }
 

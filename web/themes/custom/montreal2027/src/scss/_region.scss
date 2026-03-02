@@ -95,12 +95,17 @@
           font-size: .7rem;
           color: var(--color-white);
         }
+
+        &:focus {
+          outline: none !important;
+          box-shadow: none !important;
+        }
       }
 
       & #edit-submit-search {
         background-color: var(--color-black);
         border: 0;
-        padding: .28rem .5rem;
+        padding: 0 .5rem .2rem;
         font-size: .9rem;
         color: var(--color-white);
         margin: 0;

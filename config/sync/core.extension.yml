@@ -77,6 +77,7 @@ module:
   path_alias: 0
   photoswipe: 0
   recreate_block_content: 0
+  responsive_image: 0
   rest: 0
   search: 0
   search_api: 0
