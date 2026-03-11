@@ -27,6 +27,8 @@ jobs:
             cd ${{ vars.STG_DEPLOY_PATH }}
             echo "Setting proper permissions"
             chmod -R u+w web/sites/default
+            echo "Getting updated repository info"
+            git fetch origin
             echo "Checking out ${{github.ref_name}}"
             git checkout ${{github.ref_name}}
             echo "Pulling latest code"
