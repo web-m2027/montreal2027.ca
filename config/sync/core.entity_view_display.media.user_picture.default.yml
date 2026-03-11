@@ -1,0 +1,38 @@
+uuid: ca837322-331f-4bb2-87a7-7488f1f8faa4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.user_picture.field_media_image_1
+    - image.style.large
+    - media.type.user_picture
+  module:
+    - svg_image
+id: media.user_picture.default
+targetEntityType: media
+bundle: user_picture
+mode: default
+content:
+  field_media_image_1:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  entity_workspace_status: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

@@ -21,6 +21,19 @@ function montreal2027_form_alter(&$form, FormStateInterface $form_state, $form_i
   if ($form_id === 'search_block_form') {
     $form['keys']['#attributes']['placeholder'] = t('I am looking for'); // Add placeholder
   }
+
+  if ($form_id === 'views_exposed_form') {
+    $view = $form_state->getStorage()['view'];
+
+    if ($view->id() === 'search_page' && $view->current_display === 'page_1')  {
+      // Modify the submit button
+      $form['actions']['submit']['#type'] = 'button';
+      $form['actions']['submit']['#value'] = ''; // Optional text, can be empty
+      // Add the Font Awesome icon markup via #prefix
+      $form['actions']['submit']['#prefix'] = '<button type="submit" value="Search"><i class="fa-solid fa-magiifying-glass"></i>'; // Replace fa-search with your desired icon
+      $form['actions']['submit']['#suffix'] = '</button>';
+    }
+  }
 }
 
 function montreal2027_preprocess_block__system_branding_block(&$variables) {

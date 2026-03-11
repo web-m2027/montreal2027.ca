@@ -1,0 +1,58 @@
+uuid: 4f19ae3b-a937-4698-baa1-fe629cf607d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_staff_position
+    - paragraphs.paragraphs_type.positions
+  module:
+    - entity_reference_revisions
+    - user
+id: user.user.field_staff_position
+field_name: field_staff_position
+entity_type: user
+bundle: user
+label: 'Staff Position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      positions: positions
+    negate: 0
+    target_bundles_drag_drop:
+      ebt_tiles_item:
+        weight: 11
+        enabled: false
+      ept_basic_button:
+        weight: 12
+        enabled: false
+      ept_hero:
+        weight: 13
+        enabled: false
+      ept_text:
+        weight: 14
+        enabled: false
+      ept_tiles:
+        weight: 15
+        enabled: false
+      ept_tiles_item:
+        weight: 16
+        enabled: false
+      guest_block:
+        weight: 17
+        enabled: false
+      guests:
+        weight: 18
+        enabled: false
+      positions:
+        weight: 19
+        enabled: true
+      text_area:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,31 @@
+uuid: cad93630-6c9e-45c7-b792-acbbedbf4879
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.positions.field_division
+    - field.field.paragraph.positions.field_job_title
+    - paragraphs.paragraphs_type.positions
+id: paragraph.positions.default
+targetEntityType: paragraph
+bundle: positions
+mode: default
+content:
+  field_division:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_job_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -33,6 +33,20 @@
       }
     }
   }
+
+  &.view-search {
+    & .views-row {
+      border-bottom: 1px solid var(--color-white);
+    }
+  }
+}
+
+#views {
+  &-exposed-form {
+    &-search-page-1 {
+      margin-bottom: 0;
+    }
+  }
 }
 
 
