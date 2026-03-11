@@ -13,12 +13,14 @@ module:
   ckeditor5_paste_filter: 0
   ckeditor_media_resize: 0
   comment: 0
+  conditional_fields: 0
   config: 0
   config_ignore: 0
   contextual: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
+  draggableviews: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   ebt_basic_button: 0
@@ -38,6 +40,7 @@ module:
   ept_text: 0
   ept_tiles: 0
   facets: 0
+  facets_rest: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -74,6 +77,8 @@ module:
   path_alias: 0
   photoswipe: 0
   recreate_block_content: 0
+  responsive_image: 0
+  rest: 0
   search: 0
   search_api: 0
   search_api_db: 0

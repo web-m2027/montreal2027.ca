@@ -1,0 +1,13 @@
+uuid: 732dc8bd-75b3-4e7c-a358-7f393d5213d3
+langcode: en
+status: true
+dependencies: {  }
+id: user_picture
+label: 'User Picture'
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image_1
+field_map: {  }

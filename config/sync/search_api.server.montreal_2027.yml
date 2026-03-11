@@ -1,0 +1,15 @@
+uuid: 510746c6-2437-4615-960e-47ea151e68fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: montreal_2027
+name: 'Montreal 2027'
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 1
+  matching: prefix
+  phrase: bigram

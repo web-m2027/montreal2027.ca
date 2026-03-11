@@ -1,0 +1,34 @@
+uuid: 3e30d37c-5b75-4906-ab99-3b333644b119
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.positions.field_division
+    - field.field.paragraph.positions.field_job_title
+    - paragraphs.paragraphs_type.positions
+id: paragraph.positions.default
+targetEntityType: paragraph
+bundle: positions
+mode: default
+content:
+  field_division:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_job_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

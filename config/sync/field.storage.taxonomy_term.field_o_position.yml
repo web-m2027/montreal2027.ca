@@ -1,0 +1,29 @@
+uuid: 72346e8e-e5e2-4016-a4b2-8fe22313a8ca
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+_core:
+  default_config_hash: Sr3LdeZY3q8G5tz2EWHI_BTZSbpmPgpVPU10ncUGdhs
+id: taxonomy_term.field_o_position
+field_name: field_o_position
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: u
+      label: 'Below the parent'
+    -
+      value: s
+      label: 'Staff function'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: true
+custom_storage: false

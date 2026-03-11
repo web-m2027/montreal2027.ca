@@ -99,8 +99,8 @@ settings:
       description: ''
       weight: '-28'
     contact:
-      value: ''
-      description: ''
+      value: /under-construction
+      description: 'Contact us'
       weight: '-27'
     behance:
       value: ''

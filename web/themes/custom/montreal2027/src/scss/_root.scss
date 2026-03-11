@@ -55,6 +55,10 @@ body {
   @include noto-font($weight: 350);
 }
 
+img {
+  filter: brightness(1.2) contrast(1.06) saturate(1.14);
+}
+
 body,
 p {
   font-size: calc(0.650rem + 0.500vw);

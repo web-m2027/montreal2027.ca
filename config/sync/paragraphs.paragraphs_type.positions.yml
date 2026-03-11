@@ -1,0 +1,10 @@
+uuid: 84fa402b-0eb9-4b77-92f6-63a8d92b433f
+langcode: en
+status: true
+dependencies: {  }
+id: positions
+label: Positions
+icon_uuid: null
+icon_default: null
+description: 'Staff Positions'
+behavior_plugins: {  }
