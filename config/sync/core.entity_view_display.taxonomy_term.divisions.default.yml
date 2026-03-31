@@ -1,0 +1,26 @@
+uuid: 87349320-ab9a-4f71-93e2-b53540eb7e0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.divisions.field_staff_member
+    - taxonomy.vocabulary.divisions
+id: taxonomy_term.divisions.default
+targetEntityType: taxonomy_term
+bundle: divisions
+mode: default
+content:
+  field_staff_member:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  description: true
+  entity_workspace_status: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,7 @@
+montreal2027_tools.staff:
+  path: '/staff'
+  defaults:
+    _controller: '\Drupal\montreal2027_tools\Controller\StaffPageController::build'
+    _title: 'Staff'
+  requirements:
+    _permission: 'access content'
