@@ -1,0 +1,63 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: docker/web/Dockerfile
+      args:
+        PHP_VERSION: ${PHP_VERSION:-8.3}
+        WEB_INTERNAL_PORT: ${WEB_INTERNAL_PORT:-80}
+    container_name: ${WEB_CONTAINER_NAME:-montreal2027-web}
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      WEB_INTERNAL_PORT: ${WEB_INTERNAL_PORT:-80}
+      DB_HOST: ${DB_HOST:-db}
+      DB_PORT: ${DB_PORT:-3306}
+      DB_NAME: ${DB_NAME:-drupal}
+      DB_USER: ${DB_USER:-drupal}
+      DB_PASSWORD: ${DB_PASSWORD:-drupal}
+    ports:
+      - "${WEB_EXTERNAL_PORT:-8080}:${WEB_INTERNAL_PORT:-80}"
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - frontend
+      - backend
+    restart: unless-stopped
+
+  db:
+    image: mariadb:${MARIADB_VERSION:-11.4}
+    container_name: ${DB_CONTAINER_NAME:-montreal2027-db}
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --max-allowed-packet=64M
+    environment:
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-root}
+      MARIADB_DATABASE: ${DB_NAME:-drupal}
+      MARIADB_USER: ${DB_USER:-drupal}
+      MARIADB_PASSWORD: ${DB_PASSWORD:-drupal}
+      MARIADB_PORT_NUMBER: ${DB_PORT:-3306}
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - backend
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    restart: unless-stopped
+
+volumes:
+  db_data:
+    name: ${DB_VOLUME_NAME:-montreal2027_db_data}
+
+networks:
+  frontend:
+    name: ${FRONTEND_NETWORK_NAME:-montreal2027_frontend}
+  backend:
+    name: ${BACKEND_NETWORK_NAME:-montreal2027_backend}
+    internal: true
