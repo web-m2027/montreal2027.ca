@@ -5,3 +5,19 @@ montreal2027_tools.staff:
     _title: 'Staff'
   requirements:
     _permission: 'access content'
+
+montreal2027_tools.staff_contact_submit:
+  path: '/staff/contact-submit'
+  defaults:
+    _controller: '\Drupal\montreal2027_tools\Controller\StaffContactController::submit'
+  methods: [POST]
+  requirements:
+    _permission: 'access content'
+
+montreal2027_tools.staff_contact_settings:
+  path: '/admin/config/system/staff-contact-settings'
+  defaults:
+    _form: '\Drupal\montreal2027_tools\Form\StaffContactSettingsForm'
+    _title: 'Staff contact form settings'
+  requirements:
+    _permission: 'administer site configuration'

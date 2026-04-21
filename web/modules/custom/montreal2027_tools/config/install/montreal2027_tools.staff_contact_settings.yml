@@ -1,0 +1,4 @@
+failure_message: 'There was a problem sending your message.  Please try again later.'
+success_message: 'Your message has been sent.  A member of our staff will reach out if appropriate.'
+subject_prefix: 'Staff contact message for '
+heading_prefix: 'Send a message to the '

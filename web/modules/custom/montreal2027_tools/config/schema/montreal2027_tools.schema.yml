@@ -1,0 +1,16 @@
+montreal2027_tools.staff_contact_settings:
+  type: config_object
+  label: 'Montreal 2027 staff contact settings'
+  mapping:
+    failure_message:
+      type: text
+      label: 'Failure message'
+    success_message:
+      type: text
+      label: 'Success message'
+    subject_prefix:
+      type: label
+      label: 'Subject prefix'
+    heading_prefix:
+      type: label
+      label: 'Form heading prefix'

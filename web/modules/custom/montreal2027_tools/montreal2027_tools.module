@@ -81,3 +81,30 @@ function montreal2027_tools_form_taxonomy_overview_terms_alter(array &$form, For
     $form['terms'][$row_key] = $new_row;
   }
 }
+
+/**
+ * Implements hook_mail().
+ */
+function montreal2027_tools_mail(string $key, array &$message, array $params): void {
+  if ($key !== 'staff_contact') {
+    return;
+  }
+
+  $from_name = trim((string) ($params['from_name'] ?? ''));
+  $from_email = trim((string) ($params['from_email'] ?? ''));
+  $subject = trim((string) ($params['subject'] ?? 'Staff Contact Message'));
+  $body = trim((string) ($params['body'] ?? ''));
+
+  $safe_name = preg_replace('/[\r\n"]+/', ' ', $from_name) ?? '';
+  $safe_name = trim($safe_name);
+  $safe_email = preg_replace('/[\r\n]+/', '', $from_email) ?? '';
+  $formatted_from = '"' . $safe_name . '" <' . $safe_email . '>';
+
+  $message['subject'] = $subject;
+  $message['body'][] = "From: {$formatted_from}";
+  $message['body'][] = '';
+  $message['body'][] = $body;
+  $message['from'] = $formatted_from;
+  $message['headers']['From'] = $formatted_from;
+  $message['headers']['Reply-to'] = $safe_email;
+}

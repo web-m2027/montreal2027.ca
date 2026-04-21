@@ -4,7 +4,6 @@ status: true
 dependencies:
   module:
     - media
-    - media_gallery
     - search
     - system
     - workspaces_access
@@ -18,5 +17,4 @@ permissions:
   - 'access content'
   - 'search content'
   - 'view media'
-  - 'view published media gallery entities'
   - workspace_live_view_content
