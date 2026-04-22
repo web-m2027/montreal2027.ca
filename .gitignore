@@ -70,3 +70,4 @@ phpcs.xml
 web/themes/custom/montreal2027/css/montreal2027.min.css
 *.sql.gz
 .env
+.env.local
