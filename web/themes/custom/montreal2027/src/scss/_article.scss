@@ -78,10 +78,8 @@ article {
       & .node__content {
         display: grid;
         grid-template-columns: 30% 1fr;
-      }
-
-      & .field--name-field-guest-photo {
-        margin: auto;
+        align-items: start;
+        gap: 1rem;
       }
     }
 
