@@ -77,10 +77,7 @@ article {
 
       & .node__content {
         display: grid;
-
-        @container page-wrapper (min-width: 768px) {
-          display: block;
-        }
+        grid-template-columns: 30% 1fr;
       }
 
       & .field--name-field-guest-photo {
