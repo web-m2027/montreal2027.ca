@@ -85,7 +85,7 @@
     <h2{{ title_attributes }}>{{ label }}</h2>
   {% endif %}
   {{ title_suffix }}
-
+  {{ content.field_type_of_guest }}
   {% if display_submitted %}
     <footer class="node__meta">
       {{ author_picture }}
@@ -97,7 +97,8 @@
   {% endif %}
 
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
+    {{ content.field_guest_photo }}
+    {{ content.field_bio }}
   </div>
 
 </article>
