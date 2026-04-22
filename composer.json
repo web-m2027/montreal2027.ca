@@ -70,6 +70,7 @@
         "drush/drush": "^13.6",
         "omscllc/clean_blog_theme": "dev-develop",
         "oomphinc/composer-installers-extender": "^2.0",
+        "symfony/dotenv": "^7.4",
         "wikimedia/composer-merge-plugin": "^2.1"
     },
     "conflict": {
