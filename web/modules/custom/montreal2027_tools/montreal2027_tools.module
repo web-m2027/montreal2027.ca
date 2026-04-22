@@ -101,8 +101,6 @@ function montreal2027_tools_mail(string $key, array &$message, array $params): v
   $formatted_from = '"' . $safe_name . '" <' . $safe_email . '>';
 
   $message['subject'] = $subject;
-  $message['body'][] = "From: {$formatted_from}";
-  $message['body'][] = '';
   $message['body'][] = $body;
   $message['from'] = $formatted_from;
   $message['headers']['From'] = $formatted_from;
