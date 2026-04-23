@@ -7,16 +7,13 @@ assignees: ''
 
 ---
 
-**Website section:**
-For example, Help Wanted, Facilities, Registration, etc.
+Website section
 
-**Create new menu item Y/N:**
+Create new menu item Y/N:
 
-**Requested by:**
-Name of the person who made the request.
+Requested by:
 
-**Division:**
-What division is this for?
+Division:
 
-**Content to be added**
+Content to be added
 ---
