@@ -2,29 +2,25 @@
 
 ## Changelog
 ---
+## 1.0.3 (2026-04-22)
+
+- Updated guest node template to use explicit fields to better control markup
+- Refactored grid layout for guest article content
+- Refactored guest article SCSS and adjusted image properties
+
 ## 1.0.2 (2026-03-12)
 
-### PR #17: Update issue templates ([8c492fb](https://github.com/Montreal-2027/montreal2027.ca/commit/8c492fb))
 - Update issue templates
-
-### PR #15: Update issue templates ([2a7292c](https://github.com/Montreal-2027/montreal2027.ca/commit/2a7292c))
 - Update issue templates
-
-### PR #13: Update issue templates ([185ae41](https://github.com/Montreal-2027/montreal2027.ca/commit/185ae41))
 - Update issue templates
 
 ---
 
 ## 1.0.1 (2026-03-11)
 
-### PR #11: Style changes ([0147f2a](https://github.com/Montreal-2027/montreal2027.ca/commit/0147f2a))
 - Applied style improvements across the site
-
-### PR #10: Search results page improvements ([f35fa3d](https://github.com/Montreal-2027/montreal2027.ca/commit/f35fa3d))
 - Fixed spacing of buttons on search results page
 - Updated deploy script
-
-### PR #9: Search implementation and styling ([8186939](https://github.com/Montreal-2027/montreal2027.ca/commit/8186939))
 - Configured search using SearchAPI
 - Styled new search bar in footer
 - Styled search results page
@@ -32,8 +28,6 @@
 ---
 
 ## 1.0.0 (2026-01-21)
-
-### PR #5: Initial site development ([033fe27](https://github.com/Montreal-2027/montreal2027.ca/commit/033fe27))
 
 **Major Features:**
 - Upgraded to Drupal 11.2.10
