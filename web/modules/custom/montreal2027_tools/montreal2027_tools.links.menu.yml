@@ -1,0 +1,6 @@
+montreal2027_tools.staff_contact_settings:
+  title: 'Staff contact form'
+  description: 'Configure staff contact modal messages and prefixes.'
+  route_name: montreal2027_tools.staff_contact_settings
+  parent: system.admin_config_system
+  weight: 100

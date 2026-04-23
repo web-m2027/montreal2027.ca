@@ -1,0 +1,5 @@
+name: 'Montreal 2027 Tools'
+type: module
+description: 'Utility commands for Montreal 2027 operations.'
+core_version_requirement: ^11
+package: Custom

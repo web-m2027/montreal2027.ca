@@ -69,5 +69,9 @@ phpcs.xml
 !/web/assets/2025-11/m2027mascot@4x.png
 web/themes/custom/montreal2027/css/montreal2027.min.css
 *.sql.gz
+<<<<<<< HEAD
 .env
 .env.local
+=======
+.env
+>>>>>>> feature/staff_listing
