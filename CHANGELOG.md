@@ -2,9 +2,9 @@
 
 ## Changelog
 ---
+## 1.0.4 (2026-04-24)
 
-## 1.0.4 (2026-04-23)
-
+- Docker setup
 - Added taxonomy vocabulary for staff listing
 - Created view and view template to show staff listing
 - Added modal popup to send email to staff member
