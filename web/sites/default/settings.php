@@ -2,7 +2,7 @@
 
 use Symfony\Component\Dotenv\Dotenv;
 
-// @codingStandardsIgnoreLine
+/** @disregard P1011 */
 $env_file = DRUPAL_ROOT . '/../.env';
 if (file_exists($env_file)) {
   $dotenv = new Dotenv();

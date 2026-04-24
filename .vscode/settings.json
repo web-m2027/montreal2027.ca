@@ -130,5 +130,9 @@
         "eval": false,
         "Invoke-Expression": false,
         "iex": false
-    }
+    },
+    "intelephense.files.exclude": [
+        "**/example.settings.local.php",
+        "**/web/sites/example.settings.local.php"
+    ]
 }
