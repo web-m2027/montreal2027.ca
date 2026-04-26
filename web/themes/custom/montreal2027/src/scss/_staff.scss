@@ -1,66 +1,76 @@
 #block-montreal2027-content {
-    & h1.staff {
-        text-align: center;
-    }
+    & .staff-page {
+        width: 75dvw;
+        margin: 0 auto;
 
-    & .division {
-        background-color: floralwhite;
-        padding: .4rem;
-        font-size: calc(0.900rem + 0.500vw);
-        font-size: clamp(1.00rem, calc(0.900rem + 0.500vw), 1.50rem);
-        font-style: italic;
-        margin: 0.4rem 0 0;
-    }
-
-    & .division--row > .staff-row:nth-child(odd) {
-        background-color: oklch(from var(--color-white) l c h / 0.45);
-    }
-
-    & .staff-row {
-        display: grid;
-        grid-template-columns: 50% 40% 1fr;
-        gap: .5rem;
-        // padding: .25rem 0;
-
-        & form {
-            margin: 0;
+        div {
+            border-radius: .4rem;
         }
 
-        & input.contact-link {
-            appearance: none;
-            background: none;
-            border: 0;
-            color: var(--link-color);
-            cursor: pointer;
-            font: inherit;
-            margin: 0;
-            padding: 0;
-            text-decoration: underline;
-        }
-
-        & a {
-            & button {
-                border-radius: 1rem;
-                padding: 0 .5rem .25rem;
-                font-size: clamp(0.5rem, 0.5vw + 0.4rem, 1rem);
-                line-height: clamp(0.6rem, 0.6vw + 0.48rem, 1.2rem);
+        &__title {
+            h1 {
+                text-align: center;
             }
         }
 
-        &.indent-1 div:first-child {
-            padding: 0 0 0 1rem;
+        & .division {
+            background-color: floralwhite;
+            padding: .4rem;
+            font-size: calc(0.900rem + 0.500vw);
+            font-size: clamp(1.00rem, calc(0.900rem + 0.500vw), 1.50rem);
+            font-style: italic;
+            margin: 0.4rem 0 0;
         }
 
-        &.indent-2 div:first-child {
-            padding: 0 0 0 2rem;
+        & .division--row>.staff-row:nth-child(odd) {
+            background-color: oklch(from var(--color-white) l c h / 0.45);
         }
 
-        &.indent-3 div:first-child {
-            padding: 0 0 0 3rem;
-        }
+        & .staff-row {
+            display: grid;
+            grid-template-columns: 40% 40% 1fr;
+            gap: .5rem;
 
-        &.indent-4 div:first-child {
-            padding: 0 0 0 4rem;
+            & form {
+                margin: 0;
+            }
+
+            & input.contact-link {
+                appearance: none;
+                background: none;
+                border: 0;
+                color: var(--link-color);
+                cursor: pointer;
+                font: inherit;
+                margin: 0;
+                padding: 0;
+                text-decoration: underline;
+            }
+
+            & a {
+                & button {
+                    border-radius: 1rem;
+                    padding: 0 .5rem .25rem;
+                    font-size: clamp(0.5rem, 0.5vw + 0.4rem, 1rem);
+                    line-height: clamp(0.6rem, 0.6vw + 0.48rem, 1.2rem);
+                }
+            }
+
+            &.indent-1 div:first-child {
+                padding: 0 0 0 1rem;
+            }
+
+            &.indent-2 div:first-child {
+                padding: 0 0 0 2rem;
+            }
+
+            &.indent-3 div:first-child {
+                padding: 0 0 0 3rem;
+            }
+
+            &.indent-4 div:first-child {
+                padding: 0 0 0 4rem;
+            }
         }
     }
 }

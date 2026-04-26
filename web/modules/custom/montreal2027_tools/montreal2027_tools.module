@@ -5,6 +5,23 @@ use Drupal\Core\Entity\EntityFormInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 
 /**
+ * Implements hook_theme().
+ */
+function montreal2027_tools_theme($existing, $type, $theme, $path) {
+  return [
+    'montreal2027_staff_page' => [
+      'variables' => [
+        'page_title' => '',
+        'page_body' => '',
+        'divisions' => [],
+        'empty_position_link' => ['title' => '', 'uri' => ''],
+        'contact_modal_markup' => '',
+      ],
+    ],
+  ];
+}
+
+/**
  * Implements hook_form_BASE_FORM_ID_alter() for taxonomy term forms.
  */
 function montreal2027_tools_form_taxonomy_term_form_alter(array &$form, FormStateInterface $form_state, string $form_id): void {

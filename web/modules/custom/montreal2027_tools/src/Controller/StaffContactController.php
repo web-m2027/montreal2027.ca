@@ -42,7 +42,7 @@ class StaffContactController extends ControllerBase {
    * Submits a contact message to the staff term's email address.
    */
   public function submit(Request $request): JsonResponse {
-    $config = $this->config('montreal2027_tools.staff_contact_settings');
+    $config = $this->config('montreal2027_tools.staff_page_settings');
 
     $failure_message = trim((string) ($config->get('failure_message') ?? ''));
     if ($failure_message === '') {

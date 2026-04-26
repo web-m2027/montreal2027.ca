@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.taxonomy_term.divisions.field_email_address
     - field.field.taxonomy_term.divisions.field_name
+    - field.field.taxonomy_term.divisions.field_vacant_position
     - taxonomy.vocabulary.divisions
 id: taxonomy_term.divisions.default
 targetEntityType: taxonomy_term
@@ -25,6 +26,16 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_vacant_position:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
     region: content
 hidden:
   description: true

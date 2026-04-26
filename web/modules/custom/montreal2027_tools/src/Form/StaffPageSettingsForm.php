@@ -35,8 +35,8 @@ class StaffPageSettingsForm extends ConfigFormBase {
     $page_title_format = $config->get('page_title.format') ?? 'full_html';
     $page_body = trim((string) ($config->get('page_body.value') ?? ''));
     $page_body_format = $config->get('page_body.format') ?? 'full_html';
-    $empty_position_link_text = trim((string) ($config->get('empty_position_link_text') ?? ''));
-    $empty_position_link_url = trim((string) ($config->get('empty_position_link_url') ?? ''));
+    $empty_position_link_title = trim((string) ($config->get('empty_position_link.title') ?? ''));
+    $empty_position_link_uri = trim((string) ($config->get('empty_position_link.uri') ?? ''));
     
     if ($page_title === '') {
       $page_title = '<h1>Committee &amp; Staff</h1>';
@@ -89,19 +89,24 @@ class StaffPageSettingsForm extends ConfigFormBase {
       '#format' => $page_body_format,
     ];
 
-    $form['page_content']['empty_position_link_text'] = [
+    $form['page_content']['empty_position_link'] = [
+      '#type' => 'container',
+      '#tree' => TRUE,
+    ];
+
+    $form['page_content']['empty_position_link']['title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Empty position link text'),
       '#description' => $this->t('Text for the link shown when no positions are found.'),
-      '#default_value' => $empty_position_link_text,
+      '#default_value' => $empty_position_link_title,
       '#maxlength' => 255,
     ];
 
-    $form['page_content']['empty_position_link_url'] = [
+    $form['page_content']['empty_position_link']['uri'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Empty position link URL'),
       '#description' => $this->t('URL for the empty position link. Use internal paths (e.g., /contact) or external URLs (e.g., https://example.com).'),
-      '#default_value' => $empty_position_link_url,
+      '#default_value' => $empty_position_link_uri,
       '#maxlength' => 2048,
     ];
 
@@ -157,14 +162,15 @@ class StaffPageSettingsForm extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state): void {
     $page_title_value = $form_state->getValue('page_title');
     $page_body_value = $form_state->getValue('page_body');
+    $empty_position_link = $form_state->getValue('empty_position_link');
     
     $this->configFactory->getEditable('montreal2027_tools.staff_page_settings')
       ->set('page_title.value', trim((string) ($page_title_value['value'] ?? '')))
       ->set('page_title.format', $page_title_value['format'] ?? 'full_html')
       ->set('page_body.value', trim((string) ($page_body_value['value'] ?? '')))
       ->set('page_body.format', $page_body_value['format'] ?? 'full_html')
-      ->set('empty_position_link_text', trim((string) $form_state->getValue('empty_position_link_text')))
-      ->set('empty_position_link_url', trim((string) $form_state->getValue('empty_position_link_url')))
+      ->set('empty_position_link.title', trim((string) ($empty_position_link['title'] ?? '')))
+      ->set('empty_position_link.uri', trim((string) ($empty_position_link['uri'] ?? '')))
       ->set('failure_message', trim((string) $form_state->getValue('failure_message')))
       ->set('success_message', trim((string) $form_state->getValue('success_message')))
       ->set('subject_prefix', trim((string) $form_state->getValue('subject_prefix')))

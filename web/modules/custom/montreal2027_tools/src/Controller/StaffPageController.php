@@ -5,7 +5,6 @@ namespace Drupal\montreal2027_tools\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Render\Markup;
 use Drupal\Core\Url;
-use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\Component\Utility\Html;
 use Drupal\taxonomy\TermStorageInterface;
 
@@ -18,33 +17,64 @@ class StaffPageController extends ControllerBase {
    * Builds the /staff page output.
    */
   public function build(): array {
-    $config = $this->config('montreal2027_tools.staff_contact_settings');
+    $config = $this->config('montreal2027_tools.staff_page_settings');
     $heading_prefix = trim((string) ($config->get('heading_prefix') ?? ''));
     if ($heading_prefix === '') {
       $heading_prefix = 'Send a message to the ';
     }
 
+    $page_title_value = trim((string) ($config->get('page_title.value') ?? ''));
+    $page_title_format = $config->get('page_title.format') ?? 'full_html';
+    if ($page_title_value === '') {
+      $page_title_value = '<h1>Committee &amp; Staff</h1>';
+    }
+
+    $page_body_value = trim((string) ($config->get('page_body.value') ?? ''));
+    $page_body_format = $config->get('page_body.format') ?? 'full_html';
+    if ($page_body_value === '') {
+      $page_body_value = '<p>Phosfluorescently parallel task technically sound benefits without technically sound ideas. Seamlessly underwhelm principle-centered results rather than B2C infomediaries. Interactively disseminate market-driven platforms vis-a-vis out-of-the-box applications.</p>';
+    }
+
+    $empty_position_link_title = trim((string) ($config->get('empty_position_link.title') ?? ''));
+    $empty_position_link_uri = trim((string) ($config->get('empty_position_link.uri') ?? ''));
+
     $term_storage = $this->getTermStorage();
     $top_level_terms = $term_storage->loadTree('divisions', 0, 1, TRUE);
 
-    $staff_output = '';
+    $divisions = [];
     foreach ($top_level_terms as $term) {
       if (!$term) {
         continue;
       }
-      $staff_output .= '<div class="division--row"><div class="division">' . Html::escape($term->label()) . '</div>';
-      $staff_output .= $this->buildChildRows((int) $term->id(), 1);
-      $staff_output .= '</div>';
+      $is_vacant_position = FALSE;
+      if ($term->hasField('field_vacant_position') && !$term->get('field_vacant_position')->isEmpty()) {
+        $is_vacant_position = (bool) $term->get('field_vacant_position')->value;
+      }
+      $divisions[] = [
+        'term' => $term,
+        'is_vacant_position' => $is_vacant_position,
+        'children' => $this->buildChildData((int) $term->id(), 1),
+      ];
     }
-
-    if ($staff_output === '') {
-      $staff_output = '<div>' . (string) new TranslatableMarkup('No staff entries found.') . '</div>';
-    }
-
-    $output = '<h1 class="staff">Committee &amp; Staff</h1><p>Phosfluorescently parallel task technically sound benefits without technically sound ideas. Seamlessly underwhelm principle-centered results rather than B2C infomediaries. Interactively disseminate market-driven platforms vis-a-vis out-of-the-box applications.</p>' . $staff_output . $this->buildContactModalMarkup();
 
     return [
-      '#markup' => Markup::create($output),
+      '#theme' => 'montreal2027_staff_page',
+      '#page_title' => [
+        '#type' => 'processed_text',
+        '#text' => $page_title_value,
+        '#format' => $page_title_format,
+      ],
+      '#page_body' => [
+        '#type' => 'processed_text',
+        '#text' => $page_body_value,
+        '#format' => $page_body_format,
+      ],
+      '#divisions' => $divisions,
+      '#empty_position_link' => [
+        'title' => $empty_position_link_title,
+        'uri' => $empty_position_link_uri,
+      ],
+      '#contact_modal_markup' => Markup::create($this->buildContactModalMarkup()),
       '#attached' => [
         'library' => [
           'montreal2027_tools/staff_contact_modal',
@@ -57,19 +87,19 @@ class StaffPageController extends ControllerBase {
       ],
       '#cache' => [
         'contexts' => ['languages:language_interface'],
-        'tags' => ['taxonomy_term_list', 'taxonomy_vocabulary:divisions'],
+        'tags' => ['taxonomy_term_list', 'taxonomy_vocabulary:divisions', 'config:montreal2027_tools.staff_page_settings'],
       ],
     ];
   }
 
   /**
-   * Builds recursive child rows for a parent term.
+   * Builds recursive child data for a parent term.
    */
-  private function buildChildRows(int $parent_tid, int $indent): string {
+  private function buildChildData(int $parent_tid, int $indent): array {
     $term_storage = $this->getTermStorage();
     $children = $term_storage->loadTree('divisions', $parent_tid, 1, TRUE);
 
-    $output = '';
+    $child_data = [];
     foreach ($children as $term) {
       if (!$term) {
         continue;
@@ -79,12 +109,11 @@ class StaffPageController extends ControllerBase {
         foreach ($term->get('field_name') as $field_item) {
           $value = trim((string) $field_item->value);
           if ($value !== '') {
-            $field_names[] = Html::escape($value);
+            $field_names[] = $value;
           }
         }
       }
 
-      $field_name_output = implode(', ', $field_names);
       $has_email_address = FALSE;
       if ($term->hasField('field_email_address') && !$term->get('field_email_address')->isEmpty()) {
         foreach ($term->get('field_email_address') as $email_item) {
@@ -95,21 +124,22 @@ class StaffPageController extends ControllerBase {
         }
       }
 
-      $output .= '<div class="staff-row indent-' . $indent . '">';
-      $output .= '<div>' . Html::escape($term->label()) . '</div>';
-      $output .= '<div>' . $field_name_output . '</div>';
-      $output .= '<div>'; // Start contact button container
-      
-      if ($has_email_address) {
-        $output .= '<button type="button" class="contact-link" value="' . (int) $term->id() . '">Contact</button>';
-      } 
-      $output .= '</div>';
-      $output .= '</div>';
+      $is_vacant_position = FALSE;
+      if ($term->hasField('field_vacant_position') && !$term->get('field_vacant_position')->isEmpty()) {
+        $is_vacant_position = (bool) $term->get('field_vacant_position')->value;
+      }
 
-      $output .= $this->buildChildRows((int) $term->id(), $indent + 1);
+      $child_data[] = [
+        'term' => $term,
+        'indent' => $indent,
+        'field_names' => $field_names,
+        'has_email_address' => $has_email_address,
+        'is_vacant_position' => $is_vacant_position,
+        'children' => $this->buildChildData((int) $term->id(), $indent + 1),
+      ];
     }
 
-    return $output;
+    return $child_data;
   }
 
   /**
@@ -126,7 +156,7 @@ class StaffPageController extends ControllerBase {
    */
   private function buildContactModalMarkup(): string {
     $action = Url::fromRoute('montreal2027_tools.staff_contact_submit')->toString();
-    $config = $this->config('montreal2027_tools.staff_contact_settings');
+    $config = $this->config('montreal2027_tools.staff_page_settings');
     $heading_prefix = trim((string) ($config->get('heading_prefix') ?? ''));
     if ($heading_prefix === '') {
       $heading_prefix = 'Send a message';
