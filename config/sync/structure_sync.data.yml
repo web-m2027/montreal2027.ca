@@ -1,0 +1,633 @@
+taxonomies:
+  divisions:
+    -
+      vid: divisions
+      tid: '28'
+      langcode: en
+      name: 'Administrative Assistant'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '27'
+      uuid: 150f15a8-8855-4121-8288-b730fbb5d275
+      field_email_address: {  }
+      field_name:
+        -
+          value: 'Lisa Hertel'
+    -
+      vid: divisions
+      tid: '30'
+      langcode: en
+      name: Ads
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '27'
+      uuid: aab201f9-8c89-4da0-973a-66c169ef8e9c
+      field_email_address: {  }
+      field_name: {  }
+    -
+      vid: divisions
+      tid: '32'
+      langcode: en
+      name: 'Area Head, Website'
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '23'
+      uuid: 9fdba22b-ccdb-447d-aac7-503eea39aa8b
+      field_email_address:
+        -
+          value: website@montreal2027.ca
+      field_name:
+        -
+          value: 'Dave Weiner'
+    -
+      vid: divisions
+      tid: '25'
+      langcode: en
+      name: Chair
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '13'
+      uuid: d1d3a80e-201b-4540-9cbc-23caf88d7957
+      field_email_address:
+        -
+          value: chairs@montreal2027.ca
+      field_name:
+        -
+          value: 'Bruce Farr'
+    -
+      vid: divisions
+      tid: '14'
+      langcode: en
+      name: 'Communications Division'
+      description__value: null
+      description__format: null
+      weight: '11'
+      parent: '0'
+      uuid: 9b4ba045-a5af-4b6e-bb3f-4b273ea0d4e7
+      field_email_address: {  }
+      field_name: {  }
+    -
+      vid: divisions
+      tid: '15'
+      langcode: en
+      name: 'Convention Services Division'
+      description__value: null
+      description__format: null
+      weight: '12'
+      parent: '0'
+      uuid: 9f426031-8ab3-4305-b002-c3aa064bb352
+      field_email_address: {  }
+      field_name: {  }
+    -
+      vid: divisions
+      tid: '27'
+      langcode: en
+      name: 'Division Head'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '14'
+      uuid: be268c47-3d2f-4535-819e-d7a9f176e92a
+      field_email_address:
+        -
+          value: communications@montreal2027.ca
+      field_name:
+        -
+          value: 'Angela Jones'
+    -
+      vid: divisions
+      tid: '31'
+      langcode: en
+      name: 'Division Head'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '23'
+      uuid: cda6f3ef-9479-4576-8e25-b333567f0f2c
+      field_email_address:
+        -
+          value: technology@montreal2027.ca
+      field_name:
+        -
+          value: 'Carl "zbang" Zwanzig'
+    -
+      vid: divisions
+      tid: '39'
+      langcode: en
+      name: 'Division Head'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '18'
+      uuid: d0c50e5f-6cad-41b3-bdfc-55eea62a9e70
+      field_email_address:
+        -
+          value: events@montreal2027.ca
+      field_name:
+        -
+          value: 'Sean McCoy'
+    -
+      vid: divisions
+      tid: '36'
+      langcode: en
+      name: 'Division Heads'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '15'
+      uuid: b352e85d-fbee-4b52-b44d-9f6aaed8556b
+      field_email_address:
+        -
+          value: consvc@montreal2027.ca
+      field_name:
+        -
+          value: 'Carolina Gomez Lagerlöf'
+        -
+          value: 'Britt-Louise Viklund'
+    -
+      vid: divisions
+      tid: '37'
+      langcode: en
+      name: 'Division Heads'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '16'
+      uuid: d2307466-b3c8-4fc6-a158-76db53e912e2
+      field_email_address:
+        -
+          value: events@montreal2027.ca
+      field_name:
+        -
+          value: 'Kate Wood'
+        -
+          value: 'Liana Olear'
+    -
+      vid: divisions
+      tid: '38'
+      langcode: en
+      name: 'Division Heads'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '17'
+      uuid: 0d7e980b-514d-4e50-a791-3b1865bddc01
+      field_email_address:
+        -
+          value: events@montral2027.ca
+      field_name:
+        -
+          value: 'Diane Lacey'
+        -
+          value: 'René Walling'
+    -
+      vid: divisions
+      tid: '40'
+      langcode: en
+      name: 'Division Heads'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '19'
+      uuid: 2a204ec1-908e-48b3-a5f3-16fac26545d5
+      field_email_address:
+        -
+          value: finance@montreal2027.ca
+      field_name:
+        -
+          value: 'Alexia Hebel'
+        -
+          value: 'Joann Lawler'
+    -
+      vid: divisions
+      tid: '41'
+      langcode: en
+      name: 'Division Heads'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '20'
+      uuid: 66e4c88d-adb7-4202-b9c1-61a4e2b7d91d
+      field_email_address:
+        -
+          value: membersvcs@montreal2027.ca
+      field_name:
+        -
+          value: 'Joni Brill Dashoff'
+        -
+          value: 'Catelynn Cunningham'
+        -
+          value: 'Saul Jaffe'
+    -
+      vid: divisions
+      tid: '42'
+      langcode: en
+      name: 'Division Heads'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '22'
+      uuid: 0834b2aa-2791-4380-8a84-5424b4821901
+      field_email_address:
+        -
+          value: programme@montreal2027.ca
+      field_name:
+        -
+          value: 'Carl Fink'
+        -
+          value: 'Gary Feldbaum'
+    -
+      vid: divisions
+      tid: '43'
+      langcode: en
+      name: 'Division Heads'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '24'
+      uuid: 1f979afb-e6c1-4e0a-af19-b5622641547b
+      field_email_address: {  }
+      field_name:
+        -
+          value: 'Todd Dashoff'
+        -
+          value: 'Linda Deneroff'
+    -
+      vid: divisions
+      tid: '16'
+      langcode: en
+      name: 'Events Division'
+      description__value: null
+      description__format: null
+      weight: '13'
+      parent: '0'
+      uuid: 1d20cc8e-ea5c-4fbb-a577-8c053f1b40d7
+      field_email_address: {  }
+      field_name: {  }
+    -
+      vid: divisions
+      tid: '17'
+      langcode: en
+      name: 'Exhibits Division'
+      description__value: null
+      description__format: null
+      weight: '14'
+      parent: '0'
+      uuid: 28959cf7-f404-48f0-9e08-fbedf5dddcf4
+      field_email_address: {  }
+      field_name: {  }
+    -
+      vid: divisions
+      tid: '18'
+      langcode: en
+      name: 'Facilities Division'
+      description__value: null
+      description__format: null
+      weight: '15'
+      parent: '0'
+      uuid: 862b3f1c-39e4-4e76-b31a-46fa497c3601
+      field_email_address: {  }
+      field_name: {  }
+    -
+      vid: divisions
+      tid: '19'
+      langcode: en
+      name: 'Finance Division'
+      description__value: null
+      description__format: null
+      weight: '16'
+      parent: '0'
+      uuid: 75ef5c89-afb2-4c3e-bc88-782590693cc3
+      field_email_address: {  }
+      field_name: {  }
+    -
+      vid: divisions
+      tid: '33'
+      langcode: en
+      name: 'Frontend Developer'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '32'
+      uuid: ca619c51-b0a4-467f-8f0b-56af9334ba11
+      field_email_address: {  }
+      field_name:
+        -
+          value: 'John Robertson'
+    -
+      vid: divisions
+      tid: '34'
+      langcode: en
+      name: 'Graphic Design & UI/UX'
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '32'
+      uuid: 4758b92f-0aee-4278-aade-7982320e441a
+      field_email_address: {  }
+      field_name:
+        -
+          value: 'Bob Bulkely'
+    -
+      vid: divisions
+      tid: '35'
+      langcode: en
+      name: Incoming
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '30'
+      uuid: de1d175e-98f8-4ccc-b689-b1ee15dda555
+      field_email_address: {  }
+      field_name:
+        -
+          value: 'Kees Van Toom'
+    -
+      vid: divisions
+      tid: '20'
+      langcode: en
+      name: 'Member Services Division'
+      description__value: null
+      description__format: null
+      weight: '17'
+      parent: '0'
+      uuid: 2b9f4aab-8200-4116-80c2-4ae09db98299
+      field_email_address: {  }
+      field_name: {  }
+    -
+      vid: divisions
+      tid: '13'
+      langcode: en
+      name: 'Office of the Chair'
+      description__value: null
+      description__format: null
+      weight: '10'
+      parent: '0'
+      uuid: 6ba8c6a5-b883-423f-bc28-ff2f575098f8
+      field_email_address:
+        -
+          value: chairs@montreal2027.ca
+      field_name: {  }
+    -
+      vid: divisions
+      tid: '21'
+      langcode: en
+      name: 'Online Operations Division'
+      description__value: null
+      description__format: null
+      weight: '18'
+      parent: '0'
+      uuid: 7b2ba263-bf73-41db-bd15-71719deb3d65
+      field_email_address: {  }
+      field_name: {  }
+    -
+      vid: divisions
+      tid: '29'
+      langcode: en
+      name: Outgoing
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '30'
+      uuid: e7330bbf-9c75-4322-a4c4-22cba8dff4f8
+      field_email_address: {  }
+      field_name:
+        -
+          value: 'Angela Jones'
+    -
+      vid: divisions
+      tid: '22'
+      langcode: en
+      name: 'Programme Division'
+      description__value: null
+      description__format: null
+      weight: '19'
+      parent: '0'
+      uuid: f7ed0a1d-6cbb-4d91-a217-d086fba8ea9a
+      field_email_address: {  }
+      field_name: {  }
+    -
+      vid: divisions
+      tid: '23'
+      langcode: en
+      name: 'Technology & Production Division'
+      description__value: null
+      description__format: null
+      weight: '20'
+      parent: '0'
+      uuid: 0dec9df5-b5f3-4a5d-b962-9e167cc8cc41
+      field_email_address: {  }
+      field_name: {  }
+    -
+      vid: divisions
+      tid: '24'
+      langcode: en
+      name: 'WSFS Division'
+      description__value: null
+      description__format: null
+      weight: '21'
+      parent: '0'
+      uuid: 72dc1c7f-b1cd-4e4d-aab2-a4c6f8446aac
+      field_email_address: {  }
+      field_name: {  }
+  guest_type:
+    -
+      vid: guest_type
+      tid: '3'
+      langcode: en
+      name: 'Guest of Honour'
+      description__value: '<h2>Montréal 2027 Worldcon is excited to announce the following Guests of Honour will be joining us.</h2>'
+      description__format: basic_html
+      weight: '0'
+      parent: '0'
+      uuid: 7e09a191-7074-4dcd-af2e-d2aca4f16f03
+      field_plural:
+        -
+          value: 'Guests of Honour'
+    -
+      vid: guest_type
+      tid: '1'
+      langcode: en
+      name: Artist
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '0'
+      uuid: 9c339bbc-b1bd-4d3d-9f8f-fc6de44d7a13
+      field_plural:
+        -
+          value: Artists
+    -
+      vid: guest_type
+      tid: '2'
+      langcode: en
+      name: Author
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '0'
+      uuid: 30fe333c-9f33-479c-8a5f-e0e528859fc0
+      field_plural:
+        -
+          value: Authors
+  membership:
+    -
+      vid: membership
+      tid: '7'
+      langcode: en
+      name: 'Child In Tow'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: c9a79079-4e0d-47f5-bf47-9c5fed84a561
+      field_ages:
+        -
+          value: 'Ages 0-7 as of September 2, 2027'
+      field_cad_price: {  }
+      field_usd_price: {  }
+      field_wsfs_membership:
+        -
+          name: N/A
+          vid: wsfs_membership
+    -
+      vid: membership
+      tid: '8'
+      langcode: en
+      name: 'Fast Track'
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '0'
+      uuid: c5289298-e35e-460a-be3e-bbd2ad880e03
+      field_ages:
+        -
+          value: 'Ages 8-12 as of September 2, 2027'
+      field_cad_price:
+        -
+          value: '45.00'
+      field_usd_price: {  }
+      field_wsfs_membership:
+        -
+          name: Optional
+          vid: wsfs_membership
+    -
+      vid: membership
+      tid: '9'
+      langcode: en
+      name: 'Teen Track'
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '0'
+      uuid: 64fee912-7cc3-4f91-a549-434369e688d1
+      field_ages:
+        -
+          value: 'Ages 12-17 as of September 2, 2027'
+      field_cad_price:
+        -
+          value: '90.00'
+      field_usd_price: {  }
+      field_wsfs_membership:
+        -
+          name: Optional
+          vid: wsfs_membership
+    -
+      vid: membership
+      tid: '10'
+      langcode: en
+      name: 'Young Adult'
+      description__value: null
+      description__format: null
+      weight: '3'
+      parent: '0'
+      uuid: 42fe6299-ec80-4094-b298-f98e38ee9f85
+      field_ages:
+        -
+          value: 'Ages 18-30 as of September 2, 2027'
+      field_cad_price:
+        -
+          value: '130.00'
+      field_usd_price: {  }
+      field_wsfs_membership:
+        -
+          name: Required
+          vid: wsfs_membership
+    -
+      vid: membership
+      tid: '11'
+      langcode: en
+      name: Adult
+      description__value: null
+      description__format: null
+      weight: '4'
+      parent: '0'
+      uuid: 80c6e6d5-415c-40b4-a229-28220098111f
+      field_ages:
+        -
+          value: 'Ages 31+ as of September 2, 2027'
+      field_cad_price:
+        -
+          value: '190.00'
+      field_usd_price: {  }
+      field_wsfs_membership:
+        -
+          name: Required
+          vid: wsfs_membership
+  tags:
+    -
+      vid: tags
+      tid: '12'
+      langcode: en
+      name: Policy
+      description__value: '<p>A policy of the Montréal 2027 Worldcon</p>'
+      description__format: basic_html
+      weight: '0'
+      parent: '0'
+      uuid: 7ba23501-e17f-4459-959f-110d4e20512e
+  wsfs_membership:
+    -
+      vid: wsfs_membership
+      tid: '4'
+      langcode: en
+      name: N/A
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 23ec360c-2800-494c-a08f-8ab8c7c7d1e4
+      field_cad_price: {  }
+      field_conversion_rate_date: {  }
+      field_usd_price: {  }
+    -
+      vid: wsfs_membership
+      tid: '5'
+      langcode: en
+      name: Optional
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: 56aca9a1-7a07-4398-bb81-153adb7e3754
+      field_cad_price: {  }
+      field_conversion_rate_date: {  }
+      field_usd_price: {  }
+    -
+      vid: wsfs_membership
+      tid: '6'
+      langcode: en
+      name: Required
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '0'
+      uuid: e3e23b97-abfa-40ae-b9b3-45377d3c9d2b
+      field_cad_price:
+        -
+          value: '70.00'
+      field_conversion_rate_date: {  }
+      field_usd_price: {  }

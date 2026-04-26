@@ -1,0 +1,15 @@
+page_title:
+  value: '<h1>Montréal 2027 Committee &amp; Staff</h1>'
+  format: full_html
+page_body:
+  value: "<p>They say it takes a village to raise a child. &nbsp;It also takes a village to organize and run a Worldcon. These are just some of our hard working volunteers. &nbsp;If you see a position that is vacant that you're interested in, please reach out by clicking the link.</p>"
+  format: full_html
+empty_position_link:
+  title: 'Volunteer Today'
+  uri: /volunteers
+failure_message: 'There was a problem sending your message.  Please try again later.'
+success_message: 'Your message has been sent.  A member of our staff will reach out if appropriate.'
+subject_prefix: 'Staff contact message for'
+heading_prefix: 'Send a message to the'
+empty_position_link_text: ''
+empty_position_link_url: ''

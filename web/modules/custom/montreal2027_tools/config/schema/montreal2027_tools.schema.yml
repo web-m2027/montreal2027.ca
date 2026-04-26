@@ -1,0 +1,46 @@
+montreal2027_tools.staff_page_settings:
+  type: config_object
+  label: 'Montreal 2027 staff page settings'
+  mapping:
+    page_title:
+      type: mapping
+      label: 'Page title'
+      mapping:
+        value:
+          type: text
+          label: 'Value'
+        format:
+          type: string
+          label: 'Format'
+    page_body:
+      type: mapping
+      label: 'Page body'
+      mapping:
+        value:
+          type: text
+          label: 'Value'
+        format:
+          type: string
+          label: 'Format'
+    empty_position_link:
+      type: mapping
+      label: 'Empty position link'
+      mapping:
+        title:
+          type: label
+          label: 'Link text'
+        uri:
+          type: string
+          label: 'Link URI'
+    failure_message:
+      type: text
+      label: 'Failure message'
+    success_message:
+      type: text
+      label: 'Success message'
+    subject_prefix:
+      type: label
+      label: 'Subject prefix'
+    heading_prefix:
+      type: label
+      label: 'Form heading prefix'

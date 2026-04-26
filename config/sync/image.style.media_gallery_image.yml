@@ -1,4 +1,4 @@
-uuid: 0508768d-b2b2-4bc3-a668-4936ac92624d
+uuid: 8d1d6ce7-ac41-4bb7-948e-bc9f8d5250e1
 langcode: en
 status: true
 dependencies: {  }
@@ -15,9 +15,3 @@ effects:
       width: 300
       height: 180
       anchor: center-center
-  5c069985-34be-4961-ad84-cc61b6461076:
-    uuid: 5c069985-34be-4961-ad84-cc61b6461076
-    id: image_convert_avif
-    weight: 2
-    data:
-      extension: webp

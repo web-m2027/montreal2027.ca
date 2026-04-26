@@ -1,0 +1,6 @@
+montreal2027_tools.staff_page_settings:
+  title: 'Staff page settings'
+  description: 'Configure the staff page content and contact form.'
+  route_name: montreal2027_tools.staff_page_settings
+  parent: system.admin_config_system
+  weight: 100

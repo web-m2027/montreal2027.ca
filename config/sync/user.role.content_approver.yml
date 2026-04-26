@@ -6,7 +6,6 @@ dependencies:
     - entity_workflow_workspace
     - help
     - media
-    - media_gallery
     - node
     - system
     - taxonomy
@@ -28,5 +27,4 @@ permissions:
   - 'view any workspace'
   - 'view media'
   - 'view the administration theme'
-  - 'view unpublished media gallery entities'
   - 'view vocabulary labels'
