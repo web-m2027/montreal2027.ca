@@ -23,7 +23,6 @@ dependencies:
     - filter
     - help
     - media
-    - media_gallery
     - node
     - system
     - taxonomy
@@ -42,7 +41,6 @@ permissions:
   - 'access media overview'
   - 'access taxonomy overview'
   - 'access toolbar'
-  - 'add media gallery entities'
   - 'create article content'
   - 'create audio media'
   - 'create content translations'
@@ -74,7 +72,5 @@ permissions:
   - 'view any workspace'
   - 'view own unpublished content'
   - 'view own unpublished media'
-  - 'view published media gallery entities'
   - 'view the administration theme'
-  - 'view unpublished media gallery entities'
   - 'view vocabulary labels'

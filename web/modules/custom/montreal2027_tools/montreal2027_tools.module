@@ -1,0 +1,125 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityFormInterface;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+
+/**
+ * Implements hook_theme().
+ */
+function montreal2027_tools_theme($existing, $type, $theme, $path) {
+  return [
+    'montreal2027_staff_page' => [
+      'variables' => [
+        'page_title' => '',
+        'page_body' => '',
+        'divisions' => [],
+        'empty_position_link' => ['title' => '', 'uri' => ''],
+        'contact_modal_markup' => '',
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter() for taxonomy term forms.
+ */
+function montreal2027_tools_form_taxonomy_term_form_alter(array &$form, FormStateInterface $form_state, string $form_id): void {
+  $form_object = $form_state->getFormObject();
+  if (!$form_object instanceof EntityFormInterface) {
+    return;
+  }
+
+  $term = $form_object->getEntity();
+  if (!$term || $term->bundle() !== 'divisions') {
+    return;
+  }
+
+  if (isset($form['name']['widget'][0]['value']['#title'])) {
+    $form['name']['widget'][0]['value']['#title'] = new TranslatableMarkup('Division/Position Name');
+  }
+  elseif (isset($form['name'][0]['value']['#title'])) {
+    $form['name'][0]['value']['#title'] = new TranslatableMarkup('Division/Position Name');
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for taxonomy overview table.
+ */
+function montreal2027_tools_form_taxonomy_overview_terms_alter(array &$form, FormStateInterface $form_state, string $form_id): void {
+  $vocabulary = $form_state->get(['taxonomy', 'vocabulary']);
+  if (!$vocabulary || $vocabulary->id() !== 'divisions') {
+    return;
+  }
+
+  if (isset($form['terms']['#header']['term'])) {
+    $form['terms']['#header']['term'] = new TranslatableMarkup('Division/Position Name');
+  }
+
+  // Add Staff Member column header after the term column.
+  $header = $form['terms']['#header'];
+  $new_header = [];
+  foreach ($header as $key => $value) {
+    $new_header[$key] = $value;
+    if ($key === 'term') {
+      $new_header['staff_member'] = new TranslatableMarkup('Staff Member');
+    }
+  }
+  $form['terms']['#header'] = $new_header;
+
+  // Populate the Staff Member column for each term row.
+  $term_storage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+  foreach (array_keys($form['terms']) as $row_key) {
+    if (!str_starts_with($row_key, 'tid:')) {
+      continue;
+    }
+    $parts = explode(':', $row_key);
+    $tid = $parts[1];
+    $term = $term_storage->load($tid);
+    $display_name = '';
+    if ($term && !$term->get('field_name')->isEmpty()) {
+      $field_values = $term->get('field_name');
+      $values = [];
+      foreach ($field_values as $field_value) {
+        $values[] = $field_value->value;
+      }
+      $display_name = implode('<br>', $values);
+    }
+
+    // Insert staff_member cell after the term cell.
+    $row = $form['terms'][$row_key];
+    $new_row = [];
+    foreach ($row as $cell_key => $cell_value) {
+      $new_row[$cell_key] = $cell_value;
+      if ($cell_key === 'term') {
+        $new_row['staff_member'] = ['#markup' => $display_name];
+      }
+    }
+    $form['terms'][$row_key] = $new_row;
+  }
+}
+
+/**
+ * Implements hook_mail().
+ */
+function montreal2027_tools_mail(string $key, array &$message, array $params): void {
+  if ($key !== 'staff_contact') {
+    return;
+  }
+
+  $from_name = trim((string) ($params['from_name'] ?? ''));
+  $from_email = trim((string) ($params['from_email'] ?? ''));
+  $subject = trim((string) ($params['subject'] ?? 'Staff Contact Message'));
+  $body = trim((string) ($params['body'] ?? ''));
+
+  $safe_name = preg_replace('/[\r\n"]+/', ' ', $from_name) ?? '';
+  $safe_name = trim($safe_name);
+  $safe_email = preg_replace('/[\r\n]+/', '', $from_email) ?? '';
+  $formatted_from = '"' . $safe_name . '" <' . $safe_email . '>';
+
+  $message['subject'] = $subject;
+  $message['body'][] = $body;
+  $message['from'] = $formatted_from;
+  $message['headers']['From'] = $formatted_from;
+  $message['headers']['Reply-to'] = $safe_email;
+}

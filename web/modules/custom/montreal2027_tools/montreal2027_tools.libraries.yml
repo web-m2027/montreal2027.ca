@@ -1,0 +1,11 @@
+staff_contact_modal:
+  version: 1.x
+  js:
+    js/staff-contact-modal.js: {}
+  css:
+    component:
+      css/staff-contact-modal.css: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/once

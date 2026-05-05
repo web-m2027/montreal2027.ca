@@ -1,0 +1,23 @@
+uuid: e8d8fd8f-9a79-48d6-ae78-f6ae4d943240
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_vacant_position
+    - taxonomy.vocabulary.divisions
+id: taxonomy_term.divisions.field_vacant_position
+field_name: field_vacant_position
+entity_type: taxonomy_term
+bundle: divisions
+label: 'Vacant Position'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

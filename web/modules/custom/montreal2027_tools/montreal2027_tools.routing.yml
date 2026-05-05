@@ -1,0 +1,23 @@
+montreal2027_tools.staff:
+  path: '/staff'
+  defaults:
+    _controller: '\Drupal\montreal2027_tools\Controller\StaffPageController::build'
+    _title: 'Staff'
+  requirements:
+    _permission: 'access content'
+
+montreal2027_tools.staff_contact_submit:
+  path: '/staff/contact-submit'
+  defaults:
+    _controller: '\Drupal\montreal2027_tools\Controller\StaffContactController::submit'
+  methods: [POST]
+  requirements:
+    _permission: 'access content'
+
+montreal2027_tools.staff_page_settings:
+  path: '/admin/config/system/staff-page-settings'
+  defaults:
+    _form: '\Drupal\montreal2027_tools\Form\StaffPageSettingsForm'
+    _title: 'Staff Page Settings'
+  requirements:
+    _permission: 'administer site configuration'

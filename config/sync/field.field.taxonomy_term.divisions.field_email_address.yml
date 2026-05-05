@@ -1,0 +1,19 @@
+uuid: 7e98c44e-05e6-41d0-8690-9c61ae1d950a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_email_address
+    - taxonomy.vocabulary.divisions
+id: taxonomy_term.divisions.field_email_address
+field_name: field_email_address
+entity_type: taxonomy_term
+bundle: divisions
+label: 'Email Address'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

@@ -2,17 +2,26 @@
 
 ## Changelog
 ---
+## 1.0.4 (2026-04-24)
+
+- Docker setup
+- Added taxonomy vocabulary for staff listing
+- Created view and view template to show staff listing
+- Added modal popup to send email to staff member
+
+---
+
 ## 1.0.3 (2026-04-22)
 
 - Updated guest node template to use explicit fields to better control markup
 - Refactored grid layout for guest article content
 - Refactored guest article SCSS and adjusted image properties
 
+---
+
 ## 1.0.2 (2026-03-12)
 
-- Update issue templates
-- Update issue templates
-- Update issue templates
+- Updated issue templates
 
 ---
 
