@@ -2,46 +2,19 @@ taxonomies:
   divisions:
     -
       vid: divisions
-      tid: '28'
+      tid: '37'
       langcode: en
       name: 'Administrative Assistant'
       description__value: null
       description__format: null
       weight: '0'
-      parent: '27'
+      parent: '26'
       uuid: 150f15a8-8855-4121-8288-b730fbb5d275
       field_email_address: {  }
       field_name:
         -
           value: 'Lisa Hertel'
-    -
-      vid: divisions
-      tid: '30'
-      langcode: en
-      name: Ads
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '27'
-      uuid: aab201f9-8c89-4da0-973a-66c169ef8e9c
-      field_email_address: {  }
-      field_name: {  }
-    -
-      vid: divisions
-      tid: '32'
-      langcode: en
-      name: 'Area Head, Website'
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '23'
-      uuid: 9fdba22b-ccdb-447d-aac7-503eea39aa8b
-      field_email_address:
-        -
-          value: website@montreal2027.ca
-      field_name:
-        -
-          value: 'Dave Weiner'
+      field_vacant_position: {  }
     -
       vid: divisions
       tid: '25'
@@ -58,33 +31,10 @@ taxonomies:
       field_name:
         -
           value: 'Bruce Farr'
+      field_vacant_position: {  }
     -
       vid: divisions
-      tid: '14'
-      langcode: en
-      name: 'Communications Division'
-      description__value: null
-      description__format: null
-      weight: '11'
-      parent: '0'
-      uuid: 9b4ba045-a5af-4b6e-bb3f-4b273ea0d4e7
-      field_email_address: {  }
-      field_name: {  }
-    -
-      vid: divisions
-      tid: '15'
-      langcode: en
-      name: 'Convention Services Division'
-      description__value: null
-      description__format: null
-      weight: '12'
-      parent: '0'
-      uuid: 9f426031-8ab3-4305-b002-c3aa064bb352
-      field_email_address: {  }
-      field_name: {  }
-    -
-      vid: divisions
-      tid: '27'
+      tid: '26'
       langcode: en
       name: 'Division Head'
       description__value: null
@@ -98,25 +48,10 @@ taxonomies:
       field_name:
         -
           value: 'Angela Jones'
+      field_vacant_position: {  }
     -
       vid: divisions
-      tid: '31'
-      langcode: en
-      name: 'Division Head'
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '23'
-      uuid: cda6f3ef-9479-4576-8e25-b333567f0f2c
-      field_email_address:
-        -
-          value: technology@montreal2027.ca
-      field_name:
-        -
-          value: 'Carl "zbang" Zwanzig'
-    -
-      vid: divisions
-      tid: '39'
+      tid: '30'
       langcode: en
       name: 'Division Head'
       description__value: null
@@ -130,9 +65,44 @@ taxonomies:
       field_name:
         -
           value: 'Sean McCoy'
+      field_vacant_position: {  }
     -
       vid: divisions
-      tid: '36'
+      tid: '34'
+      langcode: en
+      name: 'Division Head'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '23'
+      uuid: cda6f3ef-9479-4576-8e25-b333567f0f2c
+      field_email_address:
+        -
+          value: technology@montreal2027.ca
+      field_name:
+        -
+          value: 'Carl "zbang" Zwanzig'
+      field_vacant_position: {  }
+    -
+      vid: divisions
+      tid: '44'
+      langcode: en
+      name: 'Division Head'
+      description__value: null
+      description__format: null
+      weight: '0'
+      parent: '21'
+      uuid: 12fe020e-b6d4-4f58-815b-9c61a2635b8a
+      field_email_address: {  }
+      field_name:
+        -
+          value: Vacant
+      field_vacant_position:
+        -
+          value: '1'
+    -
+      vid: divisions
+      tid: '27'
       langcode: en
       name: 'Division Heads'
       description__value: null
@@ -148,9 +118,10 @@ taxonomies:
           value: 'Carolina Gomez Lagerlöf'
         -
           value: 'Britt-Louise Viklund'
+      field_vacant_position: {  }
     -
       vid: divisions
-      tid: '37'
+      tid: '28'
       langcode: en
       name: 'Division Heads'
       description__value: null
@@ -166,9 +137,10 @@ taxonomies:
           value: 'Kate Wood'
         -
           value: 'Liana Olear'
+      field_vacant_position: {  }
     -
       vid: divisions
-      tid: '38'
+      tid: '29'
       langcode: en
       name: 'Division Heads'
       description__value: null
@@ -184,9 +156,10 @@ taxonomies:
           value: 'Diane Lacey'
         -
           value: 'René Walling'
+      field_vacant_position: {  }
     -
       vid: divisions
-      tid: '40'
+      tid: '31'
       langcode: en
       name: 'Division Heads'
       description__value: null
@@ -202,9 +175,10 @@ taxonomies:
           value: 'Alexia Hebel'
         -
           value: 'Joann Lawler'
+      field_vacant_position: {  }
     -
       vid: divisions
-      tid: '41'
+      tid: '32'
       langcode: en
       name: 'Division Heads'
       description__value: null
@@ -222,9 +196,10 @@ taxonomies:
           value: 'Catelynn Cunningham'
         -
           value: 'Saul Jaffe'
+      field_vacant_position: {  }
     -
       vid: divisions
-      tid: '42'
+      tid: '33'
       langcode: en
       name: 'Division Heads'
       description__value: null
@@ -240,9 +215,10 @@ taxonomies:
           value: 'Carl Fink'
         -
           value: 'Gary Feldbaum'
+      field_vacant_position: {  }
     -
       vid: divisions
-      tid: '43'
+      tid: '36'
       langcode: en
       name: 'Division Heads'
       description__value: null
@@ -256,108 +232,116 @@ taxonomies:
           value: 'Todd Dashoff'
         -
           value: 'Linda Deneroff'
+      field_vacant_position: {  }
     -
       vid: divisions
-      tid: '16'
-      langcode: en
-      name: 'Events Division'
-      description__value: null
-      description__format: null
-      weight: '13'
-      parent: '0'
-      uuid: 1d20cc8e-ea5c-4fbb-a577-8c053f1b40d7
-      field_email_address: {  }
-      field_name: {  }
-    -
-      vid: divisions
-      tid: '17'
-      langcode: en
-      name: 'Exhibits Division'
-      description__value: null
-      description__format: null
-      weight: '14'
-      parent: '0'
-      uuid: 28959cf7-f404-48f0-9e08-fbedf5dddcf4
-      field_email_address: {  }
-      field_name: {  }
-    -
-      vid: divisions
-      tid: '18'
-      langcode: en
-      name: 'Facilities Division'
-      description__value: null
-      description__format: null
-      weight: '15'
-      parent: '0'
-      uuid: 862b3f1c-39e4-4e76-b31a-46fa497c3601
-      field_email_address: {  }
-      field_name: {  }
-    -
-      vid: divisions
-      tid: '19'
-      langcode: en
-      name: 'Finance Division'
-      description__value: null
-      description__format: null
-      weight: '16'
-      parent: '0'
-      uuid: 75ef5c89-afb2-4c3e-bc88-782590693cc3
-      field_email_address: {  }
-      field_name: {  }
-    -
-      vid: divisions
-      tid: '33'
+      tid: '41'
       langcode: en
       name: 'Frontend Developer'
       description__value: null
       description__format: null
       weight: '0'
-      parent: '32'
+      parent: '35'
       uuid: ca619c51-b0a4-467f-8f0b-56af9334ba11
       field_email_address: {  }
       field_name:
         -
           value: 'John Robertson'
+      field_vacant_position: {  }
     -
       vid: divisions
-      tid: '34'
-      langcode: en
-      name: 'Graphic Design & UI/UX'
-      description__value: null
-      description__format: null
-      weight: '1'
-      parent: '32'
-      uuid: 4758b92f-0aee-4278-aade-7982320e441a
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Bob Bulkely'
-    -
-      vid: divisions
-      tid: '35'
+      tid: '40'
       langcode: en
       name: Incoming
       description__value: null
       description__format: null
       weight: '0'
-      parent: '30'
+      parent: '38'
       uuid: de1d175e-98f8-4ccc-b689-b1ee15dda555
       field_email_address: {  }
       field_name:
         -
           value: 'Kees Van Toom'
+      field_vacant_position: {  }
     -
       vid: divisions
-      tid: '20'
+      tid: '38'
       langcode: en
-      name: 'Member Services Division'
+      name: Ads
       description__value: null
       description__format: null
-      weight: '17'
-      parent: '0'
-      uuid: 2b9f4aab-8200-4116-80c2-4ae09db98299
+      weight: '1'
+      parent: '26'
+      uuid: aab201f9-8c89-4da0-973a-66c169ef8e9c
       field_email_address: {  }
       field_name: {  }
+      field_vacant_position: {  }
+    -
+      vid: divisions
+      tid: '42'
+      langcode: en
+      name: 'Graphic Design & UI/UX'
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '35'
+      uuid: 4758b92f-0aee-4278-aade-7982320e441a
+      field_email_address: {  }
+      field_name:
+        -
+          value: 'Bob Bulkely'
+      field_vacant_position: {  }
+    -
+      vid: divisions
+      tid: '39'
+      langcode: en
+      name: Outgoing
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '38'
+      uuid: e7330bbf-9c75-4322-a4c4-22cba8dff4f8
+      field_email_address: {  }
+      field_name:
+        -
+          value: 'Angela Jones'
+      field_vacant_position: {  }
+    -
+      vid: divisions
+      tid: '35'
+      langcode: en
+      name: 'Website Area Head'
+      description__value: null
+      description__format: null
+      weight: '1'
+      parent: '23'
+      uuid: 9fdba22b-ccdb-447d-aac7-503eea39aa8b
+      field_email_address:
+        -
+          value: website@montreal2027.ca
+      field_name:
+        -
+          value: 'Dave Weiner'
+      field_vacant_position:
+        -
+          value: '0'
+    -
+      vid: divisions
+      tid: '45'
+      langcode: en
+      name: QA/QC
+      description__value: null
+      description__format: null
+      weight: '2'
+      parent: '35'
+      uuid: 311d978d-b812-428d-978c-a7f4ea455bc3
+      field_email_address: {  }
+      field_name:
+        -
+          value: Vacant
+      field_vacant_position:
+        -
+          value: '1'
     -
       vid: divisions
       tid: '13'
@@ -365,13 +349,105 @@ taxonomies:
       name: 'Office of the Chair'
       description__value: null
       description__format: null
-      weight: '10'
+      weight: '20'
       parent: '0'
       uuid: 6ba8c6a5-b883-423f-bc28-ff2f575098f8
       field_email_address:
         -
           value: chairs@montreal2027.ca
       field_name: {  }
+      field_vacant_position: {  }
+    -
+      vid: divisions
+      tid: '14'
+      langcode: en
+      name: 'Communications Division'
+      description__value: null
+      description__format: null
+      weight: '21'
+      parent: '0'
+      uuid: 9b4ba045-a5af-4b6e-bb3f-4b273ea0d4e7
+      field_email_address: {  }
+      field_name: {  }
+      field_vacant_position: {  }
+    -
+      vid: divisions
+      tid: '15'
+      langcode: en
+      name: 'Convention Services Division'
+      description__value: null
+      description__format: null
+      weight: '22'
+      parent: '0'
+      uuid: 9f426031-8ab3-4305-b002-c3aa064bb352
+      field_email_address: {  }
+      field_name: {  }
+      field_vacant_position: {  }
+    -
+      vid: divisions
+      tid: '16'
+      langcode: en
+      name: 'Events Division'
+      description__value: null
+      description__format: null
+      weight: '23'
+      parent: '0'
+      uuid: 1d20cc8e-ea5c-4fbb-a577-8c053f1b40d7
+      field_email_address: {  }
+      field_name: {  }
+      field_vacant_position: {  }
+    -
+      vid: divisions
+      tid: '17'
+      langcode: en
+      name: 'Exhibits Division'
+      description__value: null
+      description__format: null
+      weight: '24'
+      parent: '0'
+      uuid: 28959cf7-f404-48f0-9e08-fbedf5dddcf4
+      field_email_address: {  }
+      field_name: {  }
+      field_vacant_position: {  }
+    -
+      vid: divisions
+      tid: '18'
+      langcode: en
+      name: 'Facilities Division'
+      description__value: null
+      description__format: null
+      weight: '25'
+      parent: '0'
+      uuid: 862b3f1c-39e4-4e76-b31a-46fa497c3601
+      field_email_address: {  }
+      field_name: {  }
+      field_vacant_position: {  }
+    -
+      vid: divisions
+      tid: '19'
+      langcode: en
+      name: 'Finance Division'
+      description__value: null
+      description__format: null
+      weight: '26'
+      parent: '0'
+      uuid: 75ef5c89-afb2-4c3e-bc88-782590693cc3
+      field_email_address: {  }
+      field_name: {  }
+      field_vacant_position: {  }
+    -
+      vid: divisions
+      tid: '20'
+      langcode: en
+      name: 'Member Services Division'
+      description__value: null
+      description__format: null
+      weight: '27'
+      parent: '0'
+      uuid: 2b9f4aab-8200-4116-80c2-4ae09db98299
+      field_email_address: {  }
+      field_name: {  }
+      field_vacant_position: {  }
     -
       vid: divisions
       tid: '21'
@@ -379,25 +455,12 @@ taxonomies:
       name: 'Online Operations Division'
       description__value: null
       description__format: null
-      weight: '18'
+      weight: '28'
       parent: '0'
       uuid: 7b2ba263-bf73-41db-bd15-71719deb3d65
       field_email_address: {  }
       field_name: {  }
-    -
-      vid: divisions
-      tid: '29'
-      langcode: en
-      name: Outgoing
-      description__value: null
-      description__format: null
-      weight: '0'
-      parent: '30'
-      uuid: e7330bbf-9c75-4322-a4c4-22cba8dff4f8
-      field_email_address: {  }
-      field_name:
-        -
-          value: 'Angela Jones'
+      field_vacant_position: {  }
     -
       vid: divisions
       tid: '22'
@@ -405,11 +468,12 @@ taxonomies:
       name: 'Programme Division'
       description__value: null
       description__format: null
-      weight: '19'
+      weight: '29'
       parent: '0'
       uuid: f7ed0a1d-6cbb-4d91-a217-d086fba8ea9a
       field_email_address: {  }
       field_name: {  }
+      field_vacant_position: {  }
     -
       vid: divisions
       tid: '23'
@@ -417,11 +481,12 @@ taxonomies:
       name: 'Technology & Production Division'
       description__value: null
       description__format: null
-      weight: '20'
+      weight: '30'
       parent: '0'
       uuid: 0dec9df5-b5f3-4a5d-b962-9e167cc8cc41
       field_email_address: {  }
       field_name: {  }
+      field_vacant_position: {  }
     -
       vid: divisions
       tid: '24'
@@ -429,11 +494,12 @@ taxonomies:
       name: 'WSFS Division'
       description__value: null
       description__format: null
-      weight: '21'
+      weight: '31'
       parent: '0'
       uuid: 72dc1c7f-b1cd-4e4d-aab2-a4c6f8446aac
       field_email_address: {  }
       field_name: {  }
+      field_vacant_position: {  }
   guest_type:
     -
       vid: guest_type

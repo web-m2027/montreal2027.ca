@@ -18,7 +18,7 @@ class StaffPageController extends ControllerBase {
    */
   public function build(): array {
     $config = $this->config('montreal2027_tools.staff_page_settings');
-    $heading_prefix = trim((string) ($config->get('heading_prefix') ?? ''));
+    $heading_prefix = trim((string) ($config->get('heading_prefix') ?? '')) . ' ';
     if ($heading_prefix === '') {
       $heading_prefix = 'Send a message to the ';
     }
