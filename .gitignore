@@ -38,6 +38,7 @@
 /web/sites/*/*services*.yml
 /web/sites/*/*settings*.php
 !/web/sites/*/settings.php
+!/web/sites/default/development.services.yml
 /web/sites/*/cache
 /web/sites/*/files
 /web/sites/*/files-private
@@ -68,3 +69,6 @@ phpcs.xml
 !/web/assets/2025-11/53876623114_a7f20e1dbb_o.jpg
 !/web/assets/2025-11/m2027mascot@4x.png
 web/themes/custom/montreal2027/css/montreal2027.min.css
+*.sql.gz
+.env
+.env.local

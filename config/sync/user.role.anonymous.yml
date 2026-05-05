@@ -7,7 +7,6 @@ dependencies:
   module:
     - filter
     - media
-    - media_gallery
     - search
     - system
     - workspaces_access
@@ -22,5 +21,4 @@ permissions:
   - 'search content'
   - 'use text format restricted_html'
   - 'view media'
-  - 'view published media gallery entities'
   - workspace_live_view_content

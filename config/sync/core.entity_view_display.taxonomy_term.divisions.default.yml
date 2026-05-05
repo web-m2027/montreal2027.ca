@@ -1,0 +1,44 @@
+uuid: 87349320-ab9a-4f71-93e2-b53540eb7e0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.divisions.field_email_address
+    - field.field.taxonomy_term.divisions.field_name
+    - field.field.taxonomy_term.divisions.field_vacant_position
+    - taxonomy.vocabulary.divisions
+id: taxonomy_term.divisions.default
+targetEntityType: taxonomy_term
+bundle: divisions
+mode: default
+content:
+  field_email_address:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_vacant_position:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  description: true
+  entity_workspace_status: true
+  langcode: true
+  search_api_excerpt: true

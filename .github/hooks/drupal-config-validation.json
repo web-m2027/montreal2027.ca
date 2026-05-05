@@ -1,0 +1,12 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "type": "command",
+        "command": "node",
+        "args": ["-e", "const input = JSON.parse(require('fs').readFileSync(0, 'utf-8')); const tool = input.tool?.name || ''; if (tool === 'run_in_terminal' && input.tool?.arguments?.command?.match(/git\\s+(commit|push)/)) { console.log(JSON.stringify({systemMessage: '⚠️  Remember to export Drupal config (drush cex) before committing. Run .github/hooks/pre-commit-config-check.sh to validate.'})); } else { console.log('{}'); }"],
+        "timeout": 2
+      }
+    ]
+  }
+}

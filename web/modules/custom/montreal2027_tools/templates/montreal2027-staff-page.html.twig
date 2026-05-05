@@ -1,0 +1,59 @@
+{#
+/**
+ * @file
+ * Template for the staff listing page.
+ *
+ * Available variables:
+ * - page_title: The main page heading.
+ * - page_body: The introductory text.
+ * - divisions: Array of division data, each containing:
+ *   - term: The taxonomy term entity.
+ *   - children: Array of child position data.
+ * - empty_position_link: Array with 'title' and 'uri' keys.
+ * - contact_modal_markup: Rendered markup for the contact modal.
+ */
+#}
+<div class="staff-page">
+	<div class="staff-page__title">{{ page_title }}</div>
+	<div class="staff-page__body">{{ page_body }}</div>
+
+	{% if divisions|length > 0 %}
+		{% for division in divisions %}
+			<div class="division--row">
+				<div class="division">{{ division.term.label }}</div>
+				{% if division.children %}
+					{{ _self.render_positions(division.children, empty_position_link) }}
+				{% endif %}
+			</div>
+		{% endfor %}
+	{% else %}
+		<div>
+			{% trans %}No staff entries found.{% endtrans %}
+		</div>
+	{% endif %}
+
+	{{ contact_modal_markup }}
+</div>
+
+{#
+ # Macro to recursively render position rows
+ #}
+{% macro render_positions(positions, empty_position_link) %}
+	{% for position in positions %}
+		<div class="staff-row indent-{{ position.indent }}">
+			<div>{{ position.term.label }}</div>
+			<div>{{ position.field_names|join(', ') }}</div>
+			<div>
+				{% if position.has_email_address %}
+					<button type="button" class="contact-link" value="{{ position.term.id }}">Contact</button>
+				{% endif %}
+				{% if position.is_vacant_position and empty_position_link.title and empty_position_link.uri %}
+					<a href="{{ empty_position_link.uri }}" class="vacant">{{ empty_position_link.title }}</a>
+				{% endif %}
+			</div>
+		</div>
+		{% if position.children %}
+			{{ _self.render_positions(position.children, empty_position_link) }}
+		{% endif %}
+	{% endfor %}
+{% endmacro %}

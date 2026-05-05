@@ -3,5 +3,7 @@ _core:
 mode: simple
 ignored_config_entities:
   - block.block.montreal2027_socialmedialinks
+  - mailsystem.settings
+  - phpmailer_smtp.settings
   - system.site
   - views.view.workflow_transition_log

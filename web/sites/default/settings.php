@@ -1,5 +1,14 @@
 <?php
 
+use Symfony\Component\Dotenv\Dotenv;
+
+/** @disregard P1011 */
+$env_file = DRUPAL_ROOT . '/../.env';
+if (file_exists($env_file)) {
+  $dotenv = new Dotenv();
+  $dotenv->load($env_file);
+}
+
 // phpcs:ignoreFile
 
 /**
@@ -46,7 +55,27 @@ $settings['trusted_host_patterns'] = [
   '^.+\\.montreal2027\\.ca',
   '^montreal2027\\.ca',
   '^montreal2027\\.local',
+  '^localhost$',
+  '^127\\.0\\.0\\.1$',
 ];
+
+$databases['default']['default'] = [
+  'database' => $_ENV['DB_NAME'],
+  'username' => $_ENV['DB_USER'],
+  'password' => $_ENV['DB_PASSWORD'],
+  'prefix' => '',
+  'host' => $_ENV['DB_HOST'],
+  'port' => $_ENV['DB_PORT'],
+  'isolation_level' => 'READ COMMITTED',
+  'driver' => 'mysql',
+  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
+];
+
+$settings['container_yamls'][] = $app_root . '/' . $site_path . '/development.services.yml';
+$settings['hash_salt'] = $_ENV['HASH_SALT'];
+$settings['cache']['bins']['render'] = 'cache.backend.null';
+$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
 
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
